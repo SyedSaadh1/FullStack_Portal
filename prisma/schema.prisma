@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// https://www.prisma.io/blog/backend-prisma-typescript-orm-with-postgresql-auth-mngp1ps7kip4
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id        String    @id @default(cuid())
+  name      String    @default("")
+  email     String    @unique @default("")
+  password  String?
+  hashedToken String?
+  refreshTokens RefreshToken[]
+  tokens      Token[]
+  createdAt DateTime? @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model RefreshToken {
+  id          String   @id @unique @default(uuid())
+  
+  userId      String
+  User        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  revoked     Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Token {
+ id         String    @id @unique @default(uuid())
+ createdAt  DateTime  @default(now())
+ updatedAt  DateTime  @updatedAt
+ emailToken String?   @unique // Only used for short lived email tokens
+ valid      Boolean   @default(true)
+ expiration DateTime
+
+ // Relation fields
+ userId     String
+ user       User @relation(fields: [userId], references: [id])
+}

@@ -5,3 +5,9 @@ node_modules
 /public/build
 .env
 .vercel
+
+.keystone/admin
+keystone.db
+*.log
+
+*.db
