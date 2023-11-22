@@ -142,8 +142,23 @@ export default function Login() {
             </Typography>}
           </div>}
           <div>
-            <Button disabled={!canSubmit} variant="gradient" fullWidth onClick={handleLogin}>
-              {showVericationUi ? 'Verify' : 'Continue'}
+            <Button disabled={!canSubmit || fetcher.state === "submitting"} variant="gradient" fullWidth onClick={handleLogin} className="flex items-center justify-center">
+              {fetcher.state === "submitting" && <svg
+                className="animate-spin"
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="#fff"
+                  strokeLinecap="round"
+                  strokeWidth={1.5}
+                  d="M4.975 12H7.9M11.8 5v3M18.625 12H15.7M11.8 19v-3M6.974 16.95l2.068-2.121M6.974 7.05l2.068 2.121M16.626 7.05l-2.068 2.121M16.626 16.95l-2.068-2.121"
+                />
+              </svg>}
+              {(showVericationUi) ? 'Verify' : 'Continue'}
             </Button>
 
             {canSubmit && !showVericationUi && <Typography variant="small" className="mt-2">

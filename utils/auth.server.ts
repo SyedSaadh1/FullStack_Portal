@@ -51,26 +51,23 @@ export async function verify({ otp, registerId, token }: any) {
 
 export async function register(user: any) {
 
-  const newUser = await createUser(user);
-  // if (!newUser) {
-  //   return json(
-  //     {
-  //       error: `Something went wrong trying to create a new user.`,
-  //       fields: { email: user.email, password: user.password },
-  //     },
-  //     { status: 400 }
-  //   );
-  // }
-  sendVerificationCode({ email: newUser.email, code: newUser.code || "" });
-  const { code, ...rest } = newUser;
-  return rest; //createUserSession(newUser, "/");
-  // return json(
-  //   {
-  //     error: `Something went wrong trying to create a new user.`,
-  //     fields: { email: user.email, password: user.password },
-  //   },
-  //   { status: 400 }
-  // );
+  try {
+    const newUser = await createUser(user);
+    await sendVerificationCode({ email: newUser.email, code: newUser.code || "" });
+    const { code, ...rest } = newUser;
+    return rest;
+  } catch (e: any) {
+    return json(
+      {
+        error: e.message || `Something went wrong trying to create a new user.`,
+        fields: { email: user.email, password: user.password },
+      },
+      { status: 400 }
+    );
+  }
+
+
+
 }
 
 // Validate the user on email & password
