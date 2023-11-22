@@ -1,64 +1,24 @@
 // import bcrypt from "bcryptjs";
-import type { User } from "@prisma/client";
-import db from "db";
+import type { User as IUser } from "@prisma/client";
 import { authenticator } from 'otplib';
 import crypto from 'crypto'
+import { User } from "db/user";
+import UserService from "services/user.services";
 
 export const createUser = async (user: any) => {
-  // const passwordHash = await bcrypt.hash(user.password, 10);
-
-  const hashedToken = genarateUserHashToken();
-  const dbUser = await db.user.upsert({
-    where: {
-      email: user.email
-    },
-    update: {
-      hashedToken
-    },
-    create: {
-      email: user.email,
-      hashedToken
-    }
-  })
-
-  await db.token.deleteMany({
-    where: { userId: dbUser.id }
-  });
-
-  const newToken = await db.token.create({
-    data: {
-      userId: dbUser.id,
-      emailToken: genarateUserOtpToken(dbUser),
-      expiration: addMinutesToDate(new Date(), 2),
-    }
-  })
-
-
-  return {
-    id: dbUser?.id,
-    email: dbUser?.email,
-    registerId: dbUser?.hashedToken,
-    token: newToken.id,
-    code: newToken.emailToken
-  };
+  return await UserService.registerAndGenerateOtp(user.email);
 };
 
 
-export const checkIfUserExists = async (email: string) => {
-  return await db.user.count({ where: { email } });
-}
-
 export const getUserByEmail = async (email: string) => {
-  if (await checkIfUserExists(email)) {
-    return await db.user.findUnique({
-      where: { email },
-    });
+  if (await User.isExits(email)) {
+    return await User.getByEmail(email);
   }
 
   return null
 }
 
-export const genarateUserOtpToken = (user: User) => {
+export const genarateUserOtpToken = (user: IUser) => {
   if (!user.hashedToken) return null;
   authenticator.options = { digits: 6 };
   return authenticator.generate(user.hashedToken);

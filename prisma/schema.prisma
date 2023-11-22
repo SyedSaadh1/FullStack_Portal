@@ -22,6 +22,7 @@ model User {
   hashedToken String?
   refreshTokens RefreshToken[]
   tokens      Token[]
+  roles      UserRole[]
   createdAt DateTime? @default(now())
   updatedAt DateTime  @updatedAt
 }
@@ -47,4 +48,20 @@ model Token {
  // Relation fields
  userId     String
  user       User @relation(fields: [userId], references: [id])
+}
+
+model Role {
+  id       String    @id @default(cuid())
+  name     String    @unique
+  users    UserRole[]
+}
+
+model UserRole {
+  id       String    @id @default(cuid())
+  userId   String
+  roleId   String
+  user     User      @relation(fields: [userId], references: [id])
+  role     Role      @relation(fields: [roleId], references: [id])
+
+  @@unique([userId, roleId])
 }
