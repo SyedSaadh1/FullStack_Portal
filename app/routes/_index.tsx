@@ -3,6 +3,7 @@ import type { MetaFunction, LoaderFunctionArgs } from "@vercel/remix";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import { useLoaderData } from "@remix-run/react";
 import { getUser } from "utils/auth.server";
+import { CodeViewer } from "../components/editor/CodeViewer";
 
 export const meta: MetaFunction = () => {
   return [
@@ -22,8 +23,8 @@ export default function Index() {
   const data = useLoaderData<typeof loader>();
   return (
     <>
-      <div className="p-16">
-        <pre>{JSON.stringify({ data }, null, 2)}</pre>
+      <div className="py-16 container mx-auto">
+        <CodeViewer code={JSON.stringify({ data }, null, 2)} language="js" />
         <PanelGroup direction="horizontal">
           <Panel defaultSizePercentage={30} minSizePercentage={20}>
             left

@@ -1,25 +1,22 @@
-import React from "react";
 import UI from "@material-tailwind/react";
 import { Link } from "@remix-run/react";
 
 const {
   Navbar,
-  MobileNav,
   Typography,
   Button,
-  IconButton,
 } = UI
 
 export function PortalHeader({ user }: any) {
   const { id } = user || {};
-  const [openNav, setOpenNav] = React.useState(false);
+  // const [openNav, setOpenNav] = React.useState(false);
 
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false),
-    );
-  }, []);
+  // React.useEffect(() => {
+  //   window.addEventListener(
+  //     "resize",
+  //     () => window.innerWidth >= 960 && setOpenNav(false),
+  //   );
+  // }, []);
 
   // const navList = (
   //   <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -66,10 +63,11 @@ export function PortalHeader({ user }: any) {
   //   </ul>
   // );
 
+
   return (
     <>
       <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
-        <div className="flex items-center justify-between text-blue-gray-900">
+        <div className="flex items-center justify-between text-blue-gray-900 container mx-auto">
           <Link to="/">
             <Typography
               className='mr-4 cursor-pointer py-1.5 font-medium'
@@ -84,13 +82,12 @@ export function PortalHeader({ user }: any) {
                 <Button
                   variant="gradient"
                   size="sm"
-                  className="hidden lg:inline-block"
                 >
                   <span>{id ? 'Logout' : 'Login / Signup'}</span>
                 </Button>
               </Link>
             </div>
-            <IconButton
+            {/* <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
               ripple={false}
@@ -126,20 +123,14 @@ export function PortalHeader({ user }: any) {
                   />
                 </svg>
               )}
-            </IconButton>
+            </IconButton> */}
           </div>
         </div>
-        <MobileNav open={openNav}>
-          {/* {navList} */}
+        {/* <Collapse open={openNav}>
           <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm" className="">
-              <span>Log In</span>
-            </Button>
-            <Button fullWidth variant="gradient" size="sm" className="">
-              <span>Sign in</span>
-            </Button>
+            {authActions}
           </div>
-        </MobileNav>
+        </Collapse> */}
       </Navbar>
     </>
   );

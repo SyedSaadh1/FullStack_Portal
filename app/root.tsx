@@ -43,7 +43,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-full">
+      <body className="min-h-full bg-gray-50">
         <PortalHeader user={user} />
         <Outlet context={{ user }} />
         <ScrollRestoration />
