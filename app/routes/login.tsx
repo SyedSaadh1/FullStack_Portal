@@ -3,7 +3,7 @@ import type { LoaderFunction, ActionFunctionArgs } from "@vercel/remix";
 import UI from "@material-tailwind/react";
 
 
-import { useFetcher, useOutletContext } from "@remix-run/react";
+import { useFetcher } from "@remix-run/react";
 import { getUser, register } from "utils/auth.server";
 import { useState, useMemo, useEffect } from "react";
 import { isValidEmail, isValidEmailOtp } from "utils/validators";
@@ -38,9 +38,6 @@ export const loader: LoaderFunction = async ({ request }) => {
 
 
 export default function Login() {
-
-  const { user }: any = useOutletContext()
-
   const fetcher = useFetcher({ key: 'login' })
   const [email, setEmail] = useState('');
   const [otp, setOtp] = useState('');
@@ -88,11 +85,6 @@ export default function Login() {
         <CardBody className="flex flex-col gap-8">
           <Typography variant="h4" className="font-medium">
             {showVericationUi ? 'Enter the code sent to your email' : 'Enter your email to start learning'}
-
-            {/* <span>{fetcher.state}</span> */}
-            <pre>
-              {JSON.stringify({ data: fetcher.data || user }, null, 2)}
-            </pre>
           </Typography>
 
           <div className="flex gap-2 items-center">

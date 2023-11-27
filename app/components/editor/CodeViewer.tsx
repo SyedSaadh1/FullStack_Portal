@@ -8,14 +8,12 @@ const Editor: any = EditorModule.default
 const EditorView: any = Editor.default;
 
 interface CodeViewProps {
-  code: string;
+  code: object | string;
   language: 'js' | 'html' | 'css' | 'json'
 }
 
 export function CodeViewer({ code = '', language = 'js' }: CodeViewProps) {
-  const [value, setValue] = useState(code);
-
-
+  const [value, setValue] = useState(typeof code === 'string' ? code : JSON.stringify(code, null, 2));
 
   return <div className='p-6 my-4 rounded shadow shadow-blue-gray-300 bg-blue-gray-50 '>
     {<EditorView

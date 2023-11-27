@@ -54,6 +54,7 @@ export default class UserService {
   }
 
   public static async verifyUserOtp(verificationPayload: IUserVerification) {
+    if (!verificationPayload?.registerId) throw new Error(Errors.INVALID_TOKEN);
     const user = await User.getByHashedToken(verificationPayload?.registerId);
     if (!user) throw new Error(Errors.TOKEN_EXPIRED);
     return await User.getVerifyOtpUser(verificationPayload)
@@ -81,12 +82,12 @@ export default class UserService {
     });
 
     return allUsers
-      // .map(({ roles = [], ...fields }) => {
-      //   return {
-      //     ...fields,
-      //     isAdmin: roles.some(role => role?.role?.name === USER.IS_ADMIN)
-      //   }
-      // })
+    // .map(({ roles = [], ...fields }) => {
+    //   return {
+    //     ...fields,
+    //     isAdmin: roles.some(role => role?.role?.name === USER.IS_ADMIN)
+    //   }
+    // })
   }
 
 }

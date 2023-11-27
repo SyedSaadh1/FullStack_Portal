@@ -1,5 +1,8 @@
+import ROLE from "./role.constants";
+
 const USER = {
-  IS_ADMIN: 'Admin'
+  LOGIN: 'Login',
+  IS_ADMIN: ROLE.IS_ADMIN
 }
 
 export default USER;
