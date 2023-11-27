@@ -1,5 +1,6 @@
 import UI from "@material-tailwind/react";
-import { Link } from "@remix-run/react";
+import { Link, NavLink } from "@remix-run/react";
+import type { IUser } from "types/user.types";
 
 const {
   Navbar,
@@ -7,8 +8,12 @@ const {
   Button,
 } = UI
 
-export function PortalHeader({ user }: any) {
-  const { id } = user || {};
+type PortalHeaderProps = {
+  user?: IUser | null
+}
+
+export function PortalHeader({ user }: PortalHeaderProps) {
+  const { id, isAdmin } = user || {};
   // const [openNav, setOpenNav] = React.useState(false);
 
   // React.useEffect(() => {
@@ -18,50 +23,18 @@ export function PortalHeader({ user }: any) {
   //   );
   // }, []);
 
-  // const navList = (
-  //   <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-  //     <Typography
-  //       as="li"
-  //       variant="small"
-  //       color="blue-gray"
-  //       className="p-1 font-normal"
-  //     >
-  //       <a href="#" className="flex items-center">
-  //         Pages
-  //       </a>
-  //     </Typography>
-  //     <Typography
-  //       as="li"
-  //       variant="small"
-  //       color="blue-gray"
-  //       className="p-1 font-normal"
-  //     >
-  //       <a href="#" className="flex items-center">
-  //         Account
-  //       </a>
-  //     </Typography>
-  //     <Typography
-  //       as="li"
-  //       variant="small"
-  //       color="blue-gray"
-  //       className="p-1 font-normal"
-  //     >
-  //       <a href="#" className="flex items-center">
-  //         Blocks
-  //       </a>
-  //     </Typography>
-  //     <Typography
-  //       as="li"
-  //       variant="small"
-  //       color="blue-gray"
-  //       className="p-1 font-normal"
-  //     >
-  //       <a href="#" className="flex items-center">
-  //         Docs
-  //       </a>
-  //     </Typography>
-  //   </ul>
-  // );
+  const navList = id ? (
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      {isAdmin && <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <NavLink to="/admin" className="flex items-center">Admin</NavLink>
+      </Typography>}
+    </ul>
+  ) : <></>;
 
 
   return (
@@ -76,7 +49,7 @@ export function PortalHeader({ user }: any) {
             </Typography>
           </Link>
           <div className="flex items-center gap-4">
-            {/* <div className="mr-4 hidden lg:block">{navList}</div> */}
+            <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-1">
               <Link to={id ? '/logout' : 'login'}>
                 <Button

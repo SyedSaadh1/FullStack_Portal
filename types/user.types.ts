@@ -3,7 +3,15 @@ export type IUserRegister = {
 }
 
 export type IUserVerification = {
-  registerId: string;
-  token: string;
-  otp: string;
+  registerId?: string;
+  token?: string;
+  otp?: string;
+}
+
+export interface IUser {
+  id: string;
+  email: string;
+  name: string;
+  isAdmin?: boolean;
+  roles?: any[]
 }

@@ -5,6 +5,7 @@ import { User } from 'db/user';
 import { sendVerificationCode } from 'utils/mail.server';
 import type { IUserRegister, IUserVerification } from 'types/user.types';
 import Errors from 'contants/error.constants';
+import db from 'db';
 
 
 
@@ -56,6 +57,36 @@ export default class UserService {
     const user = await User.getByHashedToken(verificationPayload?.registerId);
     if (!user) throw new Error(Errors.TOKEN_EXPIRED);
     return await User.getVerifyOtpUser(verificationPayload)
+  }
+
+
+  public static async getAllUsers() {
+    const allUsers = await db.user.findMany({
+      select: {
+        email: true,
+        name: true,
+        id: true,
+        createdAt: true,
+        updatedAt: true,
+        // roles: {
+        //   include: {
+        //     role: {
+        //       select: {
+        //         name: true
+        //       }
+        //     }
+        //   }
+        // }
+      }
+    });
+
+    return allUsers
+      // .map(({ roles = [], ...fields }) => {
+      //   return {
+      //     ...fields,
+      //     isAdmin: roles.some(role => role?.role?.name === USER.IS_ADMIN)
+      //   }
+      // })
   }
 
 }

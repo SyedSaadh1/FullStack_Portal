@@ -1,7 +1,8 @@
 import { authenticator } from 'otplib';
 import type { User as IUser } from "@prisma/client";
 import db from "db";
-import type { IUserVerification } from 'types/user.types';
+import type { IUserVerification, IUser as UserType } from 'types/user.types';
+import USER from 'contants/user.constants';
 
 interface ICreateOrUpdateUser {
   email: string;
@@ -25,6 +26,22 @@ export class User {
 
   public static async isExits(email: string): Promise<boolean> {
     return (await db.user.count({ where: { email } })) > 0
+  }
+
+  public static async isAdminUser(user: UserType): Promise<boolean> {
+    const adminRolesCount = await db.user.count({
+      where: {
+        id: user.id,
+        roles: {
+          some: {
+            role: {
+              name: USER.IS_ADMIN
+            }
+          }
+        }
+      }
+    });
+    return adminRolesCount > 0;
   }
 
   public static async getByHashedToken(hashedToken: string) {

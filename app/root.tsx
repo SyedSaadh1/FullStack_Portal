@@ -13,7 +13,7 @@ import type { LinksFunction } from "@vercel/remix";
 
 import tailwindCssStylesheet from "~/tailwind.css";
 import { PortalHeader } from "./components/layout/PortalHeader";
-import { getUser } from "utils/auth.server";
+import userController from "controllers/user.controller";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwindCssStylesheet },
@@ -27,7 +27,7 @@ export async function loader({
   request: Request;
 }) {
 
-  const user = await getUser(request);
+  const user = await userController.getUser(request);
   return {
     user,
   }
@@ -45,7 +45,9 @@ export default function App() {
       </head>
       <body className="min-h-full bg-gray-50">
         <PortalHeader user={user} />
-        <Outlet context={{ user }} />
+        <main className="px-4">
+          <Outlet context={{ user }} />
+        </main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
