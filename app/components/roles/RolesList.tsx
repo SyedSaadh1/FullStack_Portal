@@ -1,6 +1,7 @@
 import { PlusIcon } from "@heroicons/react/24/outline";
 import { UserGroupIcon } from "@heroicons/react/24/solid";
 import UI from "@material-tailwind/react";
+import { NavLink } from "@remix-run/react";
 import { IRole } from "types/role.types";
 
 const {
@@ -78,12 +79,12 @@ export default function RolesList({ roles = [] }: RolesListProps) {
                   </div>
                 </td>
                 <td className={classes}>
-                  <div className="flex">
+                  <NavLink to={name} className="flex">
                     <Button variant="gradient" className="flex items-center gap-3">
                       <UserGroupIcon className="h-4 w-4" />
                       {usersCount} User{usersCount > 1 ? 's' : ''}
                     </Button>
-                  </div>
+                  </NavLink>
                 </td>
               </tr>
             );

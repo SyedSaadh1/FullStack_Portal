@@ -1,7 +1,6 @@
 import { useFetcher, useLoaderData } from "@remix-run/react";
 import type { ActionFunctionArgs, LoaderFunctionArgs } from "@vercel/remix";
 import roleController from "controllers/role.controller";
-// import { CodeViewer } from "~/components/editor/CodeViewer";
 import DashboardView from "./admin/dashboard.view";
 import RolesList from "~/components/roles/RolesList";
 import { AddRoleForm } from "~/components/roles/AddRoleForm";
@@ -24,19 +23,18 @@ export default function AdminRoleDashboard() {
     fetcher.submit({ roleName }, { action: '.', method: 'post' })
   };
 
+  const { data = {} }: any = fetcher;
+  const { error, id } = data || {};
+
 
   return (
-    <>
-      {/* <CodeViewer code={fetcher} language="js" /> */}
-
-      <DashboardView
-        title="Roles List"
-        subTitle="See information about all roles"
-        headerForm={<AddRoleForm onAdd={handleAdd} isSubmitting={fetcher.state === "submitting"} />}
-      >
-        <RolesList roles={roles} />
-      </DashboardView>
-    </>
+    <DashboardView
+      title="Roles List"
+      subTitle="See information about all roles"
+      headerForm={<AddRoleForm error={error} created={Boolean(id)} onAdd={handleAdd} isSubmitting={fetcher.state === "submitting"} />}
+    >
+      <RolesList roles={roles} />
+    </DashboardView>
 
   );
 }

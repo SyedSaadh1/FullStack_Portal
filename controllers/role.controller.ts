@@ -27,7 +27,14 @@ class RoleController extends Controller {
     } catch (error: any) {
       return json({ error: error.message }, 400)
     }
+  }
 
+  async getRoleByName(roleName: string): Promise<any> {
+    try {
+      return await RoleService.getByName(roleName.toString());
+    } catch (error: any) {
+      return json({ error: error.message }, 400)
+    }
   }
 
 }

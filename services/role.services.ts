@@ -8,6 +8,10 @@ export default class RoleService {
     return await Role.getAllRoles();
   }
 
+  public static async getByName(roleName: string) {
+    return await Role.getRoleByName(roleName);
+  }
+
   public static async addNewRole(roleName: string) {
     const isAlreadyExists = await Role.isAlreadyExists(roleName);
     if (isAlreadyExists) {
