@@ -1,4 +1,9 @@
+import * as https from "https";
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
+
+const httpsAgent = new https.Agent({
+  rejectUnauthorized: false,
+});
 
 export default class HttpService {
 
@@ -13,6 +18,7 @@ export default class HttpService {
       headers: {
         timeout: 5000,
       },
+      httpsAgent
     });
   }
 
