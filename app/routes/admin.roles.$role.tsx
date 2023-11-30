@@ -1,5 +1,5 @@
 import { useFetcher, useLoaderData } from "@remix-run/react";
-import type { ActionFunctionArgs, LoaderFunctionArgs } from "@vercel/remix";
+import { redirect, type ActionFunctionArgs, type LoaderFunctionArgs } from "@vercel/remix";
 import roleController from "controllers/role.controller";
 import { CodeViewer } from "~/components/editor/CodeViewer";
 import DashboardView from "./admin/dashboard.view";
@@ -14,6 +14,7 @@ export async function loader({
 }: LoaderFunctionArgs) {
   const roleName = params.role;
   const role: IRole = await roleController.getRoleByName(String(roleName));
+  if(!role) return redirect('..')
   return { role }
 }
 
@@ -22,14 +23,12 @@ export default function AdminRoleDashboard() {
   const { role } = useLoaderData<typeof loader>();
 
 
-
-
-
   return (
     <DashboardView
       title={`${role?.name}`}
       subTitle={`See information about all ${role?.name}`}
     >
+      <pre>{JSON.stringify({role}, null, 2)}</pre>
       {/* <RolesList roles={roles} /> */}
     </DashboardView>
 

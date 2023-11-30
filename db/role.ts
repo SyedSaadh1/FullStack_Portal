@@ -23,8 +23,8 @@ export class Role {
     return allRoles;
   }
 
-  public static async getRoleByName(roleName: string): Promise<IRole> {
-    return await db.role.findUniqueOrThrow({ where: { name: roleName } });
+  public static async getRoleByName(roleName: string): Promise<IRole | null> {
+    return await db.role.findFirst({ where: { name: roleName } });
   }
 
   public static async isAlreadyExists(roleName: string): Promise<boolean> {
