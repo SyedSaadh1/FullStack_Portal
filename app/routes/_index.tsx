@@ -10,7 +10,7 @@ import CourseListing from "~/components/courses/CourseListing";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "FUllstack Institute - Full Stack Development Program – Master Web Technologies" },
+    { title: "Fullstack Institute - Full Stack Development Program – Master Web Technologies" },
     { name: "description", content: "Accelerate your career with our comprehensive Full Stack Development Program. Learn Web Development, Advanced HTML/CSS/JavaScript, ReactJS, and more" },
     { name: "keywords", content: "Full Stack Development, Web Development Training, HTML5, CSS3, JavaScript, ReactJS, Material UI, Advanced Web Programming, Career in Tech, Coding Bootcamp" }
   ];
