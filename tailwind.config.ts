@@ -4,6 +4,7 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 
 export default withMT({
   content: [
+    './app/*.{js,jsx,ts,tsx}',
     './app/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
@@ -14,6 +15,6 @@ export default withMT({
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 } satisfies Config);
 

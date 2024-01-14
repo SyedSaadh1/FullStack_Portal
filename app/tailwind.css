@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 
+
+
 @font-face {
   font-family: 'Wotfard-fallback';
   src: local(Verdana);
@@ -58,4 +60,8 @@
   font-weight: 600;
   font-style: normal;
   font-display: fallback;
+}
+
+* {
+  font-family: 'Wotfard'
 }
