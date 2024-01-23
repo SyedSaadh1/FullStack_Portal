@@ -1,5 +1,7 @@
-import Link from 'next/link';
+import FullstackHeader from "./FullstackHeader";
 
 export default function Page() {
-    return <h1 className="p-4 shadow-2xl">Hello, Next.js! <Link href="/login">Login</Link></h1>
+    return (
+        <FullstackHeader />        
+    );
 }
