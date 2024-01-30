@@ -16,39 +16,39 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    title: "Advanced HTML, CSS, and JavaScript",
+    href: "/htmlandcss",
     description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
+      "Explore advanced HTML, CSS, and JavaScript techniques, including responsive design, Flexbox, Grid, and AJAX for dynamic, interactive web development.",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
+    title: "Introduction to ExpressJs",
+    href: "/expressjs",
     description:
-      "For sighted users to preview content available behind a link.",
+      "Master data manipulation in NodeJS: database connections, API building with Express, MySQL, and relational data handling.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Introduction to ReactJS",
+    href: "/reactjs",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Learn ReactJS fundamentals: components, props, state, and building applications in this introductory course.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
+    title: "Introduction to Material UI",
+    href: "/materialui",
+    description: "Explore Material UI fundamentals, integration with React, and crafting custom themes/layouts in this dynamic course.",
   },
   {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
+    title: "Introduction to NextJS",
+    href: "/nextjs",
     description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+      "Master NextJS essentials: project setup, routing, data integration, SSR, deployment, and optimization in this comprehensive course.",
   },
   {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
+    title: "Introduction to NodeJS",
+    href: "/nodejs",
     description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+      "Master NodeJS essentials: environment setup, modules, NPM, and server creation in this foundational course.",
   },
 ]
 
@@ -60,12 +60,16 @@ export default function PageNavigationMenu() {
           <NavigationMenuTrigger>Programs</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px]">
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
+              <Link href="/fullstack">
+                <ListItem href="" title="FullStack development">
+                  someone who can work on both the back-end and front-end of systems
+                </ListItem>
+              </Link>
+              <Link href="/frontent">
+                <ListItem href="/" title="Frontend development">
+                  creates websites and applications using web languages such as HTML, CSS, and JavaScript that allow users to access and interact with the site or app
+                </ListItem>
+              </Link>
               <ListItem href="/docs/primitives/typography" title="Typography">
                 Styles for headings, paragraphs, lists...etc
               </ListItem>
@@ -77,13 +81,15 @@ export default function PageNavigationMenu() {
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
+                <Link href={component.href}>
+                  <ListItem
+                    key={component.title}
+                    title={component.title}
+                    href={component.href}
+                  >
+                    {component.description}
+                  </ListItem>
+                </Link>
               ))}
             </ul>
           </NavigationMenuContent>
