@@ -1,17 +1,19 @@
 import React from 'react'
 import Container from '../layout/container'
-import { Title1 } from '@fluentui/react-components'
-import {CardExample} from './CoursesCard'
+import courseController from '@/controllers/course.controller'
+import { Course } from '@/types/course.types'
+import CourseCardCarousel from './CourseCardCarousel'
 
-type Props = {}
 
-const HomePageCourses = (props: Props) => {
+
+const HomePageCourses = async () => {
+
+  const courses: Course[] = JSON.parse(JSON.stringify(await courseController.getAllCourses()));
 
   return (
-    <section className='py-4'>
+    <section className='py-8'>
       <Container>
-        <Title1>Courses</Title1>
-        <CardExample />
+        <CourseCardCarousel courses={courses} />
       </Container>
     </section>
   )

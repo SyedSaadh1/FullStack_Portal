@@ -1,3 +1,4 @@
+'use client'
 import * as React from "react";
 import {
 	makeStyles,
@@ -16,6 +17,7 @@ import {
 } from "@fluentui/react-components";
 import { courses } from '../data/courses'
 import Link from "next/link";
+import { Course } from "@/types/course.types";
 
 const resolveAsset = (asset: string) => {
 	const ASSET_URL =
@@ -24,24 +26,22 @@ const resolveAsset = (asset: string) => {
 };
 
 const useStyles = makeStyles({
-	main: {
-		...shorthands.gap("16px"),
-		display: "flex",
-		flexWrap: "wrap",
-	},
-
 	card: {
-		marginTop: "32px",
-		width: "380px",
 		maxWidth: "100%",
+		...shorthands.margin(tokens.spacingVerticalXL, 0),
+		'&:hover': {
+			boxShadow: tokens.shadow16
+		}
 	},
 
 	caption: {
 		color: tokens.colorNeutralForeground3,
 	},
 
-	smallRadius: {
+	image: {
 		...shorthands.borderRadius(tokens.borderRadiusSmall),
+		maxHeight: '220px',
+		objectFit: 'cover'
 	},
 
 	grayBackground: {
@@ -58,41 +58,39 @@ const useStyles = makeStyles({
 });
 
 
-export const CardExample = (props: CardProps) => {
+const CourseCard = ({ course }: { course: Course }) => {
 	const styles = useStyles();
 
 	return (
-		<div className={styles.main}>
-			{courses.map((course) => (
-				<Card className={styles.card} {...props}>
-					<CardPreview
-						className={styles.grayBackground}
-					>
-						<img
-							className={styles.smallRadius}
-							src={resolveAsset("office1.png")}
-							alt="Presentation Preview"
-						/>
-					</CardPreview>
+		<Card className={styles.card}>
+			<CardPreview
+				className={styles.grayBackground}
+			>
+				<img
+					className={styles.image}
+					src={course.thumbnail?.url}
+					alt="Presentation Preview"
+				/>
+			</CardPreview>
 
-					<CardHeader
-						header={<Link href={`/courses/${course.name}`}>{course.name}</Link>}
-						description={
-							<Caption1 className={styles.caption}>{course.description}</Caption1>
-						}
-						action={
-							<Button
-								appearance="transparent"
-								icon={<MoreHorizontal20Regular />}
-								aria-label="More actions"
-							/>
-						}
+			<CardHeader
+				header={<Link href={`/courses/${course.name}`}>{course.name}</Link>}
+				description={
+					<Caption1 className={styles.caption}>{course.description}</Caption1>
+				}
+				action={
+					<Button
+						appearance="transparent"
+						icon={<MoreHorizontal20Regular />}
+						aria-label="More actions"
 					/>
-				</Card>
-			))}
-		</div>
+				}
+			/>
+		</Card>
 	);
 };
+
+export default CourseCard;
 
 // export const Selectable = () => {
 //     const styles = useStyles();

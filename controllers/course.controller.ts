@@ -4,10 +4,18 @@ import { Course } from "types/course.types";
 
 class CourseController extends Controller {
 
-  async getAllCourses(request: Request): Promise<Course[]> {
+  private publicCourses: Course[] = [];
 
+  constructor() {
+    super();
+    this.getAllCourses();
+  }
+
+  async getAllCourses(request?: Request): Promise<Course[]> {
     try {
-      return await coursesServices.getAllPublicCourses();
+      if (this.publicCourses?.length) return this.publicCourses;
+      this.publicCourses =  await coursesServices.getAllPublicCourses();
+      return this.publicCourses;
     } catch (error) {
       console.log(":: ERROR ::", error)
     }

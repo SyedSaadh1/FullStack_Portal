@@ -1,3 +1,4 @@
+'use client'
 import React, { useCallback, useEffect } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { makeStyles, tokens, shorthands, Subtitle1, TabList, Tab, Title1, SelectTabData } from '@fluentui/react-components';
@@ -24,13 +25,8 @@ const useStyles = makeStyles({
 
 const EXPLORE_PARAM = 'explore';
 const TABS = ['programs', 'courses', 'topics'];
-const TAB_VIEW: any = {
-  'programs': <HomePagePrograms />,
-  'courses': <HomePageCourses />,
-  'topics': <HomePageTopics />,
-}
 
-const ExploreTabs = () => {
+const ExploreTabs = ({ tabs }: any) => {
   const styles = useStyles();
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -64,7 +60,7 @@ const ExploreTabs = () => {
         </TabList>
       </Container>
     </div>
-    {TAB_VIEW[exploreParam]}
+    {tabs[exploreParam]}
   </>
   );
 };

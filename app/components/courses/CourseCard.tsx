@@ -1,3 +1,4 @@
+'use client'
 import UI from "@material-tailwind/react";
 import { Course } from "types/course.types";
 

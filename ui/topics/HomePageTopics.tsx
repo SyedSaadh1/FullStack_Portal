@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Container from '../layout/container'
 import { Title1 } from '@fluentui/react-components'

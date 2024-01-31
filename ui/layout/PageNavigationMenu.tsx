@@ -11,48 +11,14 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { Course } from "@/types/course.types"
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Advanced HTML, CSS, and JavaScript",
-    href: "/htmlandcss",
-    description:
-      "Explore advanced HTML, CSS, and JavaScript techniques, including responsive design, Flexbox, Grid, and AJAX for dynamic, interactive web development.",
-  },
-  {
-    title: "Introduction to ExpressJs",
-    href: "/expressjs",
-    description:
-      "Master data manipulation in NodeJS: database connections, API building with Express, MySQL, and relational data handling.",
-  },
-  {
-    title: "Introduction to ReactJS",
-    href: "/reactjs",
-    description:
-      "Learn ReactJS fundamentals: components, props, state, and building applications in this introductory course.",
-  },
-  {
-    title: "Introduction to Material UI",
-    href: "/materialui",
-    description: "Explore Material UI fundamentals, integration with React, and crafting custom themes/layouts in this dynamic course.",
-  },
-  {
-    title: "Introduction to NextJS",
-    href: "/nextjs",
-    description:
-      "Master NextJS essentials: project setup, routing, data integration, SSR, deployment, and optimization in this comprehensive course.",
-  },
-  {
-    title: "Introduction to NodeJS",
-    href: "/nodejs",
-    description:
-      "Master NodeJS essentials: environment setup, modules, NPM, and server creation in this foundational course.",
-  },
-]
+interface PageNavigationMenuProps {
+  courses: Course[]
+}
 
-export default function PageNavigationMenu() {
+export default function PageNavigationMenu({ courses }: PageNavigationMenuProps) {
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -80,14 +46,14 @@ export default function PageNavigationMenu() {
           <NavigationMenuTrigger>Courses</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <Link href={component.href}>
+              {courses.map((course) => (
+                <Link key={course.id} href={course.id}>
                   <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
+                    key={course.name}
+                    title={course.name}
+                    href={course.id}
                   >
-                    {component.description}
+                    {course.description}
                   </ListItem>
                 </Link>
               ))}

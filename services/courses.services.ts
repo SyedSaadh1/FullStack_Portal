@@ -10,6 +10,7 @@ class CoursesService extends HttpService {
   }
 
   public async getAllPublicCourses(): Promise<Course[]> {
+    console.log("Calling getAllPublicCourses...")
     const response: AxiosResponse<Course[]> = await this.get('/courses');
     return (response.data || []).map(this.mapImages)
   }
