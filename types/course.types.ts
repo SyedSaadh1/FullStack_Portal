@@ -9,4 +9,5 @@ export interface Course {
   is_public?: boolean,
   thumbnail?: CourseImage | null
   banner?: CourseImage | null
+  url?: string | null
 }

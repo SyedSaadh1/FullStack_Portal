@@ -74,7 +74,7 @@ const CourseCard = ({ course }: { course: Course }) => {
 			</CardPreview>
 
 			<CardHeader
-				header={<Link href={`/courses/${course.name}`}>{course.name}</Link>}
+				header={<Link href={`/courses/${course.url}`}>{course.name}</Link>}
 				description={
 					<Caption1 className={styles.caption}>{course.description}</Caption1>
 				}
