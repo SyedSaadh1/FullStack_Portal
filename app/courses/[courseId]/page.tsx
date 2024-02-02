@@ -16,7 +16,7 @@ export default async function CourseDetails({ params: { courseId } }: any) {
 
     return (
         <div className="p-8">
-            Course: {course?.name}
+            {/* Course: {course?.name} */}
             <div className="flex ">
                 <section className="flex-1">
                     <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl font-serif">
@@ -26,9 +26,9 @@ export default async function CourseDetails({ params: { courseId } }: any) {
                         Build a strong {course?.name} foundation and tackle any project
                     </p>
                 </section>
-                <section className="flex-1 justify-end">
+                <section className="flex-1 flex justify-end">
                     <div className="card w-96 bg-base-100 shadow-xl">
-                        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                        <figure><img src={course.thumbnail?.url} alt="Shoes" /></figure>
                     </div>
                 </section>
             </div>
@@ -37,15 +37,19 @@ export default async function CourseDetails({ params: { courseId } }: any) {
                     Aside
                 </div>
                 <div className="flex-[2_2_0%] px-8 py-4">
-                    <h3 className="text-3xl border-b-4 mb-2">Description</h3>
-                    <p className="text-2xl">{course?.description}</p>
-                    <p className="text-2xl">In this course, we'll guide you through this early stage. At the end of the
+                    <h3 className="text-3xl border-b-4 py-2 mb-2">Description</h3>
+                    <p className="text-lg my-4">{course?.description}</p>
+                    <p className="text-lg my-4">In this course, we'll guide you through this early stage. At the end of the
                         course you'll feel very comfortable with {course?.name} and your ability to go on and tackle
                         any topic or project.</p>
 
-                    <h3 className="text-3xl border-b-4 mt-2 mb-12">Course Content</h3>
+                    <h3 className="text-3xl border-b-4 py-2 mt-2 mb-12">Course Content</h3>
                 
                     <CourseDetailsCard />
+
+                    <h3 className="text-xl font-medium border-b-4 py-4 mt-4">INSTRUCTOR</h3>
+                    <p className="text-lg my-4">Syed Zakeer Hussain founded Fullsatck Institute to help bring software development to everyone. Our objective is to help you make software like a professional.
+                     Multiple members of the Fullstack Institute team worked together to develop this course. We hope you'll enjoy it!</p>
                 </div>
             </div>
         </div>

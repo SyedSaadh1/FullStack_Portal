@@ -18,23 +18,22 @@ export default function CourseDetailsCard() {
     const [isOpen, setIsOpen] = React.useState(false)
 
     return (
-        <Card className="w-[820px] p-8 hover:shadow-xl items-center">
-            <CardContent className="flex justify-between items-center">
+        <Card className="p-4 hover:shadow-xl">
+            <CardContent className="p-0"    >
                 <Collapsible
                     open={isOpen}
                     onOpenChange={setIsOpen}
-                    className="w-[350px] space-y-2"
                 >
-                    <CollapsibleTrigger>
-                        <div className="flex justify-between">
-                            <section className="flex justify-between gap-2">
+                    <CollapsibleTrigger className="w-full">
+                        <div className="w-full flex flex-row justify-between items-center">
+                            <section className="flex gap-2">
                                 <img src="" alt="#" />
                                 <h3 className="text-xl">HTML Basics</h3>
                             </section>
                             <p className="text-xl">4 Lessons</p>
                         </div>
                     </CollapsibleTrigger>
-                    <CollapsibleContent className="flex space-y-2 ">
+                    <CollapsibleContent className="">
                         <h3 className="text-2xl">Html Tags</h3>
                     </CollapsibleContent>
                 </Collapsible>
