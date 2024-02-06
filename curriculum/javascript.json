@@ -1,0 +1,166 @@
+{
+  "title": "JavaScript for Beginners",
+  "description": "A comprehensive introduction to programming with JavaScript, covering core concepts, practical applications, and web development basics.",
+  "courseDuration": "Approximately 25-30 hours (depending on individual pace)",
+  "softwareRequired": "Any text editor (e.g., Sublime Text, Visual Studio Code) and a web browser with developer tools (e.g., Chrome DevTools).",
+  "thumbnail": {
+    "url": "https://www.pragimtech.com/wp-content/uploads/2019/03/java-script.jpg"
+  },
+  "modules": [
+    {
+      "moduleNumber": 1,
+      "title": "Welcome to Programming with JavaScript",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "title": "What is Programming and Why Learn JavaScript?",
+          "theory": "Introduction to programming concepts, understanding algorithms and problem-solving, role of JavaScript in web development.",
+          "video": "Explanation of coding and JavaScript, showcasing its applications in websites and interactive elements.",
+          "quiz": "Matching definitions with programming terms and identifying areas where JavaScript is used.",
+          "codingTask": "Create a simple HTML document and write basic JavaScript code to display a message in the browser console."
+        },
+        {
+          "sessionNumber": 2,
+          "title": "Setting Up Your Development Environment",
+          "theory": "Choosing a text editor, understanding browser developer tools, basic setup for coding in JavaScript.",
+          "video": "Demonstration of setting up a text editor and using browser developer tools for JavaScript.",
+          "quiz": "Identifying essential tools for writing and testing JavaScript code.",
+          "codingTask": "Download and set up a chosen text editor or code editor, then test a simple JavaScript code snippet in the browser console."
+        },
+        {
+          "sessionNumber": 3,
+          "title": "Running JavaScript Code and Understanding Console Output",
+          "theory": "Executing JavaScript code in different ways (browser console, external files), interpreting console output.",
+          "video": "Demonstrating various methods to run JavaScript code and explaining console output messages.",
+          "quiz": "Recognizing different ways to execute JavaScript code and understanding basic console messages.",
+          "codingTask": "Write JavaScript code to print different messages to the console using various methods (e.g., console.log, alert)."
+        }
+      ]
+    },
+    {
+      "moduleNumber": 2,
+      "title": "Variables, Data Types, and Operators",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "title": "Storing Information with Variables",
+          "theory": "Understanding variables, naming conventions, different data types (numbers, strings, booleans).",
+          "video": "Explanation of variables, demonstrating how to declare and use them with different data types.",
+          "quiz": "Matching data types with appropriate values and identifying valid variable names.",
+          "codingTask": "Declare and assign values to variables of different data types, practice printing their values to the console."
+        },
+        {
+          "sessionNumber": 2,
+          "title": "Performing Calculations and Comparisons with Operators",
+          "theory": "Introduction to arithmetic operators (e.g., +, -, *), comparison operators (e.g., ==, !=), logical operators (e.g., &&, ||).",
+          "video": "Demonstrating the use of different operators for calculations, comparisons, and logical expressions.",
+          "quiz": "Choosing the correct operator for specific tasks and evaluating expressions with variables.",
+          "codingTask": "Write JavaScript code to perform calculations, comparisons, and logical operations using variables and operators."
+        },
+        {
+          "sessionNumber": 3,
+          "title": "User Input and Getting Creative with Data Manipulation",
+          "theory": "Accepting user input with prompts, combining and manipulating data using string methods and concatenation.",
+          "video": "Explanation of user input through prompts, demonstrating string manipulation techniques.",
+          "quiz": "Identifying methods for user input and string manipulation based on desired outcomes.",
+          "codingTask": "Create a program that prompts the user for input, performs calculations or manipulations, and displays the results."
+        }
+      ]
+    },
+    {
+      "moduleNumber": 3,
+      "title": "Conditional Statements and Control Flow",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "title": "Making Decisions with If Statements",
+          "theory": "Understanding conditional statements (if/else), controlling program flow based on conditions.",
+          "video": "Explanation of if/else statements and demonstrating their use in making decisions.",
+          "quiz": "Identifying the logic behind if/else statements and predicting program behavior based on conditions.",
+          "codingTask": "Write JavaScript code that makes decisions based on user input or variable values using if/else statements."
+        },
+        {
+          "sessionNumber": 2,
+          "title": "Branching Out with Else If and Switch Statements",
+          "theory": "Using else if and switch statements for more complex decision-making scenarios.",
+          "video": "Explanation of else if and switch statements, showcasing their applications in multiple condition cases.",
+          "quiz": "Choosing the appropriate conditional statement based on the branching logic required.",
+          "codingTask": "Implement else if or switch statements in a program to handle multiple conditions and display different results."
+        },
+        {
+          "sessionNumber": 3,
+          "title": "Looping Through Repetition with For and While Loops",
+          "theory": "Introduction to for and while loops and their usage in iteration.",
+          "video": "Explanation of for and while loops, demonstrating their use for repeated tasks and iterations.",
+          "quiz": "Identifying the loop type (for or while) suitable for specific scenarios and predicting loop behavior.",
+          "codingTask": "Write JavaScript code that uses for or while loops to iterate through tasks, print values, or perform calculations multiple times."
+        }
+      ]
+    },
+    {
+      "moduleNumber": 4,
+      "title": "Functions and Working with Arrays",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "title": "Building Reusable Code with Functions",
+          "theory": "Understanding functions, defining and calling them, passing arguments and returning values.",
+          "video": "Explanation of functions, demonstrating their creation and use for code reusability.",
+          "quiz": "Identifying function components (name, parameters, return value) and predicting function output based on arguments.",
+          "codingTask": "Write and call functions in JavaScript to perform specific tasks, taking input and returning results."
+        },
+        {
+          "sessionNumber": 2,
+          "title": "Storing and Managing Data with Arrays",
+          "theory": "Introduction to arrays, storing multiple values, accessing and manipulating elements.",
+          "video": "Explanation of arrays, demonstrating how to create, access, and modify elements within them.",
+          "quiz": "Identifying array methods (e.g., push, pop, shift) and predicting their effects on array contents.",
+          "codingTask": "Create and work with arrays in JavaScript, adding, removing, and manipulating elements, using methods for iteration and access."
+        },
+        {
+          "sessionNumber": 3,
+          "title": "Mastering Loops and Arrays Together",
+          "theory": "Combining loops and arrays for powerful data processing and manipulation.",
+          "video": "Demonstration of using loops to iterate through arrays, performing operations on each element.",
+          "quiz": "Writing code snippets that iterate through arrays using loops and perform specific tasks on each element.",
+          "codingTask": "Write JavaScript code that combines loops and arrays to process data, calculate values, or create new data structures."
+        }
+      ]
+    },
+    {
+      "moduleNumber": 5,
+      "title": "Introduction to Web Development with JavaScript",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "title": "From Console to Browser: Connecting JavaScript to HTML",
+          "theory": "Embedding JavaScript in HTML, working with the Document Object Model (DOM).",
+          "video": "Demonstration of adding JavaScript to HTML, interacting with DOM elements and modifying web pages.",
+          "quiz": "Identifying methods for manipulating DOM elements using JavaScript code.",
+          "codingTask": "Create a simple HTML page with embedded JavaScript that modifies element styles or content dynamically."
+        },
+        {
+          "sessionNumber": 2,
+          "title": "Adding Interactivity with Events and User Input",
+          "theory": "Understanding events (e.g., click, hover), handling user interactions with event listeners.",
+          "video": "Explanation of events and event listeners, demonstrating how to respond to user actions with JavaScript.",
+          "quiz": "Matching events with their corresponding handling methods and predicting program behavior based on event listeners.",
+          "codingTask": "Implement event listeners in a webpage to respond to user clicks, form submissions, or other interactions."
+        },
+        {
+          "sessionNumber": 3,
+          "title": "Exploring Further JavaScript and Beyond",
+          "theory": "Introduction to additional JavaScript features (objects, functions, libraries), expanding learning resources.",
+          "video": "Brief overview of advanced JavaScript concepts and showcasing popular libraries (e.g., jQuery).",
+          "quiz": "Identifying areas for further exploration in JavaScript learning and suggesting relevant resources.",
+          "codingTask": "Build a small interactive web application using learned JavaScript concepts, exploring potential libraries for future projects."
+        }
+      ]
+    }
+  ],
+  "additionalNotes": [
+    "This curriculum provides a foundation for learning JavaScript and web development. Encourage further exploration and practice to advance your skills.",
+    "Consider adding bonus sessions or projects to delve deeper into specific areas (e.g., working with APIs, building more complex web applications).",
+    "Remember, building expertise in programming takes time and dedication. Enjoy the learning process and keep practicing!"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "course_title": "CSS Fundamentals",
+  "modules": [
+    {
+      "module_title": "Syntax and Selectors",
+      "duration": "1 hour",
+      "context": "Understand how to add styles to websites using CSS.",
+      "content": [
+        "Introduction to CSS syntax.",
+        "Basic selectors (e.g., element selectors, class selectors).",
+        "Applying styles to HTML elements."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "CSS basics"
+        },
+        {
+          "activity_type": "Theory discussion",
+          "description": "Discuss selectors"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Assess understanding"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Style a simple webpage"
+        }
+      ]
+    },
+    {
+      "module_title": "Visual Rules",
+      "duration": "2 hours",
+      "context": "Style individual and groups of elements using various visual CSS rules.",
+      "content": [
+        "Styling text (fonts, colors, text properties).",
+        "Box model (margins, padding, borders).",
+        "Positioning elements (relative, absolute, fixed)."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "Visual CSS rules"
+        },
+        {
+          "activity_type": "Hands-on practice",
+          "description": "Styling elements"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Test visual styling concepts"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Create a styled component"
+        }
+      ]
+    },
+    {
+      "module_title": "Layouts and Flexbox",
+      "duration": "1.5 hours",
+      "context": "Explore layout techniques using CSS.",
+      "content": [
+        "CSS layout models (block, inline, inline-block).",
+        "Introduction to Flexbox.",
+        "Building responsive layouts."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "Layouts and Flexbox"
+        },
+        {
+          "activity_type": "Practical exercises",
+          "description": "Creating flexible layouts"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Test layout concepts"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Design a responsive navigation menu"
+        }
+      ]
+    },
+    {
+      "module_title": "Transitions and Animations",
+      "duration": "2 hours",
+      "context": "Add interactivity and motion to web elements.",
+      "content": [
+        "Transition properties (hover effects, smooth transitions).",
+        "Keyframe animations.",
+        "Creating animated buttons."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "CSS animations"
+        },
+        {
+          "activity_type": "Hands-on project",
+          "description": "Animate a button"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Test knowledge of transitions and animations"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Build an animated banner"
+        }
+      ]
+    }
+  ],
+  "assessment_and_certification": {
+    "duration": "1 hour",
+    "context": "Evaluate learners' understanding.",
+    "content": [
+      "Comprehensive assessment covering all modules.",
+      "Certificate for successful participants."
+    ]
+  }
+}

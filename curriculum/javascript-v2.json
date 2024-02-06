@@ -1,0 +1,121 @@
+{
+  "course_title": "JavaScript Fundamentals",
+  "modules": [
+    {
+      "module_title": "Introduction to JavaScript Basics",
+      "duration": "1 hour",
+      "context": "Understand how to use JavaScript for adding website interactivity.",
+      "content": [
+        "Introduction to JavaScript syntax.",
+        "Basic data types, built-in methods, and variables."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "JavaScript basics"
+        },
+        {
+          "activity_type": "Theory discussion",
+          "description": "Explore data types and variables"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Assess understanding"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Write simple JavaScript code"
+        }
+      ]
+    },
+    {
+      "module_title": "Conditionals and Control Flow",
+      "duration": "2 hours",
+      "context": "Learn how to control program flow using conditionals.",
+      "content": [
+        "Using if, else if, else, switch, and ternary syntax.",
+        "Making decisions in JavaScript."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "Conditionals in JavaScript"
+        },
+        {
+          "activity_type": "Hands-on practice",
+          "description": "Implement conditional logic"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Test knowledge of control flow"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Create a decision-making program"
+        }
+      ]
+    },
+    {
+      "module_title": "Functions and Scope",
+      "duration": "1.5 hours",
+      "context": "Explore JavaScript functions and variable scope.",
+      "content": [
+        "Function syntax, parameters, and return values.",
+        "Global and local scope."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "Functions in JavaScript"
+        },
+        {
+          "activity_type": "Discussion",
+          "description": "Understanding scope"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Assess knowledge of functions"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Write reusable functions"
+        }
+      ]
+    },
+    {
+      "module_title": "Arrays and Loops",
+      "duration": "2 hours",
+      "context": "Learn about arrays and iteration in JavaScript.",
+      "content": [
+        "Creating and manipulating arrays.",
+        "Using for and while loops."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "Arrays and loops"
+        },
+        {
+          "activity_type": "Hands-on project",
+          "description": "Work with arrays and loops"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Test understanding of iteration"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Solve array-related problems"
+        }
+      ]
+    }
+  ],
+  "assessment_and_certification": {
+    "duration": "1 hour",
+    "context": "Evaluate learners' understanding.",
+    "content": [
+      "Comprehensive assessment covering all modules.",
+      "Certificate for successful participants."
+    ]
+  }
+}
