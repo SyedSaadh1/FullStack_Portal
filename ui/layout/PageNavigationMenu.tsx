@@ -47,7 +47,7 @@ export default function PageNavigationMenu({ courses }: PageNavigationMenuProps)
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {courses.map((course) => (
-                <Link key={course.id} href={course.id}>
+                <Link key={course.id} href={course.url || "/"}>
                   <ListItem
                     key={course.name}
                     title={course.name}

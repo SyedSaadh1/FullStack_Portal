@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import {
   Carousel,
@@ -7,7 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
 
 import { Course } from '@/types/course.types'
 import CourseCard from './CourseCard'
@@ -20,10 +18,10 @@ type Props = {
 function CourseCardCarousel({ courses }: Props) {
   return (
     <Carousel plugins={[
-      
+
     ]}>
-      <CarouselContent>
-        {courses?.map(course => <CarouselItem key={course.id} className="basis-1/3">
+      <CarouselContent className='my-8'>
+        {courses?.map(course => <CarouselItem key={course.id} className="h-full basis-1/3">
           <CourseCard course={course} />
         </CarouselItem>)}
       </CarouselContent>
