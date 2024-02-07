@@ -10,24 +10,24 @@
   }, 
   "modules": [
     {
-      "moduleName": "Module 1: Introduction to HTML and Web Development",
+      "title": "Module 1: Introduction to HTML and Web Development",
       "sessions": [
         {
-          "sessionTitle": "Session 1: What is HTML? Why learn it? Web development basics.",
+          "title": "Session 1: What is HTML? Why learn it? Web development basics.",
           "theory": "History of HTML, web development ecosystem, basic website structure.",
           "video": "Introduction to HTML and its role in web development.",
           "quiz": "Multiple-choice questions on basic HTML concepts.",
           "codingTask": "Create a simple HTML document with basic tags and structure."
         },
         {
-          "sessionTitle": "Session 2: Understanding HTML Syntax and Basic Tags.",
+          "title": "Session 2: Understanding HTML Syntax and Basic Tags.",
           "theory": "HTML syntax, elements, attributes, comments.",
           "video": "Explanation of HTML syntax and common tags (e.g., heading, paragraph, image).",
           "quiz": "Matching and identification of HTML elements and attributes.",
           "codingTask": "Build a basic webpage with headings, paragraphs, and images."
         },
         {
-          "sessionTitle": "Session 3: Formatting Text and Links.",
+          "title": "Session 3: Formatting Text and Links.",
           "theory": "Inline and block elements, formatting tags (e.g., bold, italic, underline), linking pages with anchor tags.",
           "video": "Demonstration of text formatting and creating links in HTML.",
           "quiz": "True/False statements about text formatting and linking practices.",
@@ -36,24 +36,24 @@
       ]
     },
     {
-      "moduleName": "Module 2: Building Website Structure with Semantic HTML",
+      "title": "Module 2: Building Website Structure with Semantic HTML",
       "sessions": [
         {
-          "sessionTitle": "Session 1: Introduction to Semantic HTML and its Benefits.",
+          "title": "Session 1: Introduction to Semantic HTML and its Benefits.",
           "theory": "Importance of semantic HTML, common semantic tags (e.g., header, nav, main, section).",
           "video": "Explanation of semantic HTML and its impact on accessibility and SEO.",
           "quiz": "Identifying the correct semantic tag for different website elements.",
           "codingTask": "Rewrite a basic webpage using semantic HTML tags."
         },
         {
-          "sessionTitle": "Session 2: Lists, Tables, and Forms.",
+          "title": "Session 2: Lists, Tables, and Forms.",
           "theory": "Creating ordered and unordered lists, table structure, basic form elements (e.g., input, textarea, button).",
           "video": "Demonstration of creating lists, tables, and forms with HTML.",
           "quiz": "Choosing the appropriate HTML tags for list items, table cells, and form fields.",
           "codingTask": "Build a webpage with a list, a table, and a simple form."
         },
         {
-          "sessionTitle": "Session 3: Embedding Multimedia and Comments.",
+          "title": "Session 3: Embedding Multimedia and Comments.",
           "theory": "Including images, videos, and audio using HTML tags, adding comments for clarity.",
           "video": "Explanation of multimedia embedding and commenting practices in HTML.",
           "quiz": "Identifying the correct HTML tags for different multimedia elements and comments.",
@@ -62,24 +62,24 @@
       ]
     },
     {
-      "moduleName": "Module 3: Introducing CSS and Styling Techniques",
+      "title": "Module 3: Introducing CSS and Styling Techniques",
       "sessions": [
         {
-          "sessionTitle": "Session 1: What is CSS and its Relationship with HTML?",
+          "title": "Session 1: What is CSS and its Relationship with HTML?",
           "theory": "Introduction to CSS, linking CSS to HTML, external and internal stylesheets.",
           "video": "Explanation of CSS and its role in styling HTML elements.",
           "quiz": "Matching HTML elements with their corresponding CSS properties.",
           "codingTask": "Create a basic CSS stylesheet and link it to an HTML document to style the elements."
         },
         {
-          "sessionTitle": "Session 2: Basic CSS Selectors and Properties.",
+          "title": "Session 2: Basic CSS Selectors and Properties.",
           "theory": "Different types of CSS selectors (e.g., ID, class, element), common CSS properties (e.g., color, font, background).",
           "video": "Demonstration of using various CSS selectors and properties to style elements.",
           "quiz": "Choosing the correct CSS selector to target specific elements on a webpage.",
           "codingTask": "Style various elements on a webpage using CSS selectors and properties."
         },
         {
-          "sessionTitle": "Session 3: Intro to Layout and Responsive Design.",
+          "title": "Session 3: Intro to Layout and Responsive Design.",
           "theory": "Basic layout concepts (e.g., floats, positioning), importance of responsive design.",
           "video": "Explanation of layout techniques and introducing responsive design principles.",
           "quiz": "Identifying layout issues and suggesting responsive design solutions.",
@@ -88,22 +88,22 @@
       ]
     },
     {
-      "moduleName": "Module 4: Advanced HTML and Form Validation",
+      "title": "Module 4: Advanced HTML and Form Validation",
       "sessions": [
         {
-          "sessionTitle": "Session 1: Working with Hyperlinks and Navigation.",
+          "title": "Session 1: Working with Hyperlinks and Navigation.",
           "theory": "Different types of links (e.g., absolute, relative), creating navigation menus using HTML.",
           "video": "Demonstration of creating various types of links and building navigation menus."
         },
         {
-          "sessionTitle": "Session 2: Creating Interactive Forms with Advanced Elements.",
+          "title": "Session 2: Creating Interactive Forms with Advanced Elements.",
           "theory": "Input types (e.g., radio, checkbox, date, email), labels, form validation basics.",
           "video": "Demonstration of using advanced form elements and implementing basic validation.",
           "quiz": "Choosing the appropriate input type based on form requirements.",
           "codingTask": "Create a form with different input types and implement client-side validation."
         },
         {
-          "sessionTitle": "Session 3: Intro to JavaScript for Dynamic Interactions.",
+          "title": "Session 3: Intro to JavaScript for Dynamic Interactions.",
           "theory": "Understanding JavaScript and its role in enhancing HTML, adding events and interactivity.",
           "video": "Introduction to JavaScript and showcasing basic interactions (e.g., button clicks, form submissions).",
           "quiz": "Identifying basic JavaScript syntax and commands.",
@@ -112,31 +112,31 @@
       ]
     },
     {
-      "moduleName": "Module 5: Project: Building a Complete Website",
+      "title": "Module 5: Project: Building a Complete Website",
       "sessions": [
         {
-          "sessionTitle": "Session 1: Planning and Designing Your Website.",
+          "title": "Session 1: Planning and Designing Your Website.",
           "theory": "Identifying project goals, creating website mockups and wireframes.",
           "video": "Demonstration of website planning and design process.",
           "quiz": "Evaluating different website designs based on usability and accessibility principles.",
           "task": "Create a mockup or wireframe for your final website project."
         },
         {
-          "sessionTitle": "Session 2: Implementing Website Structure and Styling with HTML and CSS.",
+          "title": "Session 2: Implementing Website Structure and Styling with HTML and CSS.",
           "theory": "Putting it all together - using advanced HTML and CSS techniques for a complete website.",
           "video": "Building a website using learned HTML and CSS skills, incorporating best practices.",
           "quiz": "Choosing the appropriate HTML and CSS solutions for specific website elements and design goals.",
           "task": "Develop the HTML and CSS structure for your website project based on the mockup/wireframe."
         },
         {
-          "sessionTitle": "Session 3: Adding Interactivity and Finishing Touches with JavaScript.",
+          "title": "Session 3: Adding Interactivity and Finishing Touches with JavaScript.",
           "theory": "Implementing advanced JavaScript features and libraries for enhanced interactivity (e.g., animations, data manipulation).",
           "video": "Adding JavaScript functionalities to a website, showcasing practical examples.",
           "quiz": "Identifying the potential use of JavaScript libraries for specific website features.",
           "task": "Integrate JavaScript into your project to add interactivity and desired functionalities."
         },
         {
-          "sessionTitle": "Session 4: Deploying Your Website and Final Review.",
+          "title": "Session 4: Deploying Your Website and Final Review.",
           "theory": "Different hosting options, uploading website files, basic SEO considerations.",
           "video": "Demonstrating website deployment process and essential SEO practices.",
           "quiz": "Identifying key factors for successful website deployment and maintenance.",

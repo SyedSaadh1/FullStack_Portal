@@ -9,5 +9,17 @@ export interface Course {
   is_public?: boolean,
   thumbnail?: CourseImage | null
   banner?: CourseImage | null
+  courseDuration?: string
+  modules: Module[]
   url?: string | null
+}
+
+export interface Module {
+  title: string
+  sessions: Session[]
+}
+
+export interface Session {
+  title: string
+  sessionNumber: number
 }

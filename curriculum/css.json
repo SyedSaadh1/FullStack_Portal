@@ -11,7 +11,7 @@
   },
   "modules": [
     {
-      "moduleName": "Module 1: CSS Fundamentals",
+      "title": "Module 1: CSS Fundamentals",
       "sessions": [
         {
           "sessionNumber": 1,
@@ -46,7 +46,7 @@
       ]
     },
     {
-      "moduleName": "Module 2: Advanced CSS Styling and Techniques",
+      "title": "Module 2: Advanced CSS Styling and Techniques",
       "sessions": [
         {
           "sessionNumber": 1,
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "moduleName": "Module 3: Preprocessors and Frameworks",
+      "title": "Module 3: Preprocessors and Frameworks",
       "sessions": [
         {
           "sessionNumber": 1,
@@ -106,7 +106,7 @@
       ]
     },
     {
-      "moduleName": "Module 4: Best Practices and Optimization",
+      "title": "Module 4: Best Practices and Optimization",
       "sessions": [
         {
           "sessionNumber": 2,
