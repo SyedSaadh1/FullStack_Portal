@@ -23,7 +23,14 @@ const CourseInfoDetails = ({ course }: Props) => {
               <AccordionTrigger>{module?.title}</AccordionTrigger>
               <AccordionContent>
                 <ul className='flex flex-col gap-2 pl-4'>
-                  {module?.sessions?.map((session) => <li key={session?.sessionNumber}>{session?.title}</li>)}
+                  {module?.sessions?.map((session, idx) => <li key={session?.sessionNumber}>
+                    <span>{idx + 1}. {session?.title}</span>
+
+                    <ol>
+                      {session?.topics?.map((topic) => <li key={topic}>--- {topic}</li>)}
+                    </ol>
+                  </li>)}
+                  
                 </ul>
               </AccordionContent>
             </AccordionItem>)}

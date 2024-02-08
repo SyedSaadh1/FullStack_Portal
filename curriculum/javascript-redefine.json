@@ -8,19 +8,43 @@
         "sessions": [
           {
             "title": "An Introduction to JavaScript",
-            "href": "https://javascript.info/intro"
+            "href": "https://javascript.info/intro",
+            "topics": [
+              "What is JavaScript?",
+              "What can in-browser JavaScript do?",
+              "What CAN’T in-browser JavaScript do?",
+              "What makes JavaScript unique?",
+              "Languages “over” JavaScript",
+              "Summary"
+            ]
           },
           {
             "title": "Manuals and specifications",
-            "href": "https://javascript.info/manuals-specifications"
+            "href": "https://javascript.info/manuals-specifications",
+            "topics": [
+              "Specification",
+              "Manuals",
+              "Compatibility tables"
+            ]
           },
           {
             "title": "Code editors",
-            "href": "https://javascript.info/code-editors"
+            "href": "https://javascript.info/code-editors",
+            "topics": [
+              "IDE",
+              "Lightweight editors",
+              "Let’s not argue"
+            ]
           },
           {
             "title": "Developer console",
-            "href": "https://javascript.info/devtools"
+            "href": "https://javascript.info/devtools",
+            "topics": [
+              "Google Chrome",
+              "Firefox, Edge, and others",
+              "Safari",
+              "Summary"
+            ]
           }
         ]
       },
@@ -29,75 +53,210 @@
         "sessions": [
           {
             "title": "Hello, world!",
-            "href": "https://javascript.info/hello-world"
+            "href": "https://javascript.info/hello-world",
+            "topics": [
+              "The “script” tag",
+              "Modern markup",
+              "External scripts",
+              "Summary"
+            ]
           },
           {
             "title": "Code structure",
-            "href": "https://javascript.info/structure"
+            "href": "https://javascript.info/structure",
+            "topics": [
+              "Statements",
+              "Semicolons",
+              "Comments"
+            ]
           },
           {
             "title": "The modern mode, \"use strict\"",
-            "href": "https://javascript.info/strict-mode"
+            "href": "https://javascript.info/strict-mode",
+            "topics": [
+              "“use strict”",
+              "Browser console",
+              "Should we “use strict”?"
+            ]
           },
           {
             "title": "Variables",
-            "href": "https://javascript.info/variables"
+            "href": "https://javascript.info/variables",
+            "topics": [
+              "A variable",
+              "A real-life analogy",
+              "Variable naming",
+              "Constants",
+              "Name things right",
+              "Summary"
+            ]
           },
           {
             "title": "Data types",
-            "href": "https://javascript.info/types"
+            "href": "https://javascript.info/types",
+            "topics": [
+              "Number",
+              "BigInt",
+              "String",
+              "Boolean (logical type)",
+              "The “null” value",
+              "The “undefined” value",
+              "Objects and Symbols",
+              "The typeof operator",
+              "Summary"
+            ]
           },
           {
             "title": "Interaction: alert, prompt, confirm",
-            "href": "https://javascript.info/alert-prompt-confirm"
+            "href": "https://javascript.info/alert-prompt-confirm",
+            "topics": [
+              "alert",
+              "prompt",
+              "confirm",
+              "Summary"
+            ]
           },
           {
             "title": "Type Conversions",
-            "href": "https://javascript.info/type-conversions"
+            "href": "https://javascript.info/type-conversions",
+            "topics": [
+              "String Conversion",
+              "Numeric Conversion",
+              "Boolean Conversion",
+              "Summary"
+            ]
           },
           {
             "title": "Basic operators, maths",
-            "href": "https://javascript.info/operators"
+            "href": "https://javascript.info/operators",
+            "topics": [
+              "Terms: “unary”, “binary”, “operand”",
+              "Maths",
+              "String concatenation with binary +",
+              "Numeric conversion, unary +",
+              "Operator precedence",
+              "Assignment",
+              "Modify-in-place",
+              "Increment/decrement",
+              "Bitwise operators",
+              "Comma"
+            ]
           },
           {
             "title": "Comparisons",
-            "href": "https://javascript.info/comparison"
+            "href": "https://javascript.info/comparison",
+            "topics": [
+              "Boolean is the result",
+              "String comparison",
+              "Comparison of different types",
+              "Strict equality",
+              "Comparison with null and undefined",
+              "Summary"
+            ]
           },
           {
             "title": "Conditional branching: if, '?'",
-            "href": "https://javascript.info/ifelse"
+            "href": "https://javascript.info/ifelse",
+            "topics": [
+              "The “if” statement",
+              "Boolean conversion",
+              "The “else” clause",
+              "Several conditions: “else if”",
+              "Conditional operator ‘?’",
+              "Multiple ‘?’",
+              "Non-traditional use of ‘?’"
+            ]
           },
           {
             "title": "Logical operators",
-            "href": "https://javascript.info/logical-operators"
+            "href": "https://javascript.info/logical-operators",
+            "topics": [
+              "|| (OR)",
+              "OR \"||\" finds the first truthy value",
+              "&& (AND)",
+              "AND “&&” finds the first falsy value",
+              "! (NOT)"
+            ]
           },
           {
             "title": "Nullish coalescing operator '??'",
-            "href": "https://javascript.info/nullish-coalescing-operator"
+            "href": "https://javascript.info/nullish-coalescing-operator",
+            "topics": [
+              "Comparison with ||",
+              "Precedence",
+              "Summary"
+            ]
           },
           {
             "title": "Loops: while and for",
-            "href": "https://javascript.info/while-for"
+            "href": "https://javascript.info/while-for",
+            "topics": [
+              "The “while” loop",
+              "The “do…while” loop",
+              "The “for” loop",
+              "Breaking the loop",
+              "Continue to the next iteration",
+              "Labels for break/continue",
+              "Summary"
+            ]
           },
           {
             "title": "The \"switch\" statement",
-            "href": "https://javascript.info/switch"
+            "href": "https://javascript.info/switch",
+            "topics": [
+              "The syntax",
+              "An example",
+              "Grouping of “case”",
+              "Type matters"
+            ]
           },
           {
             "title": "Functions",
-            "href": "https://javascript.info/function-basics"
+            "href": "https://javascript.info/function-basics",
+            "topics": [
+              "Function Declaration",
+              "Local variables",
+              "Outer variables",
+              "Parameters",
+              "Default values",
+              "Returning a value",
+              "Naming a function",
+              "Functions == Comments",
+              "Summary"
+            ]
           },
           {
             "title": "Function expressions",
-            "href": "https://javascript.info/function-expressions"
+            "href": "https://javascript.info/function-expressions",
+            "topics": [
+              "Function is a value",
+              "Callback functions",
+              "Function Expression vs Function Declaration",
+              "Summary"
+            ]
           },
           {
             "title": "Arrow functions, the basics",
-            "href": "https://javascript.info/arrow-functions-basics"
+            "href": "https://javascript.info/arrow-functions-basics",
+            "topics": [
+              "Multiline arrow functions",
+              "Summary"
+            ]
           },
           {
             "title": "JavaScript specials",
-            "href": "https://javascript.info/javascript-specials"
+            "href": "https://javascript.info/javascript-specials",
+            "topics": [
+              "Code structure",
+              "Strict mode",
+              "Variables",
+              "Interaction",
+              "Operators",
+              "Loops",
+              "The “switch” construct",
+              "Functions",
+              "More to come"
+            ]
           }
         ]
       },
@@ -106,27 +265,82 @@
         "sessions": [
           {
             "title": "Debugging in the browser",
-            "href": "https://javascript.info/debugging-chrome"
+            "href": "https://javascript.info/debugging-chrome",
+            "topics": [
+              "The “Sources” panel",
+              "Console",
+              "Breakpoints",
+              "The command “debugger”",
+              "Pause and look around",
+              "Tracing the execution",
+              "Logging",
+              "Summary"
+            ]
           },
           {
             "title": "Coding Style",
-            "href": "https://javascript.info/coding-style"
+            "href": "https://javascript.info/coding-style",
+            "topics": [
+              "Syntax",
+              "Function Placement",
+              "Style Guides",
+              "Automated Linters",
+              "Summary"
+            ]
           },
           {
             "title": "Comments",
-            "href": "https://javascript.info/comments"
+            "href": "https://javascript.info/comments",
+            "topics": [
+              "Bad comments",
+              "Good comments",
+              "Summary"
+            ]
           },
           {
             "title": "Ninja code",
-            "href": "https://javascript.info/ninja-code"
+            "href": "https://javascript.info/ninja-code",
+            "topics": [
+              "Brevity is the soul of wit",
+              "One-letter variables",
+              "Use abbreviations",
+              "Soar high. Be abstract.",
+              "Attention test",
+              "Smart synonyms",
+              "Reuse names",
+              "Underscores for fun",
+              "Show your love",
+              "Overlap outer variables",
+              "Side-effects everywhere!",
+              "Powerful functions!",
+              "Summary"
+            ]
           },
           {
             "title": "Automated testing with Mocha",
-            "href": "https://javascript.info/testing-mocha"
+            "href": "https://javascript.info/testing-mocha",
+            "topics": [
+              "Why do we need tests?",
+              "Behavior Driven Development (BDD)",
+              "Development of “pow”: the spec",
+              "The development flow",
+              "The spec in action",
+              "Initial implementation",
+              "Improving the spec",
+              "Improving the implementation",
+              "Nested describe",
+              "Extending the spec",
+              "Summary"
+            ]
           },
           {
             "title": "Polyfills and transpilers",
-            "href": "https://javascript.info/polyfills"
+            "href": "https://javascript.info/polyfills",
+            "topics": [
+              "Transpilers",
+              "Polyfills",
+              "Summary"
+            ]
           }
         ]
       },
@@ -135,35 +349,95 @@
         "sessions": [
           {
             "title": "Objects",
-            "href": "https://javascript.info/object"
+            "href": "https://javascript.info/object",
+            "topics": [
+              "Literals and properties",
+              "Square brackets",
+              "Property value shorthand",
+              "Property names limitations",
+              "Property existence test, “in” operator",
+              "The \"for..in\" loop",
+              "Summary"
+            ]
           },
           {
             "title": "Object references and copying",
-            "href": "https://javascript.info/object-copy"
+            "href": "https://javascript.info/object-copy",
+            "topics": [
+              "Comparison by reference",
+              "Cloning and merging, Object.assign",
+              "Nested cloning",
+              "Summary"
+            ]
           },
           {
             "title": "Garbage collection",
-            "href": "https://javascript.info/garbage-collection"
+            "href": "https://javascript.info/garbage-collection",
+            "topics": [
+              "Reachability",
+              "A simple example",
+              "Two references",
+              "Interlinked objects",
+              "Unreachable island",
+              "Internal algorithms",
+              "Summary"
+            ]
           },
           {
             "title": "Object methods, \"this\"",
-            "href": "https://javascript.info/object-methods"
+            "href": "https://javascript.info/object-methods",
+            "topics": [
+              "Method examples",
+              "“this” in methods",
+              "“this” is not bound",
+              "Arrow functions have no “this”",
+              "Summary"
+            ]
           },
           {
             "title": "Constructor, operator \"new\"",
-            "href": "https://javascript.info/constructor-new"
+            "href": "https://javascript.info/constructor-new",
+            "topics": [
+              "Constructor function",
+              "Constructor mode test: new.target",
+              "Return from constructors",
+              "Methods in constructor",
+              "Summary"
+            ]
           },
           {
             "title": "Optional chaining '?.'",
-            "href": "https://javascript.info/optional-chaining"
+            "href": "https://javascript.info/optional-chaining",
+            "topics": [
+              "The “non-existing property” problem",
+              "Optional chaining",
+              "Short-circuiting",
+              "Other variants: ?.(), ?.[]",
+              "Summary"
+            ]
           },
           {
             "title": "Symbol type",
-            "href": "https://javascript.info/symbol"
+            "href": "https://javascript.info/symbol",
+            "topics": [
+              "Symbols",
+              "“Hidden” properties",
+              "Global symbols",
+              "System symbols",
+              "Summary"
+            ]
           },
           {
             "title": "Object to primitive conversion",
-            "href": "https://javascript.info/object-toprimitive"
+            "href": "https://javascript.info/object-toprimitive",
+            "topics": [
+              "Conversion rules",
+              "Hints",
+              "Symbol.toPrimitive",
+              "toString/valueOf",
+              "Further conversions",
+              "Summary"
+            ]
           }
         ]
       },
@@ -172,51 +446,155 @@
         "sessions": [
           {
             "title": "Methods of primitives",
-            "href": "https://javascript.info/primitives-methods"
+            "href": "https://javascript.info/primitives-methods",
+            "topics": [
+              "A primitive as an object",
+              "Summary"
+            ]
           },
           {
             "title": "Numbers",
-            "href": "https://javascript.info/number"
+            "href": "https://javascript.info/number",
+            "topics": [
+              "More ways to write a number",
+              "toString(base)",
+              "Rounding",
+              "Imprecise calculations",
+              "Tests: isFinite and isNaN",
+              "parseInt and parseFloat",
+              "Other math functions",
+              "Summary"
+            ]
           },
           {
             "title": "Strings",
-            "href": "https://javascript.info/string"
+            "href": "https://javascript.info/string",
+            "topics": [
+              "Quotes",
+              "Special characters",
+              "String length",
+              "Accessing characters",
+              "Strings are immutable",
+              "Changing the case",
+              "Searching for a substring",
+              "Getting a substring",
+              "Comparing strings",
+              "Summary"
+            ]
           },
           {
             "title": "Arrays",
-            "href": "https://javascript.info/array"
+            "href": "https://javascript.info/array",
+            "topics": [
+              "Declaration",
+              "Get last elements with “at”",
+              "Methods pop/push, shift/unshift",
+              "Internals",
+              "Performance",
+              "Loops",
+              "A word about “length”",
+              "new Array()",
+              "Multidimensional arrays",
+              "toString",
+              "Don’t compare arrays with ==",
+              "Summary"
+            ]
           },
           {
             "title": "Array methods",
-            "href": "https://javascript.info/array-methods"
+            "href": "https://javascript.info/array-methods",
+            "topics": [
+              "Add/remove items",
+              "Iterate: forEach",
+              "Searching in array",
+              "Transform an array",
+              "Array.isArray",
+              "Most methods support “thisArg”",
+              "Summary"
+            ]
           },
           {
             "title": "Iterables",
-            "href": "https://javascript.info/iterable"
+            "href": "https://javascript.info/iterable",
+            "topics": [
+              "Symbol.iterator",
+              "String is iterable",
+              "Calling an iterator explicitly",
+              "Iterables and array-likes",
+              "Array.from",
+              "Summary"
+            ]
           },
           {
             "title": "Map and Set",
-            "href": "https://javascript.info/map-set"
+            "href": "https://javascript.info/map-set",
+            "topics": [
+              "Map",
+              "Iteration over Map",
+              "Object.entries: Map from Object",
+              "Object.fromEntries: Object from Map",
+              "Set",
+              "Iteration over Set",
+              "Summary"
+            ]
           },
           {
             "title": "WeakMap and WeakSet",
-            "href": "https://javascript.info/weakmap-weakset"
+            "href": "https://javascript.info/weakmap-weakset",
+            "topics": [
+              "WeakMap",
+              "Use case: additional data",
+              "Use case: caching",
+              "WeakSet",
+              "Summary"
+            ]
           },
           {
             "title": "Object.keys, values, entries",
-            "href": "https://javascript.info/keys-values-entries"
+            "href": "https://javascript.info/keys-values-entries",
+            "topics": [
+              "Object.keys, values, entries",
+              "Transforming objects"
+            ]
           },
           {
             "title": "Destructuring assignment",
-            "href": "https://javascript.info/destructuring-assignment"
+            "href": "https://javascript.info/destructuring-assignment",
+            "topics": [
+              "Array destructuring",
+              "Object destructuring",
+              "Nested destructuring",
+              "Smart function parameters",
+              "Summary"
+            ]
           },
           {
             "title": "Date and time",
-            "href": "https://javascript.info/date"
+            "href": "https://javascript.info/date",
+            "topics": [
+              "Creation",
+              "Access date components",
+              "Setting date components",
+              "Autocorrection",
+              "Date to number, date diff",
+              "Date.now()",
+              "Benchmarking",
+              "Date.parse from a string",
+              "Summary"
+            ]
           },
           {
             "title": "JSON methods, toJSON",
-            "href": "https://javascript.info/json"
+            "href": "https://javascript.info/json",
+            "topics": [
+              "JSON.stringify",
+              "Excluding and transforming: replacer",
+              "Formatting: space",
+              "Custom “toJSON”",
+              "JSON.parse",
+              "Using reviver",
+              "Summary"
+            ]
           }
         ]
       },
@@ -225,47 +603,119 @@
         "sessions": [
           {
             "title": "Recursion and stack",
-            "href": "https://javascript.info/recursion"
+            "href": "https://javascript.info/recursion",
+            "topics": [
+              "Two ways of thinking",
+              "The execution context and stack",
+              "Recursive traversals",
+              "Recursive structures",
+              "Summary"
+            ]
           },
           {
             "title": "Rest parameters and spread syntax",
-            "href": "https://javascript.info/rest-parameters-spread"
+            "href": "https://javascript.info/rest-parameters-spread",
+            "topics": [
+              "Rest parameters ...",
+              "The “arguments” variable",
+              "Spread syntax",
+              "Copy an array/object",
+              "Summary"
+            ]
           },
           {
             "title": "Variable scope, closure",
-            "href": "https://javascript.info/closure"
+            "href": "https://javascript.info/closure",
+            "topics": [
+              "Code blocks",
+              "Nested functions",
+              "Lexical Environment",
+              "Garbage collection"
+            ]
           },
           {
             "title": "The old \"var\"",
-            "href": "https://javascript.info/var"
+            "href": "https://javascript.info/var",
+            "topics": [
+              "“var” has no block scope",
+              "“var” tolerates redeclarations",
+              "“var” variables can be declared below their use",
+              "IIFE",
+              "Summary"
+            ]
           },
           {
             "title": "Global object",
-            "href": "https://javascript.info/global-object"
+            "href": "https://javascript.info/global-object",
+            "topics": [
+              "Using for polyfills",
+              "Summary"
+            ]
           },
           {
             "title": "Function object, NFE",
-            "href": "https://javascript.info/function-object"
+            "href": "https://javascript.info/function-object",
+            "topics": [
+              "The “name” property",
+              "The “length” property",
+              "Custom properties",
+              "Named Function Expression",
+              "Summary"
+            ]
           },
           {
             "title": "The \"new Function\" syntax",
-            "href": "https://javascript.info/new-function"
+            "href": "https://javascript.info/new-function",
+            "topics": [
+              "Syntax",
+              "Closure",
+              "Summary"
+            ]
           },
           {
             "title": "Scheduling: setTimeout and setInterval",
-            "href": "https://javascript.info/settimeout-setinterval"
+            "href": "https://javascript.info/settimeout-setinterval",
+            "topics": [
+              "setTimeout",
+              "setInterval",
+              "Nested setTimeout",
+              "Zero delay setTimeout",
+              "Summary"
+            ]
           },
           {
             "title": "Decorators and forwarding, call/apply",
-            "href": "https://javascript.info/call-apply-decorators"
+            "href": "https://javascript.info/call-apply-decorators",
+            "topics": [
+              "Transparent caching",
+              "Using “func.call” for the context",
+              "Going multi-argument",
+              "func.apply",
+              "Borrowing a method",
+              "Decorators and function properties",
+              "Summary"
+            ]
           },
           {
             "title": "Function binding",
-            "href": "https://javascript.info/bind"
+            "href": "https://javascript.info/bind",
+            "topics": [
+              "Losing “this”",
+              "Solution 1: a wrapper",
+              "Solution 2: bind",
+              "Partial functions",
+              "Going partial without context",
+              "Summary"
+            ]
           },
           {
             "title": "Arrow functions revisited",
-            "href": "https://javascript.info/arrow-functions"
+            "href": "https://javascript.info/arrow-functions",
+            "topics": [
+              "Arrow functions have no “this”",
+              "Arrows have no “arguments”",
+              "Summary"
+            ]
           }
         ]
       },
@@ -274,11 +724,26 @@
         "sessions": [
           {
             "title": "Property flags and descriptors",
-            "href": "https://javascript.info/property-descriptors"
+            "href": "https://javascript.info/property-descriptors",
+            "topics": [
+              "Property flags",
+              "Non-writable",
+              "Non-enumerable",
+              "Non-configurable",
+              "Object.defineProperties",
+              "Object.getOwnPropertyDescriptors",
+              "Sealing an object globally"
+            ]
           },
           {
             "title": "Property getters and setters",
-            "href": "https://javascript.info/property-accessors"
+            "href": "https://javascript.info/property-accessors",
+            "topics": [
+              "Getters and setters",
+              "Accessor descriptors",
+              "Smarter getters/setters",
+              "Using for compatibility"
+            ]
           }
         ]
       },
@@ -287,19 +752,43 @@
         "sessions": [
           {
             "title": "Prototypal inheritance",
-            "href": "https://javascript.info/prototype-inheritance"
+            "href": "https://javascript.info/prototype-inheritance",
+            "topics": [
+              "[[Prototype]]",
+              "Writing doesn’t use prototype",
+              "The value of “this”",
+              "for…in loop",
+              "Summary"
+            ]
           },
           {
             "title": "F.prototype",
-            "href": "https://javascript.info/function-prototype"
+            "href": "https://javascript.info/function-prototype",
+            "topics": [
+              "Default F.prototype, constructor property",
+              "Summary"
+            ]
           },
           {
             "title": "Native prototypes",
-            "href": "https://javascript.info/native-prototypes"
+            "href": "https://javascript.info/native-prototypes",
+            "topics": [
+              "Object.prototype",
+              "Other built-in prototypes",
+              "Primitives",
+              "Changing native prototypes",
+              "Borrowing from prototypes",
+              "Summary"
+            ]
           },
           {
             "title": "Prototype methods, objects without __proto__",
-            "href": "https://javascript.info/prototype-methods"
+            "href": "https://javascript.info/prototype-methods",
+            "topics": [
+              "Brief history",
+              "\"Very plain\" objects",
+              "Summary"
+            ]
           }
         ]
       },
@@ -308,31 +797,74 @@
         "sessions": [
           {
             "title": "Class basic syntax",
-            "href": "https://javascript.info/class"
+            "href": "https://javascript.info/class",
+            "topics": [
+              "The “class” syntax",
+              "What is a class?",
+              "Not just a syntactic sugar",
+              "Class Expression",
+              "Getters/setters",
+              "Computed names […]",
+              "Class fields",
+              "Summary"
+            ]
           },
           {
             "title": "Class inheritance",
-            "href": "https://javascript.info/class-inheritance"
+            "href": "https://javascript.info/class-inheritance",
+            "topics": [
+              "The “extends” keyword",
+              "Overriding a method",
+              "Overriding constructor",
+              "Super: internals, [[HomeObject]]",
+              "Summary"
+            ]
           },
           {
             "title": "Static properties and methods",
-            "href": "https://javascript.info/static-properties-methods"
+            "href": "https://javascript.info/static-properties-methods",
+            "topics": [
+              "Static properties",
+              "Inheritance of static properties and methods",
+              "Summary"
+            ]
           },
           {
             "title": "Private and protected properties and methods",
-            "href": "https://javascript.info/private-protected-properties-methods"
+            "href": "https://javascript.info/private-protected-properties-methods",
+            "topics": [
+              "A real-life example",
+              "Internal and external interface",
+              "Protecting “waterAmount”",
+              "Read-only “power”",
+              "Private “#waterLimit”",
+              "Summary"
+            ]
           },
           {
             "title": "Extending built-in classes",
-            "href": "https://javascript.info/extend-natives"
+            "href": "https://javascript.info/extend-natives",
+            "topics": [
+              "No static inheritance in built-ins"
+            ]
           },
           {
             "title": "Class checking: \"instanceof\"",
-            "href": "https://javascript.info/instanceof"
+            "href": "https://javascript.info/instanceof",
+            "topics": [
+              "The instanceof operator",
+              "Bonus: Object.prototype.toString for the type",
+              "Summary"
+            ]
           },
           {
             "title": "Mixins",
-            "href": "https://javascript.info/mixins"
+            "href": "https://javascript.info/mixins",
+            "topics": [
+              "A mixin example",
+              "EventMixin",
+              "Summary"
+            ]
           }
         ]
       },
@@ -341,11 +873,28 @@
         "sessions": [
           {
             "title": "Error handling, \"try...catch\"",
-            "href": "https://javascript.info/try-catch"
+            "href": "https://javascript.info/try-catch",
+            "topics": [
+              "The “try…catch” syntax",
+              "Error object",
+              "Optional “catch” binding",
+              "Using “try…catch”",
+              "Throwing our own errors",
+              "Rethrowing",
+              "try…catch…finally",
+              "Global catch",
+              "Summary"
+            ]
           },
           {
             "title": "Custom errors, extending Error",
-            "href": "https://javascript.info/custom-errors"
+            "href": "https://javascript.info/custom-errors",
+            "topics": [
+              "Extending Error",
+              "Further inheritance",
+              "Wrapping exceptions",
+              "Summary"
+            ]
           }
         ]
       },
@@ -354,35 +903,77 @@
         "sessions": [
           {
             "title": "Introduction: callbacks",
-            "href": "https://javascript.info/callbacks"
+            "href": "https://javascript.info/callbacks",
+            "topics": [
+              "Callback in callback",
+              "Handling errors",
+              "Pyramid of Doom"
+            ]
           },
           {
             "title": "Promise",
-            "href": "https://javascript.info/promise-basics"
+            "href": "https://javascript.info/promise-basics",
+            "topics": [
+              "Consumers: then, catch",
+              "Cleanup: finally",
+              "Example: loadScript"
+            ]
           },
           {
             "title": "Promises chaining",
-            "href": "https://javascript.info/promise-chaining"
+            "href": "https://javascript.info/promise-chaining",
+            "topics": [
+              "Returning promises",
+              "Example: loadScript",
+              "Bigger example: fetch",
+              "Summary"
+            ]
           },
           {
             "title": "Error handling with promises",
-            "href": "https://javascript.info/promise-error-handling"
+            "href": "https://javascript.info/promise-error-handling",
+            "topics": [
+              "Implicit try…catch",
+              "Rethrowing",
+              "Unhandled rejections",
+              "Summary"
+            ]
           },
           {
             "title": "Promise API",
-            "href": "https://javascript.info/promise-api"
+            "href": "https://javascript.info/promise-api",
+            "topics": [
+              "Promise.all",
+              "Promise.allSettled",
+              "Promise.race",
+              "Promise.any",
+              "Promise.resolve/reject",
+              "Summary"
+            ]
           },
           {
             "title": "Promisification",
-            "href": "https://javascript.info/promisify"
+            "href": "https://javascript.info/promisify",
+            "topics": []
           },
           {
             "title": "Microtasks",
-            "href": "https://javascript.info/microtask-queue"
+            "href": "https://javascript.info/microtask-queue",
+            "topics": [
+              "Microtasks queue",
+              "Unhandled rejection",
+              "Summary"
+            ]
           },
           {
             "title": "Async/await",
-            "href": "https://javascript.info/async-await"
+            "href": "https://javascript.info/async-await",
+            "topics": [
+              "Async functions",
+              "Await",
+              "Error handling",
+              "Summary"
+            ]
           }
         ]
       },
@@ -391,11 +982,29 @@
         "sessions": [
           {
             "title": "Generators",
-            "href": "https://javascript.info/generators"
+            "href": "https://javascript.info/generators",
+            "topics": [
+              "Generator functions",
+              "Generators are iterable",
+              "Using generators for iterables",
+              "Generator composition",
+              "“yield” is a two-way street",
+              "generator.throw",
+              "generator.return",
+              "Summary"
+            ]
           },
           {
             "title": "Async iteration and generators",
-            "href": "https://javascript.info/async-iterators-generators"
+            "href": "https://javascript.info/async-iterators-generators",
+            "topics": [
+              "Recall iterables",
+              "Async iterables",
+              "Recall generators",
+              "Async generators (finally)",
+              "Real-life example: paginated data",
+              "Summary"
+            ]
           }
         ]
       },
@@ -404,15 +1013,35 @@
         "sessions": [
           {
             "title": "Modules, introduction",
-            "href": "https://javascript.info/modules-intro"
+            "href": "https://javascript.info/modules-intro",
+            "topics": [
+              "What is a module?",
+              "Core module features",
+              "Browser-specific features",
+              "Build tools",
+              "Summary"
+            ]
           },
           {
             "title": "Export and Import",
-            "href": "https://javascript.info/import-export"
+            "href": "https://javascript.info/import-export",
+            "topics": [
+              "Export before declarations",
+              "Export apart from declarations",
+              "Import *",
+              "Import “as”",
+              "Export “as”",
+              "Export default",
+              "Re-export",
+              "Summary"
+            ]
           },
           {
             "title": "Dynamic imports",
-            "href": "https://javascript.info/modules-dynamic-imports"
+            "href": "https://javascript.info/modules-dynamic-imports",
+            "topics": [
+              "The import() expression"
+            ]
           }
         ]
       },
@@ -421,31 +1050,79 @@
         "sessions": [
           {
             "title": "Proxy and Reflect",
-            "href": "https://javascript.info/proxy"
+            "href": "https://javascript.info/proxy",
+            "topics": [
+              "Proxy",
+              "Default value with “get” trap",
+              "Validation with “set” trap",
+              "Iteration with “ownKeys” and “getOwnPropertyDescriptor”",
+              "Protected properties with “deleteProperty” and other traps",
+              "“In range” with “has” trap",
+              "Wrapping functions: \"apply\"",
+              "Reflect",
+              "Proxy limitations",
+              "Revocable proxies",
+              "References",
+              "Summary"
+            ]
           },
           {
             "title": "Eval: run a code string",
-            "href": "https://javascript.info/eval"
+            "href": "https://javascript.info/eval",
+            "topics": [
+              "Using “eval”",
+              "Summary"
+            ]
           },
           {
             "title": "Currying",
-            "href": "https://javascript.info/currying-partials"
+            "href": "https://javascript.info/currying-partials",
+            "topics": [
+              "Currying? What for?",
+              "Advanced curry implementation",
+              "Summary"
+            ]
           },
           {
             "title": "Reference Type",
-            "href": "https://javascript.info/reference-type"
+            "href": "https://javascript.info/reference-type",
+            "topics": [
+              "Reference type explained",
+              "Summary"
+            ]
           },
           {
             "title": "BigInt",
-            "href": "https://javascript.info/bigint"
+            "href": "https://javascript.info/bigint",
+            "topics": [
+              "Math operators",
+              "Comparisons",
+              "Boolean operations",
+              "Polyfills",
+              "References"
+            ]
           },
           {
             "title": "Unicode, String internals",
-            "href": "https://javascript.info/unicode"
+            "href": "https://javascript.info/unicode",
+            "topics": [
+              "Surrogate pairs",
+              "Diacritical marks and normalization"
+            ]
           },
           {
             "title": "WeakRef and FinalizationRegistry",
-            "href": "https://javascript.info/weakref-finalizationregistry"
+            "href": "https://javascript.info/weakref-finalizationregistry",
+            "topics": [
+              "WeakRef",
+              "WeakRef use cases",
+              "Example №1: using WeakRef for caching",
+              "Example №2: Using WeakRef to track DOM objects",
+              "FinalizationRegistry",
+              "Caching with FinalizationRegistry",
+              "Using WeakRef and FinalizationRegistry in practice",
+              "Summary"
+            ]
           }
         ]
       }
@@ -460,47 +1137,146 @@
         "sessions": [
           {
             "title": "Browser environment, specs",
-            "href": "https://javascript.info/browser-environment"
+            "href": "https://javascript.info/browser-environment",
+            "topics": [
+              "DOM (Document Object Model)",
+              "BOM (Browser Object Model)",
+              "Summary"
+            ]
           },
           {
             "title": "DOM tree",
-            "href": "https://javascript.info/dom-nodes"
+            "href": "https://javascript.info/dom-nodes",
+            "topics": [
+              "An example of the DOM",
+              "Autocorrection",
+              "Other node types",
+              "See it for yourself",
+              "Interaction with console",
+              "Summary"
+            ]
           },
           {
             "title": "Walking the DOM",
-            "href": "https://javascript.info/dom-navigation"
+            "href": "https://javascript.info/dom-navigation",
+            "topics": [
+              "On top: documentElement and body",
+              "Children: childNodes, firstChild, lastChild",
+              "Siblings and the parent",
+              "Element-only navigation",
+              "More links: tables",
+              "Summary"
+            ]
           },
           {
             "title": "Searching: getElement*, querySelector*",
-            "href": "https://javascript.info/searching-elements-dom"
+            "href": "https://javascript.info/searching-elements-dom",
+            "topics": [
+              "document.getElementById or just id",
+              "querySelectorAll",
+              "querySelector",
+              "matches",
+              "closest",
+              "getElementsBy*",
+              "Live collections",
+              "Summary"
+            ]
           },
           {
             "title": "Node properties: type, tag and contents",
-            "href": "https://javascript.info/basic-dom-node-properties"
+            "href": "https://javascript.info/basic-dom-node-properties",
+            "topics": [
+              "DOM node classes",
+              "The “nodeType” property",
+              "Tag: nodeName and tagName",
+              "innerHTML: the contents",
+              "outerHTML: full HTML of the element",
+              "nodeValue/data: text node content",
+              "textContent: pure text",
+              "The “hidden” property",
+              "More properties",
+              "Summary"
+            ]
           },
           {
             "title": "Attributes and properties",
-            "href": "https://javascript.info/dom-attributes-and-properties"
+            "href": "https://javascript.info/dom-attributes-and-properties",
+            "topics": [
+              "DOM properties",
+              "HTML attributes",
+              "Property-attribute synchronization",
+              "DOM properties are typed",
+              "Non-standard attributes, dataset",
+              "Summary"
+            ]
           },
           {
             "title": "Modifying the document",
-            "href": "https://javascript.info/modifying-document"
+            "href": "https://javascript.info/modifying-document",
+            "topics": [
+              "Example: show a message",
+              "Creating an element",
+              "Insertion methods",
+              "insertAdjacentHTML/Text/Element",
+              "Node removal",
+              "Cloning nodes: cloneNode",
+              "DocumentFragment",
+              "Old-school insert/remove methods",
+              "A word about “document.write”",
+              "Summary"
+            ]
           },
           {
             "title": "Styles and classes",
-            "href": "https://javascript.info/styles-and-classes"
+            "href": "https://javascript.info/styles-and-classes",
+            "topics": [
+              "className and classList",
+              "Element style",
+              "Resetting the style property",
+              "Mind the units",
+              "Computed styles: getComputedStyle",
+              "Summary"
+            ]
           },
           {
             "title": "Element size and scrolling",
-            "href": "https://javascript.info/size-and-scroll"
+            "href": "https://javascript.info/size-and-scroll",
+            "topics": [
+              "Sample element",
+              "Geometry",
+              "offsetParent, offsetLeft/Top",
+              "offsetWidth/Height",
+              "clientTop/Left",
+              "clientWidth/Height",
+              "scrollWidth/Height",
+              "scrollLeft/scrollTop",
+              "Don’t take width/height from CSS",
+              "Summary"
+            ]
           },
           {
             "title": "Window sizes and scrolling",
-            "href": "https://javascript.info/size-and-scroll-window"
+            "href": "https://javascript.info/size-and-scroll-window",
+            "topics": [
+              "Width/height of the window",
+              "Width/height of the document",
+              "Get the current scroll",
+              "Scrolling: scrollTo, scrollBy, scrollIntoView",
+              "scrollIntoView",
+              "Forbid the scrolling",
+              "Summary"
+            ]
           },
           {
             "title": "Coordinates",
-            "href": "https://javascript.info/coordinates"
+            "href": "https://javascript.info/coordinates",
+            "topics": [
+              "Element coordinates: getBoundingClientRect",
+              "elementFromPoint(x, y)",
+              "Using for “fixed” positioning",
+              "Document coordinates",
+              "Summary"
+            ]
           }
         ]
       },
@@ -509,23 +1285,60 @@
         "sessions": [
           {
             "title": "Introduction to browser events",
-            "href": "https://javascript.info/introduction-browser-events"
+            "href": "https://javascript.info/introduction-browser-events",
+            "topics": [
+              "Event handlers",
+              "Accessing the element: this",
+              "Possible mistakes",
+              "addEventListener",
+              "Event object",
+              "Object handlers: handleEvent",
+              "Summary"
+            ]
           },
           {
             "title": "Bubbling and capturing",
-            "href": "https://javascript.info/bubbling-and-capturing"
+            "href": "https://javascript.info/bubbling-and-capturing",
+            "topics": [
+              "Bubbling",
+              "event.target",
+              "Stopping bubbling",
+              "Capturing",
+              "Summary"
+            ]
           },
           {
             "title": "Event delegation",
-            "href": "https://javascript.info/event-delegation"
+            "href": "https://javascript.info/event-delegation",
+            "topics": [
+              "Delegation example: actions in markup",
+              "The “behavior” pattern",
+              "Summary"
+            ]
           },
           {
             "title": "Browser default actions",
-            "href": "https://javascript.info/default-browser-action"
+            "href": "https://javascript.info/default-browser-action",
+            "topics": [
+              "Preventing browser actions",
+              "The “passive” handler option",
+              "event.defaultPrevented",
+              "Summary"
+            ]
           },
           {
             "title": "Dispatching custom events",
-            "href": "https://javascript.info/dispatch-events"
+            "href": "https://javascript.info/dispatch-events",
+            "topics": [
+              "Event constructor",
+              "dispatchEvent",
+              "Bubbling example",
+              "MouseEvent, KeyboardEvent and others",
+              "Custom events",
+              "event.preventDefault()",
+              "Events-in-events are synchronous",
+              "Summary"
+            ]
           }
         ]
       },
@@ -534,27 +1347,71 @@
         "sessions": [
           {
             "title": "Mouse events",
-            "href": "https://javascript.info/mouse-events-basics"
+            "href": "https://javascript.info/mouse-events-basics",
+            "topics": [
+              "Mouse event types",
+              "Events order",
+              "Mouse button",
+              "Modifiers: shift, alt, ctrl and meta",
+              "Coordinates: clientX/Y, pageX/Y",
+              "Preventing selection on mousedown",
+              "Summary"
+            ]
           },
           {
             "title": "Moving the mouse: mouseover/out, mouseenter/leave",
-            "href": "https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave"
+            "href": "https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave",
+            "topics": [
+              "Events mouseover/mouseout, relatedTarget",
+              "Skipping elements",
+              "Mouseout when leaving for a child",
+              "Events mouseenter and mouseleave",
+              "Event delegation",
+              "Summary"
+            ]
           },
           {
             "title": "Drag'n'Drop with mouse events",
-            "href": "https://javascript.info/mouse-drag-and-drop"
+            "href": "https://javascript.info/mouse-drag-and-drop",
+            "topics": [
+              "Drag’n’Drop algorithm",
+              "Correct positioning",
+              "Potential drop targets (droppables)",
+              "Summary"
+            ]
           },
           {
             "title": "Pointer events",
-            "href": "https://javascript.info/pointer-events"
+            "href": "https://javascript.info/pointer-events",
+            "topics": [
+              "The brief history",
+              "Pointer event types",
+              "Pointer event properties",
+              "Multi-touch",
+              "Event: pointercancel",
+              "Pointer capturing",
+              "Summary"
+            ]
           },
           {
             "title": "Keyboard: keydown and keyup",
-            "href": "https://javascript.info/keyboard-events"
+            "href": "https://javascript.info/keyboard-events",
+            "topics": [
+              "Teststand",
+              "Keydown and keyup",
+              "Auto-repeat",
+              "Default actions",
+              "Legacy",
+              "Mobile Keyboards",
+              "Summary"
+            ]
           },
           {
             "title": "Scrolling",
-            "href": "https://javascript.info/onscroll"
+            "href": "https://javascript.info/onscroll",
+            "topics": [
+              "Prevent scrolling"
+            ]
           }
         ]
       },
@@ -563,19 +1420,43 @@
         "sessions": [
           {
             "title": "Form properties and methods",
-            "href": "https://javascript.info/form-elements"
+            "href": "https://javascript.info/form-elements",
+            "topics": [
+              "Navigation: form and elements",
+              "Backreference: element.form",
+              "Form elements",
+              "References",
+              "Summary"
+            ]
           },
           {
             "title": "Focusing: focus/blur",
-            "href": "https://javascript.info/focus-blur"
+            "href": "https://javascript.info/focus-blur",
+            "topics": [
+              "Events focus/blur",
+              "Methods focus/blur",
+              "Allow focusing on any element: tabindex",
+              "Delegation: focusin/focusout",
+              "Summary"
+            ]
           },
           {
             "title": "Events: change, input, cut, copy, paste",
-            "href": "https://javascript.info/events-change-input"
+            "href": "https://javascript.info/events-change-input",
+            "topics": [
+              "Event: change",
+              "Event: input",
+              "Events: cut, copy, paste",
+              "Summary"
+            ]
           },
           {
             "title": "Forms: event and method submit",
-            "href": "https://javascript.info/forms-submit"
+            "href": "https://javascript.info/forms-submit",
+            "topics": [
+              "Event: submit",
+              "Method: submit"
+            ]
           }
         ]
       },
@@ -584,15 +1465,35 @@
         "sessions": [
           {
             "title": "Page: DOMContentLoaded, load, beforeunload, unload",
-            "href": "https://javascript.info/onload-ondomcontentloaded"
+            "href": "https://javascript.info/onload-ondomcontentloaded",
+            "topics": [
+              "DOMContentLoaded",
+              "window.onload",
+              "window.onunload",
+              "window.onbeforeunload",
+              "readyState",
+              "Summary"
+            ]
           },
           {
             "title": "Scripts: async, defer",
-            "href": "https://javascript.info/script-async-defer"
+            "href": "https://javascript.info/script-async-defer",
+            "topics": [
+              "defer",
+              "async",
+              "Dynamic scripts",
+              "Summary"
+            ]
           },
           {
             "title": "Resource loading: onload and onerror",
-            "href": "https://javascript.info/onload-onerror"
+            "href": "https://javascript.info/onload-onerror",
+            "topics": [
+              "Loading a script",
+              "Other resources",
+              "Crossorigin policy",
+              "Summary"
+            ]
           }
         ]
       },
@@ -601,15 +1502,44 @@
         "sessions": [
           {
             "title": "Mutation observer",
-            "href": "https://javascript.info/mutation-observer"
+            "href": "https://javascript.info/mutation-observer",
+            "topics": [
+              "Syntax",
+              "Usage for integration",
+              "Usage for architecture",
+              "Additional methods",
+              "Summary"
+            ]
           },
           {
             "title": "Selection and Range",
-            "href": "https://javascript.info/selection-range"
+            "href": "https://javascript.info/selection-range",
+            "topics": [
+              "Range",
+              "Range properties",
+              "Range selection methods",
+              "Range editing methods",
+              "Selection",
+              "Selection properties",
+              "Selection events",
+              "Selection methods",
+              "Selection in form controls",
+              "Making unselectable",
+              "References",
+              "Summary"
+            ]
           },
           {
             "title": "Event loop: microtasks and macrotasks",
-            "href": "https://javascript.info/event-loop"
+            "href": "https://javascript.info/event-loop",
+            "topics": [
+              "Event Loop",
+              "Use-case 1: splitting CPU-hungry tasks",
+              "Use case 2: progress indication",
+              "Use case 3: doing something after the event",
+              "Macrotasks and Microtasks",
+              "Summary"
+            ]
           }
         ]
       }
@@ -624,15 +1554,45 @@
         "sessions": [
           {
             "title": "Popups and window methods",
-            "href": "https://javascript.info/popup-windows"
+            "href": "https://javascript.info/popup-windows",
+            "topics": [
+              "Popup blocking",
+              "window.open",
+              "Example: a minimalistic window",
+              "Accessing popup from window",
+              "Accessing window from popup",
+              "Closing a popup",
+              "Moving and resizing",
+              "Scrolling a window",
+              "Focus/blur on a window",
+              "Summary"
+            ]
           },
           {
             "title": "Cross-window communication",
-            "href": "https://javascript.info/cross-window-communication"
+            "href": "https://javascript.info/cross-window-communication",
+            "topics": [
+              "Same Origin",
+              "Windows on subdomains: document.domain",
+              "Iframe: wrong document pitfall",
+              "Collection: window.frames",
+              "The “sandbox” iframe attribute",
+              "Cross-window messaging",
+              "Summary"
+            ]
           },
           {
             "title": "The clickjacking attack",
-            "href": "https://javascript.info/clickjacking"
+            "href": "https://javascript.info/clickjacking",
+            "topics": [
+              "The idea",
+              "The demo",
+              "Old-school defences (weak)",
+              "X-Frame-Options",
+              "Showing with disabled functionality",
+              "Samesite cookie attribute",
+              "Summary"
+            ]
           }
         ]
       },
@@ -641,19 +1601,40 @@
         "sessions": [
           {
             "title": "ArrayBuffer, binary arrays",
-            "href": "https://javascript.info/arraybuffer-binary-arrays"
+            "href": "https://javascript.info/arraybuffer-binary-arrays",
+            "topics": [
+              "TypedArray",
+              "TypedArray methods",
+              "DataView",
+              "Summary"
+            ]
           },
           {
             "title": "TextDecoder and TextEncoder",
-            "href": "https://javascript.info/text-decoder"
+            "href": "https://javascript.info/text-decoder",
+            "topics": [
+              "TextEncoder"
+            ]
           },
           {
             "title": "Blob",
-            "href": "https://javascript.info/blob"
+            "href": "https://javascript.info/blob",
+            "topics": [
+              "Blob as URL",
+              "Blob to base64",
+              "Image to blob",
+              "From Blob to ArrayBuffer",
+              "From Blob to stream",
+              "Summary"
+            ]
           },
           {
             "title": "File and FileReader",
-            "href": "https://javascript.info/file"
+            "href": "https://javascript.info/file",
+            "topics": [
+              "FileReader",
+              "Summary"
+            ]
           }
         ]
       },
@@ -662,51 +1643,136 @@
         "sessions": [
           {
             "title": "Fetch",
-            "href": "https://javascript.info/fetch"
+            "href": "https://javascript.info/fetch",
+            "topics": [
+              "Response headers",
+              "Request headers",
+              "POST requests",
+              "Sending an image",
+              "Summary"
+            ]
           },
           {
             "title": "FormData",
-            "href": "https://javascript.info/formdata"
+            "href": "https://javascript.info/formdata",
+            "topics": [
+              "Sending a simple form",
+              "FormData Methods",
+              "Sending a form with a file",
+              "Sending a form with Blob data",
+              "Summary"
+            ]
           },
           {
             "title": "Fetch: Download progress",
-            "href": "https://javascript.info/fetch-progress"
+            "href": "https://javascript.info/fetch-progress",
+            "topics": []
           },
           {
             "title": "Fetch: Abort",
-            "href": "https://javascript.info/fetch-abort"
+            "href": "https://javascript.info/fetch-abort",
+            "topics": [
+              "The AbortController object",
+              "Using with fetch",
+              "AbortController is scalable",
+              "Summary"
+            ]
           },
           {
             "title": "Fetch: Cross-Origin Requests",
-            "href": "https://javascript.info/fetch-crossorigin"
+            "href": "https://javascript.info/fetch-crossorigin",
+            "topics": [
+              "Why is CORS needed? A brief history",
+              "Safe requests",
+              "CORS for safe requests",
+              "Response headers",
+              "“Unsafe” requests",
+              "Credentials",
+              "Summary"
+            ]
           },
           {
             "title": "Fetch API",
-            "href": "https://javascript.info/fetch-api"
+            "href": "https://javascript.info/fetch-api",
+            "topics": [
+              "referrer, referrerPolicy",
+              "mode",
+              "credentials",
+              "cache",
+              "redirect",
+              "integrity",
+              "keepalive"
+            ]
           },
           {
             "title": "URL objects",
-            "href": "https://javascript.info/url"
+            "href": "https://javascript.info/url",
+            "topics": [
+              "Creating a URL",
+              "SearchParams “?…”",
+              "Encoding"
+            ]
           },
           {
             "title": "XMLHttpRequest",
-            "href": "https://javascript.info/xmlhttprequest"
+            "href": "https://javascript.info/xmlhttprequest",
+            "topics": [
+              "The basics",
+              "Response Type",
+              "Ready states",
+              "Aborting request",
+              "Synchronous requests",
+              "HTTP-headers",
+              "POST, FormData",
+              "Upload progress",
+              "Cross-origin requests",
+              "Summary"
+            ]
           },
           {
             "title": "Resumable file upload",
-            "href": "https://javascript.info/resume-upload"
+            "href": "https://javascript.info/resume-upload",
+            "topics": [
+              "Not-so-useful progress event",
+              "Algorithm"
+            ]
           },
           {
             "title": "Long polling",
-            "href": "https://javascript.info/long-polling"
+            "href": "https://javascript.info/long-polling",
+            "topics": [
+              "Regular Polling",
+              "Long polling",
+              "Demo: a chat",
+              "Area of usage"
+            ]
           },
           {
             "title": "WebSocket",
-            "href": "https://javascript.info/websocket"
+            "href": "https://javascript.info/websocket",
+            "topics": [
+              "A simple example",
+              "Opening a websocket",
+              "Data transfer",
+              "Rate limiting",
+              "Connection close",
+              "Connection state",
+              "Chat example",
+              "Summary"
+            ]
           },
           {
             "title": "Server Sent Events",
-            "href": "https://javascript.info/server-sent-events"
+            "href": "https://javascript.info/server-sent-events",
+            "topics": [
+              "Getting messages",
+              "Reconnection",
+              "Message id",
+              "Connection status: readyState",
+              "Event types",
+              "Full example",
+              "Summary"
+            ]
           }
         ]
       },
@@ -715,15 +1781,50 @@
         "sessions": [
           {
             "title": "Cookies, document.cookie",
-            "href": "https://javascript.info/cookie"
+            "href": "https://javascript.info/cookie",
+            "topics": [
+              "Reading from document.cookie",
+              "Writing to document.cookie",
+              "path",
+              "domain",
+              "expires, max-age",
+              "secure",
+              "samesite",
+              "httpOnly",
+              "Appendix: Cookie functions",
+              "Appendix: Third-party cookies",
+              "Appendix: GDPR",
+              "Summary"
+            ]
           },
           {
             "title": "LocalStorage, sessionStorage",
-            "href": "https://javascript.info/localstorage"
+            "href": "https://javascript.info/localstorage",
+            "topics": [
+              "localStorage demo",
+              "Object-like access",
+              "Looping over keys",
+              "Strings only",
+              "sessionStorage",
+              "Storage event",
+              "Summary"
+            ]
           },
           {
             "title": "IndexedDB",
-            "href": "https://javascript.info/indexeddb"
+            "href": "https://javascript.info/indexeddb",
+            "topics": [
+              "Open database",
+              "Object store",
+              "Transactions",
+              "Transactions’ autocommit",
+              "Error handling",
+              "Searching",
+              "Deleting from store",
+              "Cursors",
+              "Promise wrapper",
+              "Summary"
+            ]
           }
         ]
       },
@@ -732,15 +1833,41 @@
         "sessions": [
           {
             "title": "Bezier curve",
-            "href": "https://javascript.info/bezier-curve"
+            "href": "https://javascript.info/bezier-curve",
+            "topics": [
+              "Control points",
+              "De Casteljau’s algorithm",
+              "Maths",
+              "Summary"
+            ]
           },
           {
             "title": "CSS-animations",
-            "href": "https://javascript.info/css-animations"
+            "href": "https://javascript.info/css-animations",
+            "topics": [
+              "CSS transitions",
+              "transition-property",
+              "transition-duration",
+              "transition-delay",
+              "transition-timing-function",
+              "Event: “transitionend”",
+              "Keyframes",
+              "Performance",
+              "Summary"
+            ]
           },
           {
             "title": "JavaScript animations",
-            "href": "https://javascript.info/js-animation"
+            "href": "https://javascript.info/js-animation",
+            "topics": [
+              "Using setInterval",
+              "Using requestAnimationFrame",
+              "Structured animation",
+              "Timing functions",
+              "Reversal: ease*",
+              "More interesting “draw”",
+              "Summary"
+            ]
           }
         ]
       },
@@ -749,31 +1876,77 @@
         "sessions": [
           {
             "title": "From the orbital height",
-            "href": "https://javascript.info/webcomponents-intro"
+            "href": "https://javascript.info/webcomponents-intro",
+            "topics": [
+              "What’s common between…",
+              "Component architecture"
+            ]
           },
           {
             "title": "Custom elements",
-            "href": "https://javascript.info/custom-elements"
+            "href": "https://javascript.info/custom-elements",
+            "topics": [
+              "Example: “time-formatted”",
+              "Observing attributes",
+              "Rendering order",
+              "Customized built-in elements",
+              "References",
+              "Summary"
+            ]
           },
           {
             "title": "Shadow DOM",
-            "href": "https://javascript.info/shadow-dom"
+            "href": "https://javascript.info/shadow-dom",
+            "topics": [
+              "Built-in shadow DOM",
+              "Shadow tree",
+              "Encapsulation",
+              "References",
+              "Summary"
+            ]
           },
           {
             "title": "Template element",
-            "href": "https://javascript.info/template-element"
+            "href": "https://javascript.info/template-element",
+            "topics": [
+              "Inserting template",
+              "Summary"
+            ]
           },
           {
             "title": "Shadow DOM slots, composition",
-            "href": "https://javascript.info/slots-composition"
+            "href": "https://javascript.info/slots-composition",
+            "topics": [
+              "Named slots",
+              "Slot fallback content",
+              "Default slot: first unnamed",
+              "Menu example",
+              "Updating slots",
+              "Slot API",
+              "Summary"
+            ]
           },
           {
             "title": "Shadow DOM styling",
-            "href": "https://javascript.info/shadow-dom-style"
+            "href": "https://javascript.info/shadow-dom-style",
+            "topics": [
+              ":host",
+              "Cascading",
+              ":host(selector)",
+              "Styling slotted content",
+              "CSS hooks with custom properties",
+              "Summary"
+            ]
           },
           {
             "title": "Shadow DOM and events",
-            "href": "https://javascript.info/shadow-dom-events"
+            "href": "https://javascript.info/shadow-dom-events",
+            "topics": [
+              "Bubbling, event.composedPath()",
+              "event.composed",
+              "Custom events",
+              "Summary"
+            ]
           }
         ]
       },
@@ -782,71 +1955,162 @@
         "sessions": [
           {
             "title": "Patterns and flags",
-            "href": "https://javascript.info/regexp-introduction"
+            "href": "https://javascript.info/regexp-introduction",
+            "topics": [
+              "Regular Expressions",
+              "Flags",
+              "Searching: str.match",
+              "Replacing: str.replace",
+              "Testing: regexp.test",
+              "Summary"
+            ]
           },
           {
             "title": "Character classes",
-            "href": "https://javascript.info/regexp-character-classes"
+            "href": "https://javascript.info/regexp-character-classes",
+            "topics": [
+              "Inverse classes",
+              "A dot is “any character”",
+              "Summary"
+            ]
           },
           {
             "title": "Unicode: flag \"u\" and class \\p{...}",
-            "href": "https://javascript.info/regexp-unicode"
+            "href": "https://javascript.info/regexp-unicode",
+            "topics": [
+              "Unicode properties \\p{…}",
+              "Summary"
+            ]
           },
           {
             "title": "Anchors: string start ^ and end $",
-            "href": "https://javascript.info/regexp-anchors"
+            "href": "https://javascript.info/regexp-anchors",
+            "topics": [
+              "Testing for a full match"
+            ]
           },
           {
             "title": "Multiline mode of anchors ^ $, flag \"m\"",
-            "href": "https://javascript.info/regexp-multiline-mode"
+            "href": "https://javascript.info/regexp-multiline-mode",
+            "topics": [
+              "Searching at line start ^",
+              "Searching at line end $",
+              "Searching for \\n instead of ^ $"
+            ]
           },
           {
             "title": "Word boundary: \\b",
-            "href": "https://javascript.info/regexp-boundary"
+            "href": "https://javascript.info/regexp-boundary",
+            "topics": []
           },
           {
             "title": "Escaping, special characters",
-            "href": "https://javascript.info/regexp-escaping"
+            "href": "https://javascript.info/regexp-escaping",
+            "topics": [
+              "Escaping",
+              "A slash",
+              "new RegExp",
+              "Summary"
+            ]
           },
           {
             "title": "Sets and ranges [...]",
-            "href": "https://javascript.info/regexp-character-sets-and-ranges"
+            "href": "https://javascript.info/regexp-character-sets-and-ranges",
+            "topics": [
+              "Sets",
+              "Ranges",
+              "Excluding ranges",
+              "Escaping in […]",
+              "Ranges and flag “u”"
+            ]
           },
           {
             "title": "Quantifiers +, *, ? and {n}",
-            "href": "https://javascript.info/regexp-quantifiers"
+            "href": "https://javascript.info/regexp-quantifiers",
+            "topics": [
+              "Quantity {n}",
+              "Shorthands",
+              "More examples"
+            ]
           },
           {
             "title": "Greedy and lazy quantifiers",
-            "href": "https://javascript.info/regexp-greedy-and-lazy"
+            "href": "https://javascript.info/regexp-greedy-and-lazy",
+            "topics": [
+              "Greedy search",
+              "Lazy mode",
+              "Alternative approach",
+              "Summary"
+            ]
           },
           {
             "title": "Capturing groups",
-            "href": "https://javascript.info/regexp-groups"
+            "href": "https://javascript.info/regexp-groups",
+            "topics": [
+              "Examples",
+              "Parentheses contents in the match",
+              "Searching for all matches with groups: matchAll",
+              "Named groups",
+              "Capturing groups in replacement",
+              "Non-capturing groups with ?:",
+              "Summary"
+            ]
           },
           {
             "title": "Backreferences in pattern: \\N and \\k<name>",
-            "href": "https://javascript.info/regexp-backreferences"
+            "href": "https://javascript.info/regexp-backreferences",
+            "topics": [
+              "Backreference by number: \\N",
+              "Backreference by name: \\k<name>"
+            ]
           },
           {
             "title": "Alternation (OR) |",
-            "href": "https://javascript.info/regexp-alternation"
+            "href": "https://javascript.info/regexp-alternation",
+            "topics": [
+              "Example: regexp for time"
+            ]
           },
           {
             "title": "Lookahead and lookbehind",
-            "href": "https://javascript.info/regexp-lookahead-lookbehind"
+            "href": "https://javascript.info/regexp-lookahead-lookbehind",
+            "topics": [
+              "Lookahead",
+              "Negative lookahead",
+              "Lookbehind",
+              "Capturing groups",
+              "Summary"
+            ]
           },
           {
             "title": "Catastrophic backtracking",
-            "href": "https://javascript.info/regexp-catastrophic-backtracking"
+            "href": "https://javascript.info/regexp-catastrophic-backtracking",
+            "topics": [
+              "Example",
+              "Simplified example",
+              "Back to words and strings",
+              "How to fix?",
+              "Preventing backtracking"
+            ]
           },
           {
             "title": "Sticky flag \"y\", searching at position",
-            "href": "https://javascript.info/regexp-sticky"
+            "href": "https://javascript.info/regexp-sticky",
+            "topics": []
           },
           {
             "title": "Methods of RegExp and String",
-            "href": "https://javascript.info/regexp-methods"
+            "href": "https://javascript.info/regexp-methods",
+            "topics": [
+              "str.match(regexp)",
+              "str.matchAll(regexp)",
+              "str.split(regexp|substr, limit)",
+              "str.search(regexp)",
+              "str.replace(str|regexp, str|func)",
+              "str.replaceAll(str|regexp, str|func)",
+              "regexp.exec(str)",
+              "regexp.test(str)"
+            ]
           }
         ]
       }

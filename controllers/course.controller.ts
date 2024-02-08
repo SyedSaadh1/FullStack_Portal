@@ -4,11 +4,11 @@ import { Course } from "types/course.types";
 
 import html from "@/curriculum/html.json";
 import css from "@/curriculum/css.json";
-import javascript from "@/curriculum/javascript.json";
+import javascript from "@/curriculum/javascript-redefine.json";
 
 class CourseController extends Controller {
 
-  private mockCourses = [html, css, javascript].map(course => ({
+  private mockCourses = [html, css, javascript[0]].map(course => ({
     ...course,
     id: course.title.toLowerCase().split(" ").join("-"),
     name: course.title,
