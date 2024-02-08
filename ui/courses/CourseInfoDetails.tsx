@@ -13,10 +13,8 @@ const CourseInfoDetails = ({ course }: Props) => {
   return (
     <Container className='py-8'>
       <p className='mb-8'>Time to complete: {course?.courseDuration}</p>
+      <Title3>Course Content</Title3>
       <Card>
-        <CardHeader>
-          <Title3>Course Content</Title3>
-        </CardHeader>
         <CardContent>
           <Accordion type="multiple" className="w-full">
             {course?.modules?.map((module) => <AccordionItem key={module?.title} value={module?.title}>

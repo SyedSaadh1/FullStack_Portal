@@ -2,6 +2,9 @@
   {
     "title": "The JavaScript language",
     "description": "Here we learn JavaScript, starting from scratch and go on to advanced concepts like OOP.\n\nWe concentrate on the language itself here, with the minimum of environment-specific notes.",
+    "thumbnail": {
+      "url": "https://www.pragimtech.com/wp-content/uploads/2019/03/java-script.jpg"
+    },
     "modules": [
       {
         "title": "An introduction",
