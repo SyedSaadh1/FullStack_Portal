@@ -33,7 +33,7 @@ const Experience = (props: Props) => {
   const handleCompany1DateChange = (date: Date | null) => {
     setCompany1({
       ...company1,
-      date: date,
+      date: null,
     });
   };
 
@@ -47,7 +47,7 @@ const Experience = (props: Props) => {
   const handleCompany2DateChange = (date: Date | null) => {
     setCompany2({
       ...company2,
-      date: date,
+      date: null,
     });
   };
 
