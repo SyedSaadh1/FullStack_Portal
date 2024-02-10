@@ -1,3 +1,8 @@
+
+
+
+
+
 "use client";
 import Container from '@/ui/layout/container';
 import React, { useState, useEffect } from 'react';
@@ -12,25 +17,11 @@ import { DatePicker } from '../dateui/DatePicker';
 type Props = {};
 
 const Education = (props: Props) => {
-  // State variables for input values
-  const [scc, setScc] = useState('');
-  const [higherSecondary, setHigherSecondary] = useState('');
-  const [bachelor, setBachelor] = useState('');
-  const [others, setOthers] = useState('');
-
-  // useEffect to load data from localStorage when the component mounts
-  useEffect(() => {
-    const storedScc = localStorage.getItem('scc') || '';
-    const storedHigherSecondary = localStorage.getItem('higherSecondary') || '';
-    const storedBachelor = localStorage.getItem('bachelor') || '';
-    const storedOthers = localStorage.getItem('others') || '';
-
-    // Set state variables with the stored values
-    setScc(storedScc);
-    setHigherSecondary(storedHigherSecondary);
-    setBachelor(storedBachelor);
-    setOthers(storedOthers);
-  }, []);
+  // State variables for input values with initial values from localStorage
+  const [scc, setScc] = useState(() => localStorage.getItem('scc') || '');
+  const [higherSecondary, setHigherSecondary] = useState(() => localStorage.getItem('higherSecondary') || '');
+  const [bachelor, setBachelor] = useState(() => localStorage.getItem('bachelor') || '');
+  const [others, setOthers] = useState(() => localStorage.getItem('others') || '');
 
   useEffect(() => {
     localStorage.setItem('scc', scc);
@@ -93,7 +84,4 @@ const Education = (props: Props) => {
 }
 
 export default Education;
-
-
-
 
