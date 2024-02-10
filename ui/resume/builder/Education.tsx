@@ -1,8 +1,4 @@
 
-
-
-
-
 "use client";
 import Container from '@/ui/layout/container';
 import React, { useState, useEffect } from 'react';
@@ -17,7 +13,6 @@ import { DatePicker } from '../dateui/DatePicker';
 type Props = {};
 
 const Education = (props: Props) => {
-  // State variables for input values with initial values from localStorage
   const [scc, setScc] = useState(() => localStorage.getItem('scc') || '');
   const [higherSecondary, setHigherSecondary] = useState(() => localStorage.getItem('higherSecondary') || '');
   const [bachelor, setBachelor] = useState(() => localStorage.getItem('bachelor') || '');
@@ -44,7 +39,7 @@ const Education = (props: Props) => {
       <CardHeader>
         <CardTitle>Education Details</CardTitle>
       </CardHeader>
-      <Label htmlFor="scc">SCC Details</Label>
+      <Label>SCC Details</Label>
       <Input
         id="scc"
         placeholder="Write Your FullName."
@@ -53,7 +48,7 @@ const Education = (props: Props) => {
       />
       <DatePicker />
 
-      <Label htmlFor="higherSecondary">HigherSecondary</Label>
+      <Label>HigherSecondary</Label>
       <Input
         id="higherSecondary"
         placeholder="Write Your FullName."
@@ -62,7 +57,7 @@ const Education = (props: Props) => {
       />
       <DatePicker />
 
-      <Label htmlFor="bachelor">Bachelor</Label>
+      <Label>Bachelor</Label>
       <Input
         id="bachelor"
         placeholder="Write Your FullName."
@@ -71,7 +66,7 @@ const Education = (props: Props) => {
       />
       <DatePicker />
 
-      <Label htmlFor="others">Others</Label>
+      <Label>Others</Label>
       <Input
         id="others"
         placeholder="Write Your FullName."
