@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import Container from '@/ui/layout/container';
 import React, { useState, useEffect } from 'react';
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import {
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -13,42 +12,41 @@ import { DatePicker } from '../dateui/DatePicker';
 type Props = {};
 
 const Education = (props: Props) => {
-  const [educationDetails, setEducationDetails] = useState({
-    scc: { name: '', date: null },
-    higherSecondary: { name: '', date: null },
-    bachelor: { name: '', date: null },
-    others: { name: '', date: null },
-  });
+  // State variables for input values
+  const [scc, setScc] = useState('');
+  const [higherSecondary, setHigherSecondary] = useState('');
+  const [bachelor, setBachelor] = useState('');
+  const [others, setOthers] = useState('');
 
+  // useEffect to load data from localStorage when the component mounts
   useEffect(() => {
-    const storedEducationDetails = JSON.parse(localStorage.getItem('educationDetails') || '{}');
-    setEducationDetails(storedEducationDetails);
+    const storedScc = localStorage.getItem('scc') || '';
+    const storedHigherSecondary = localStorage.getItem('higherSecondary') || '';
+    const storedBachelor = localStorage.getItem('bachelor') || '';
+    const storedOthers = localStorage.getItem('others') || '';
+
+    // Set state variables with the stored values
+    setScc(storedScc);
+    setHigherSecondary(storedHigherSecondary);
+    setBachelor(storedBachelor);
+    setOthers(storedOthers);
   }, []);
 
-  const handleChange = (category, event) => {
-    const { value } = event.target;
-    setEducationDetails((prevDetails) => ({
-      ...prevDetails,
-      [category]: {
-        ...prevDetails[category],
-        name: value,
-      },
-    }));
-  };
-
-  const handleDateChange = (category, date) => {
-    setEducationDetails((prevDetails) => ({
-      ...prevDetails,
-      [category]: {
-        ...prevDetails[category],
-        date,
-      },
-    }));
-  };
+  useEffect(() => {
+    localStorage.setItem('scc', scc);
+  }, [scc]);
 
   useEffect(() => {
-    localStorage.setItem('educationDetails', JSON.stringify(educationDetails));
-  }, [educationDetails]);
+    localStorage.setItem('higherSecondary', higherSecondary);
+  }, [higherSecondary]);
+
+  useEffect(() => {
+    localStorage.setItem('bachelor', bachelor);
+  }, [bachelor]);
+
+  useEffect(() => {
+    localStorage.setItem('others', others);
+  }, [others]);
 
   return (
     <Container className='bg-slate-200 p-16'>
@@ -59,53 +57,43 @@ const Education = (props: Props) => {
       <Input
         id="scc"
         placeholder="Write Your FullName."
-        value={educationDetails.scc.name}
-        onChange={(event) => handleChange('scc', event)}
+        value={scc}
+        onChange={(e) => setScc(e.target.value)}
       />
-      <DatePicker
-        selected={educationDetails.scc.date}
-        onChange={(date) => handleDateChange('scc', date)}
-      />
+      <DatePicker />
 
-<Label htmlFor="higherSecondary">HigherSecondary</Label>
+      <Label htmlFor="higherSecondary">HigherSecondary</Label>
       <Input
         id="higherSecondary"
         placeholder="Write Your FullName."
-        value={educationDetails.higherSecondary.name}
-        onChange={(event) => handleChange('higherSecondary', event)}
+        value={higherSecondary}
+        onChange={(e) => setHigherSecondary(e.target.value)}
       />
-      <DatePicker
-        selected={educationDetails.higherSecondary.date}
-        onChange={(date) => handleDateChange('higherSecondary', date)}
-      />
+      <DatePicker />
 
-      
-<Label htmlFor="bachelor">Bachelor</Label>
+      <Label htmlFor="bachelor">Bachelor</Label>
       <Input
         id="bachelor"
         placeholder="Write Your FullName."
-        value={educationDetails.bachelor.name}
-        onChange={(event) => handleChange('bachelor', event)}
+        value={bachelor}
+        onChange={(e) => setBachelor(e.target.value)}
       />
-      <DatePicker
-        selected={educationDetails.bachelor.date}
-        onChange={(date) => handleDateChange('bachelor', date)}
-      />
+      <DatePicker />
 
-<Label htmlFor="others">Others</Label>
+      <Label htmlFor="others">Others</Label>
       <Input
         id="others"
         placeholder="Write Your FullName."
-        value={educationDetails.others.name}
-        onChange={(event) => handleChange('others', event)}
+        value={others}
+        onChange={(e) => setOthers(e.target.value)}
       />
-      <DatePicker
-        selected={educationDetails.others.date}
-        onChange={(date) => handleDateChange('others', date)}
-      />
-
+      <DatePicker />
     </Container>
   );
 }
 
 export default Education;
+
+
+
+
