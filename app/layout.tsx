@@ -1,5 +1,6 @@
 import PageHeader from "@/ui/layout/PageHeader"
 import FluentUIProvider from "./FluentUIProvider"
+import NextAuthProvider from "./NextAuthProvider"
 import "./tailwind.css"
 
 export default function RootLayout({
@@ -11,10 +12,12 @@ export default function RootLayout({
     <html lang="en">
       <body className="theme-day bg">
         <FluentUIProvider>
-          <main className="bg">
-            <PageHeader />
-            {children}
-          </main>
+          <NextAuthProvider>
+            <main className="bg">
+              <PageHeader />
+              {children}
+            </main>
+          </NextAuthProvider>
         </FluentUIProvider>
       </body>
     </html>
