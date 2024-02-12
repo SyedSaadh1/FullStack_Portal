@@ -1,0 +1,270 @@
+[
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/introduction/",
+    "topics": [
+      "HTML, CSS, & JavaScript",
+      "Languages vs \u201cWeb Dev\u201d",
+      "Web Publishing",
+      "Not Frameworks",
+      "Hands-On Learning",
+      "Tools of the Trade",
+      "Atom Text Editor",
+      "Creating a Project",
+      "Creating Files",
+      "Nav\u2019ing File System",
+      "Multiple Panes",
+      "Outside of Atom",
+      "Summary"
+    ],
+    "title": "introduction",
+    "description": "The purpose of HTML, CSS, and JavaScript, the difference between frameworks and languages, and finding your way around a basic website project with Atom."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/basic-web-pages/",
+    "topics": [
+      "Setup",
+      "Structure of a Web Page",
+      "Page Titles",
+      "Paragraphs",
+      "Headings",
+      "Unordered Lists",
+      "Ordered Lists",
+      "Emphasis Elements",
+      "Strong Elements",
+      "Structure vs Presentation",
+      "Empty HTML Elements",
+      "Summary"
+    ],
+    "title": "basic web pages",
+    "description": "The skeleton for every web page on the Internet, as well as fundamental HTML elements like headings, paragraphs, lists, etc."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/links-and-images/",
+    "topics": [
+      "Setup",
+      "Anchors",
+      "Links",
+      "Types of Links",
+      "Link Targets",
+      "Naming Conventions",
+      "Images",
+      "Image Formats",
+      "Image Dimensions",
+      "Text Alternatives",
+      "More HTML Attributes",
+      "HTML Entities",
+      "Summary"
+    ],
+    "title": "links and images",
+    "description": "Linking to other pages, referring to them with absolute, relative, and root-relative paths, embedding images, and finishing touches to our basic web page skeleton."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/hello-css/",
+    "topics": [
+      "Setup",
+      "CSS Stylesheets",
+      "Linking a Stylesheet",
+      "CSS Comments",
+      "Multiple Properties",
+      "Different Elements",
+      "Units of Measurement",
+      "Multiple Selectors",
+      "List Styles",
+      "Reusable Stylesheets",
+      "More Text Styles",
+      "The Cascade",
+      "Summary"
+    ],
+    "title": "hello, css",
+    "description": "Connecting a stylesheet, styling HTML elements with all sorts of CSS properties, selecting different elements, and reusing styles across multiple web pages."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/css-box-model/",
+    "topics": [
+      "Setup",
+      "Block vs Inline",
+      "Changing Box Behavior",
+      "The Box Model",
+      "Padding",
+      "Borders",
+      "Margins",
+      "Vertical Margin Collapse",
+      "Generic Boxes",
+      "Explicit Dimensions",
+      "Content vs Border Boxes",
+      "Aligning Boxes",
+      "Resetting Styles",
+      "Summary"
+    ],
+    "title": "the box model",
+    "description": "Block boxes, inline boxes, padding, borders, margins, dimensions, and an introduction to how beautiful websites are built up with boxes."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/css-selectors/",
+    "topics": [
+      "Setup",
+      "Class Selectors",
+      "More Useful Divs",
+      "Container Divs",
+      "Reusing Class Styles",
+      "Modifying Class Styles",
+      "Descendant Selectors",
+      "Link Pseudo-Classes",
+      "Button Pseudo-Classes",
+      "Structural Pseudo-Classes",
+      "ID Selectors",
+      "CSS Specificity",
+      "Summary"
+    ],
+    "title": "css selectors",
+    "description": "Class selectors, descendant selectors, more useful"
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/floats/",
+    "topics": [
+      "Setup",
+      "Default Layout Behavior",
+      "Floating an Element",
+      "Floating Inside of Parents",
+      "Multiple Floats",
+      "After a Float",
+      "Full-Bleed Layouts",
+      "Equal-Width Columns",
+      "Floats for Grids",
+      "Floats for Content",
+      "Summary"
+    ],
+    "title": "floats",
+    "description": "Introduction to CSS float-based layouts, controlling the horizontal flow of the page, clearing floats, and hiding overflow."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/flexbox/",
+    "topics": [
+      "Setup",
+      "Flexbox Overview",
+      "Flex Containers",
+      "Aligning a Flex Item",
+      "Distributing Flex Items",
+      "Grouping Flex Items",
+      "Cross-Axis Alignment",
+      "Wrapping Flex Items",
+      "Flex Container Direction",
+      "Flex Container Order",
+      "Flex Item Order",
+      "Flex Item Alignment",
+      "Flexible Items",
+      "Auto-Margins",
+      "Summary"
+    ],
+    "title": "flexbox",
+    "description": "Flex containers versus flex items, aligning vertically and horizontally, distributing, wrapping, re-ordering, and crafting modern CSS layouts."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/advanced-positioning/",
+    "topics": [
+      "Setup",
+      "Positioned Elements",
+      "Relative Positioning",
+      "Absolute Positioning",
+      "Fixed Positioning",
+      "Positioning for Animation",
+      "Positioning for Menus",
+      "Inline Menu Items",
+      "Submenus",
+      "Absolute Submenus",
+      "Z-Index",
+      "Pseudo-Classes for Menus",
+      "Summary"
+    ],
+    "title": "advanced positioning",
+    "description": "Static, relative, absolute, and fixed positioning, dropdown menus, the z-index, and other fancy CSS that\u2019ll make you feel real smart."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/responsive-design/",
+    "topics": [
+      "Setup",
+      "CSS Media Queries",
+      "A Few Notes On Design",
+      "Mobile-First Development",
+      "Tablet Layout",
+      "Desktop Layout",
+      "Disabling Viewport Zooming",
+      "Summary"
+    ],
+    "title": "responsive design",
+    "description": "Using media queries to control when CSS rules are applied, mobile-first development, and disabling viewport zoom."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/responsive-images/",
+    "topics": [
+      "Setup",
+      "Retina Screens",
+      "Responsive SVG Images",
+      "Responsive Raster Images",
+      "Image Optimization",
+      "Retina Optimization w/ srcset",
+      "Screen Width Optimization",
+      "Art Direction w/ <picture>",
+      "Summary"
+    ],
+    "title": "responsive images",
+    "description": "The hard part of responsive design: retina screens, fluid images, device optimization with"
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/semantic-html/",
+    "topics": [
+      "Setup",
+      "The Document Outline",
+      "Articles",
+      "Sections",
+      "Nav Elements",
+      "Headers",
+      "Footers",
+      "Asides",
+      "Divs for Layout",
+      "Dates and Times",
+      "Address",
+      "Figures and Captions",
+      "Legacy Considerations",
+      "Summary"
+    ],
+    "title": "semantic html",
+    "description": "The document outline, articles, sections, navs, headers, footers, asides, figures, and other ways to make your HTML markup more informative."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/forms/",
+    "topics": [
+      "Setup",
+      "HTML Forms",
+      "Text Input Fields",
+      "Email Input Fields",
+      "Radio Buttons",
+      "Select Elements",
+      "Textareas",
+      "Checkboxes",
+      "Submit Buttons",
+      "Summary"
+    ],
+    "title": "forms",
+    "description": "Frontend forms: the HTML for creating text fields, radio buttons, dropdown menus, checkboxes, and buttons, as well as the CSS for styling all of them."
+  },
+  {
+    "link": "https://internetingishard.netlify.app/html-and-css/web-typography/",
+    "topics": [
+      "Brief History of Web Fonts",
+      "Where to Find Web Fonts",
+      "Setup",
+      "Locally Hosted Web Fonts",
+      "Font Families and Faces",
+      "Externally Hosted Web Fonts",
+      "Paragraph Indents",
+      "Text Alignment",
+      "Vertical Text Spacing",
+      "Line Length",
+      "Other Guidelines",
+      "Summary"
+    ],
+    "title": "web typography",
+    "description": "Where to find web fonts, hosting locally versus externally, dealing with multiple font faces, and basic typographic principles like text alignment, leading, and measure."
+  }
+]
