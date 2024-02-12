@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { TextareaDemo } from '../dateui/input'
 
 type Props = {}
 
@@ -32,7 +33,7 @@ const Summary = (props: Props) => {
         <CardTitle>Summary</CardTitle>
       </CardHeader>
       <Label htmlFor="summary">Information</Label>
-      <Input
+      <TextareaDemo
         id="summary"
         placeholder="Write Your Summary."
         value={summary}

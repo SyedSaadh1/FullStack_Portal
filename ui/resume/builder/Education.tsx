@@ -39,7 +39,7 @@ const Education = (props: Props) => {
       <CardHeader>
         <CardTitle>Education Details</CardTitle>
       </CardHeader>
-      <Label>SCC Details</Label>
+      <Label className='flex'>SCC Details</Label>
       <Input
         id="scc"
         placeholder="Write Your FullName."
@@ -48,7 +48,7 @@ const Education = (props: Props) => {
       />
       <DatePicker />
 
-      <Label>HigherSecondary</Label>
+      <Label className='flex'>HigherSecondary</Label>
       <Input
         id="higherSecondary"
         placeholder="Write Your FullName."
@@ -57,7 +57,7 @@ const Education = (props: Props) => {
       />
       <DatePicker />
 
-      <Label>Bachelor</Label>
+      <Label className='flex'>Bachelor</Label>
       <Input
         id="bachelor"
         placeholder="Write Your FullName."
@@ -66,7 +66,7 @@ const Education = (props: Props) => {
       />
       <DatePicker />
 
-      <Label>Others</Label>
+      <Label className='flex'>Others</Label>
       <Input
         id="others"
         placeholder="Write Your FullName."

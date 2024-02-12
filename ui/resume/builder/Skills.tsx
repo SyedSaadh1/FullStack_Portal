@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { CardHeader, CardTitle } from "@/components/ui/card";
+import { TextareaDemo } from '../dateui/input';
 
 type Props = {};
 
@@ -23,28 +24,14 @@ const Skills = (props: Props) => {
     }
   }, [])
 
-  /* const handleChange1 = (e: any) => {
-    const {id, value} = e.target;
-    localStorage.setItem(id, value);
-    if (id === 'skills1') {
-      setSkills1(value)
-    } 
-   }
-*/
+  
    const handleChange1 = (e: any) => {
     const skills = e.target.value;
     setSkills1(skills)
     localStorage.setItem('skills1', skills)
    }
 
- /*  const handleChange2 = (e: any) => {
-    const {id, value} = e.target
-    localStorage.setItem(id, value)
-    if (id === 'skills2') {
-      setSkills2(value)
-    }
-   }
-*/
+ 
    const handleChange2 = (e: any) => {
     const skills = e.target.value;
     setSkills2(skills)
@@ -59,9 +46,8 @@ const Skills = (props: Props) => {
       <Label htmlFor="professionalSkills">
         Professional Skills
       </Label>
-      <Input
+      <TextareaDemo
         id="professionalSkills"
-        placeholder="Details"
         value={skills1}
         onChange={handleChange1}
       />
@@ -69,9 +55,8 @@ const Skills = (props: Props) => {
       <Label htmlFor="advancedSkills">
         Advanced Skills
       </Label>
-      <Input
+      <TextareaDemo
         id="advancedSkills"
-        placeholder="Details"
         value={skills2}
         onChange={handleChange2}
       />
