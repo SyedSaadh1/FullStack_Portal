@@ -8,7 +8,7 @@ export default async function CourseDetails({ params: { courseId } }: any) {
 	const course = await courseController.getCourseDetailById(courseId);
 	if(!course) return <div>Loading...</div>;
 	return (
-		<div className="">
+		<div>
 			<CourseInfo course={course} />
 			<CourseInfoDetails course={course} />
 		</div>

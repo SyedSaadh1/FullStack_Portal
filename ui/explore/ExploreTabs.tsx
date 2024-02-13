@@ -3,9 +3,6 @@ import React, { useCallback, useEffect } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { makeStyles, tokens, shorthands, Subtitle1, TabList, Tab, Title1, SelectTabData } from '@fluentui/react-components';
 import Container from '../layout/container';
-import HomePagePrograms from '../programs/HomePagePrograms';
-import HomePageCourses from '../courses/HomePageCourses';
-import HomePageTopics from '../topics/HomePageTopics';
 
 const useStyles = makeStyles({
   root: {

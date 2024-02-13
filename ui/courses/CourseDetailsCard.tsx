@@ -3,39 +3,52 @@
 import * as React from "react"
 
 import {
-	Collapsible,
-	CollapsibleContent,
-	CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import {
-	Card,
-	CardContent,
+	Card
 } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import Container from "../layout/container";
+import { Course } from "@/types/course.types";
 
-export default function CourseDetailsCard() {
-	const [isOpen, setIsOpen] = React.useState(false)
+type Props = {
+	course: Course
+}
+
+export default function CourseDetailsCard({ course }: Props) {
 
 	return (
-		<Card className="p-4 hover:shadow-xl">
-			<CardContent className="p-0"    >
-				<Collapsible
-					open={isOpen}
-					onOpenChange={setIsOpen}
-				>
-					<CollapsibleTrigger className="w-full">
-						<div className="w-full flex flex-row justify-between items-center">
-							<section className="flex gap-2">
-								<img src="" alt="#" />
-								<h3 className="text-xl">HTML Basics</h3>
-							</section>
-							<p className="text-xl">4 Lessons</p>
-						</div>
-					</CollapsibleTrigger>
-					<CollapsibleContent className="">
-						<h3 className="text-2xl">Html Tags</h3>
-					</CollapsibleContent>
-				</Collapsible>
-			</CardContent>
-		</Card>
+		<Container>
+			{course?.modules?.map((module) => (
+				<Card className="mt-4">
+					<Accordion type="single" collapsible className="w-full  py-2 px-8">
+						<AccordionItem className="border-none" value="item-1">
+							<AccordionTrigger className="text-xl hover:no-underline">{module?.title}</AccordionTrigger>
+							<AccordionContent className="border-none">
+								<p className="py-4">{course?.description}</p>
+								<Button>Submission</Button>
+								{module?.sessions?.map((session) => (<Card className="bg-slate-100 my-4">
+									<Accordion type="single" collapsible className="px-8">
+										<AccordionItem className="border-none" value="item-1">
+											<AccordionTrigger className="hover:no-underline">
+												<div className="w-full flex justify-between">
+													<h2>{session?.title}</h2>
+													<span className="mr-8">{session?.topics?.length || 0} Topics</span>
+												</div>
+											</AccordionTrigger>
+											<AccordionContent className="border-none">
+												<div className="flex flex-col gap-4 px-6">
+													{session?.topics?.map(topic => <a href="">{topic}</a>)}
+												</div>
+											</AccordionContent>
+										</AccordionItem>
+									</Accordion>
+								</Card>))}
+
+							</AccordionContent>
+						</AccordionItem>
+					</Accordion>
+				</Card>
+			))}
+		</Container>
 	)
 }

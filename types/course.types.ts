@@ -21,5 +21,7 @@ export interface Module {
 
 export interface Session {
   title: string
-  sessionNumber: number
+  sessionNumber?: number
+  topics?: string[]
 }
+

@@ -1,0 +1,872 @@
+{
+  "graph": {
+    "concepts": [
+      {
+        "slug": "arithmetic-operators",
+        "name": "Arithmetic Operators",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/arithmetic-operators",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/arithmetic-operators/tooltip"
+      },
+      {
+        "slug": "array-analysis",
+        "name": "Array Analysis",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/array-analysis",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/array-analysis/tooltip"
+      },
+      {
+        "slug": "array-destructuring",
+        "name": "Array Destructuring",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/array-destructuring",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/array-destructuring/tooltip"
+      },
+      {
+        "slug": "array-loops",
+        "name": "Array Loops",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/array-loops",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/array-loops/tooltip"
+      },
+      {
+        "slug": "array-transformations",
+        "name": "Array Transformations",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/array-transformations",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/array-transformations/tooltip"
+      },
+      {
+        "slug": "arrays",
+        "name": "Arrays",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/arrays",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/arrays/tooltip"
+      },
+      {
+        "slug": "arrow-functions",
+        "name": "Arrow Functions",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/arrow-functions",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/arrow-functions/tooltip"
+      },
+      {
+        "slug": "basics",
+        "name": "Basics",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/basics",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/basics/tooltip"
+      },
+      {
+        "slug": "booleans",
+        "name": "Booleans",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/booleans",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/booleans/tooltip"
+      },
+      {
+        "slug": "callbacks",
+        "name": "Callbacks",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/callbacks",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/callbacks/tooltip"
+      },
+      {
+        "slug": "classes",
+        "name": "Prototypes & Classes",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/classes",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/classes/tooltip"
+      },
+      {
+        "slug": "closures",
+        "name": "Closures",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/closures",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/closures/tooltip"
+      },
+      {
+        "slug": "comparison",
+        "name": "Comparison",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/comparison",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/comparison/tooltip"
+      },
+      {
+        "slug": "conditionals",
+        "name": "Conditionals",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/conditionals",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/conditionals/tooltip"
+      },
+      {
+        "slug": "conditionals-switch",
+        "name": "Switch Statement",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/conditionals-switch",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/conditionals-switch/tooltip"
+      },
+      {
+        "slug": "conditionals-ternary",
+        "name": "Ternary Operator",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/conditionals-ternary",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/conditionals-ternary/tooltip"
+      },
+      {
+        "slug": "errors",
+        "name": "Errors",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/errors",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/errors/tooltip"
+      },
+      {
+        "slug": "for-loops",
+        "name": "For Loops",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/for-loops",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/for-loops/tooltip"
+      },
+      {
+        "slug": "functions",
+        "name": "Functions",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/functions",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/functions/tooltip"
+      },
+      {
+        "slug": "increment-decrement",
+        "name": "Increment/Decrement",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/increment-decrement",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/increment-decrement/tooltip"
+      },
+      {
+        "slug": "inheritance",
+        "name": "Inheritance",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/inheritance",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/inheritance/tooltip"
+      },
+      {
+        "slug": "null-undefined",
+        "name": "Null and Undefined",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/null-undefined",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/null-undefined/tooltip"
+      },
+      {
+        "slug": "numbers",
+        "name": "Numbers",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/numbers",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/numbers/tooltip"
+      },
+      {
+        "slug": "objects",
+        "name": "Objects",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/objects",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/objects/tooltip"
+      },
+      {
+        "slug": "promises",
+        "name": "Promises",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/promises",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/promises/tooltip"
+      },
+      {
+        "slug": "recursion",
+        "name": "Recursion",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/recursion",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/recursion/tooltip"
+      },
+      {
+        "slug": "regular-expressions",
+        "name": "Regular Expressions",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/regular-expressions",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/regular-expressions/tooltip"
+      },
+      {
+        "slug": "rest-and-spread",
+        "name": "Rest and Spread",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/rest-and-spread",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/rest-and-spread/tooltip"
+      },
+      {
+        "slug": "sets",
+        "name": "Sets",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/sets",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/sets/tooltip"
+      },
+      {
+        "slug": "strings",
+        "name": "Strings",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/strings",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/strings/tooltip"
+      },
+      {
+        "slug": "template-strings",
+        "name": "Template Strings",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/template-strings",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/template-strings/tooltip"
+      },
+      {
+        "slug": "type-conversion",
+        "name": "Type Conversion",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/type-conversion",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/type-conversion/tooltip"
+      },
+      {
+        "slug": "while-loops",
+        "name": "While Loops",
+        "web_url": "https://exercism.org/tracks/javascript/concepts/while-loops",
+        "tooltip_url": "https://exercism.org/tracks/javascript/concepts/while-loops/tooltip"
+      }
+    ],
+    "levels": [
+      [
+        "basics"
+      ],
+      [
+        "numbers",
+        "arithmetic-operators",
+        "strings",
+        "booleans"
+      ],
+      [
+        "arrays",
+        "conditionals",
+        "comparison"
+      ],
+      [
+        "increment-decrement",
+        "for-loops",
+        "while-loops",
+        "conditionals-switch"
+      ],
+      [
+        "objects"
+      ],
+      [
+        "null-undefined"
+      ],
+      [
+        "type-conversion",
+        "functions"
+      ],
+      [
+        "template-strings",
+        "conditionals-ternary",
+        "closures",
+        "callbacks",
+        "array-destructuring",
+        "rest-and-spread"
+      ],
+      [
+        "array-analysis",
+        "arrow-functions",
+        "classes"
+      ],
+      [
+        "errors",
+        "inheritance",
+        "array-transformations",
+        "regular-expressions",
+        "array-loops"
+      ],
+      [
+        "sets",
+        "promises",
+        "recursion"
+      ]
+    ],
+    "connections": [
+      {
+        "from": "basics",
+        "to": "numbers"
+      },
+      {
+        "from": "basics",
+        "to": "arithmetic-operators"
+      },
+      {
+        "from": "basics",
+        "to": "strings"
+      },
+      {
+        "from": "basics",
+        "to": "booleans"
+      },
+      {
+        "from": "numbers",
+        "to": "arrays"
+      },
+      {
+        "from": "booleans",
+        "to": "conditionals"
+      },
+      {
+        "from": "numbers",
+        "to": "conditionals"
+      },
+      {
+        "from": "strings",
+        "to": "conditionals"
+      },
+      {
+        "from": "booleans",
+        "to": "comparison"
+      },
+      {
+        "from": "numbers",
+        "to": "comparison"
+      },
+      {
+        "from": "strings",
+        "to": "comparison"
+      },
+      {
+        "from": "arrays",
+        "to": "increment-decrement"
+      },
+      {
+        "from": "conditionals",
+        "to": "increment-decrement"
+      },
+      {
+        "from": "comparison",
+        "to": "increment-decrement"
+      },
+      {
+        "from": "arrays",
+        "to": "for-loops"
+      },
+      {
+        "from": "conditionals",
+        "to": "for-loops"
+      },
+      {
+        "from": "comparison",
+        "to": "for-loops"
+      },
+      {
+        "from": "arrays",
+        "to": "while-loops"
+      },
+      {
+        "from": "conditionals",
+        "to": "while-loops"
+      },
+      {
+        "from": "comparison",
+        "to": "while-loops"
+      },
+      {
+        "from": "arrays",
+        "to": "conditionals-switch"
+      },
+      {
+        "from": "conditionals",
+        "to": "conditionals-switch"
+      },
+      {
+        "from": "comparison",
+        "to": "conditionals-switch"
+      },
+      {
+        "from": "for-loops",
+        "to": "objects"
+      },
+      {
+        "from": "objects",
+        "to": "null-undefined"
+      },
+      {
+        "from": "null-undefined",
+        "to": "type-conversion"
+      },
+      {
+        "from": "null-undefined",
+        "to": "functions"
+      },
+      {
+        "from": "type-conversion",
+        "to": "template-strings"
+      },
+      {
+        "from": "type-conversion",
+        "to": "conditionals-ternary"
+      },
+      {
+        "from": "functions",
+        "to": "closures"
+      },
+      {
+        "from": "functions",
+        "to": "callbacks"
+      },
+      {
+        "from": "functions",
+        "to": "array-destructuring"
+      },
+      {
+        "from": "functions",
+        "to": "rest-and-spread"
+      },
+      {
+        "from": "callbacks",
+        "to": "array-analysis"
+      },
+      {
+        "from": "callbacks",
+        "to": "arrow-functions"
+      },
+      {
+        "from": "conditionals-ternary",
+        "to": "classes"
+      },
+      {
+        "from": "classes",
+        "to": "errors"
+      },
+      {
+        "from": "classes",
+        "to": "inheritance"
+      },
+      {
+        "from": "arrow-functions",
+        "to": "array-transformations"
+      },
+      {
+        "from": "classes",
+        "to": "regular-expressions"
+      },
+      {
+        "from": "arrow-functions",
+        "to": "array-loops"
+      },
+      {
+        "from": "array-loops",
+        "to": "sets"
+      },
+      {
+        "from": "errors",
+        "to": "promises"
+      },
+      {
+        "from": "array-transformations",
+        "to": "recursion"
+      }
+    ],
+    "status": {},
+    "exercises_data": {
+      "array-analysis": [
+        {
+          "slug": "elyses-analytic-enchantments",
+          "url": "/tracks/javascript/exercises/elyses-analytic-enchantments",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/elyses-analytic-enchantments/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "elyses-analytic-enchantments",
+            10
+          ]
+        }
+      ],
+      "array-destructuring": [
+        {
+          "slug": "elyses-destructured-enchantments",
+          "url": "/tracks/javascript/exercises/elyses-destructured-enchantments",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/elyses-destructured-enchantments/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "elyses-destructured-enchantments",
+            11
+          ]
+        }
+      ],
+      "array-loops": [
+        {
+          "slug": "elyses-looping-enchantments",
+          "url": "/tracks/javascript/exercises/elyses-looping-enchantments",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/elyses-looping-enchantments/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "elyses-looping-enchantments",
+            12
+          ]
+        }
+      ],
+      "arrays": [
+        {
+          "slug": "elyses-enchantments",
+          "url": "/tracks/javascript/exercises/elyses-enchantments",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/elyses-enchantments/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "elyses-enchantments",
+            5
+          ]
+        }
+      ],
+      "basics": [
+        {
+          "slug": "lasagna",
+          "url": "/tracks/javascript/exercises/lasagna",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/lasagna/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "lasagna",
+            1
+          ]
+        }
+      ],
+      "booleans": [
+        {
+          "slug": "annalyns-infiltration",
+          "url": "/tracks/javascript/exercises/annalyns-infiltration",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/annalyns-infiltration/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "annalyns-infiltration",
+            2
+          ]
+        }
+      ],
+      "callbacks": [
+        {
+          "slug": "fruit-picker",
+          "url": "/tracks/javascript/exercises/fruit-picker",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/fruit-picker/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "fruit-picker",
+            17
+          ]
+        }
+      ],
+      "closures": [
+        {
+          "slug": "coordinate-transformation",
+          "url": "/tracks/javascript/exercises/coordinate-transformation",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/coordinate-transformation/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "coordinate-transformation",
+            16
+          ]
+        }
+      ],
+      "conditionals": [
+        {
+          "slug": "vehicle-purchase",
+          "url": "/tracks/javascript/exercises/vehicle-purchase",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/vehicle-purchase/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "vehicle-purchase",
+            6
+          ]
+        }
+      ],
+      "errors": [
+        {
+          "slug": "factory-sensors",
+          "url": "/tracks/javascript/exercises/factory-sensors",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/factory-sensors/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "factory-sensors",
+            22
+          ]
+        }
+      ],
+      "null-undefined": [
+        {
+          "slug": "amusement-park",
+          "url": "/tracks/javascript/exercises/amusement-park",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/amusement-park/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "amusement-park",
+            14
+          ]
+        }
+      ],
+      "numbers": [
+        {
+          "slug": "freelancer-rates",
+          "url": "/tracks/javascript/exercises/freelancer-rates",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/freelancer-rates/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "freelancer-rates",
+            3
+          ]
+        }
+      ],
+      "promises": [
+        {
+          "slug": "translation-service",
+          "url": "/tracks/javascript/exercises/translation-service",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/translation-service/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "translation-service",
+            18
+          ]
+        }
+      ],
+      "recursion": [
+        {
+          "slug": "pizza-order",
+          "url": "/tracks/javascript/exercises/pizza-order",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/pizza-order/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "pizza-order",
+            15
+          ]
+        }
+      ],
+      "rest-and-spread": [
+        {
+          "slug": "elyses-destructured-enchantments",
+          "url": "/tracks/javascript/exercises/elyses-destructured-enchantments",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/elyses-destructured-enchantments/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "elyses-destructured-enchantments",
+            11
+          ]
+        }
+      ],
+      "template-strings": [
+        {
+          "slug": "custom-signs",
+          "url": "/tracks/javascript/exercises/custom-signs",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/custom-signs/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "custom-signs",
+            24
+          ]
+        }
+      ],
+      "strings": [
+        {
+          "slug": "poetry-club-door-policy",
+          "url": "/tracks/javascript/exercises/poetry-club-door-policy",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/poetry-club-door-policy/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "poetry-club-door-policy",
+            4
+          ]
+        }
+      ],
+      "comparison": [
+        {
+          "slug": "vehicle-purchase",
+          "url": "/tracks/javascript/exercises/vehicle-purchase",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/vehicle-purchase/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "vehicle-purchase",
+            6
+          ]
+        }
+      ],
+      "increment-decrement": [
+        {
+          "slug": "bird-watcher",
+          "url": "/tracks/javascript/exercises/bird-watcher",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/bird-watcher/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "bird-watcher",
+            7
+          ]
+        }
+      ],
+      "for-loops": [
+        {
+          "slug": "bird-watcher",
+          "url": "/tracks/javascript/exercises/bird-watcher",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/bird-watcher/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "bird-watcher",
+            7
+          ]
+        }
+      ],
+      "while-loops": [
+        {
+          "slug": "mixed-juices",
+          "url": "/tracks/javascript/exercises/mixed-juices",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/mixed-juices/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "mixed-juices",
+            8
+          ]
+        }
+      ],
+      "conditionals-switch": [
+        {
+          "slug": "mixed-juices",
+          "url": "/tracks/javascript/exercises/mixed-juices",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/mixed-juices/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "mixed-juices",
+            8
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "slug": "high-score-board",
+          "url": "/tracks/javascript/exercises/high-score-board",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/high-score-board/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "high-score-board",
+            19
+          ]
+        }
+      ],
+      "sets": [
+        {
+          "slug": "ozans-playlist",
+          "url": "/tracks/javascript/exercises/ozans-playlist",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/ozans-playlist/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "ozans-playlist",
+            20
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "slug": "lasagna-master",
+          "url": "/tracks/javascript/exercises/lasagna-master",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/lasagna-master/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "lasagna-master",
+            21
+          ]
+        }
+      ],
+      "type-conversion": [
+        {
+          "slug": "lucky-numbers",
+          "url": "/tracks/javascript/exercises/lucky-numbers",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/lucky-numbers/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "lucky-numbers",
+            9
+          ]
+        }
+      ],
+      "arrow-functions": [
+        {
+          "slug": "elyses-analytic-enchantments",
+          "url": "/tracks/javascript/exercises/elyses-analytic-enchantments",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/elyses-analytic-enchantments/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "elyses-analytic-enchantments",
+            10
+          ]
+        }
+      ],
+      "arithmetic-operators": [
+        {
+          "slug": "freelancer-rates",
+          "url": "/tracks/javascript/exercises/freelancer-rates",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/freelancer-rates/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "freelancer-rates",
+            3
+          ]
+        }
+      ],
+      "inheritance": [
+        {
+          "slug": "factory-sensors",
+          "url": "/tracks/javascript/exercises/factory-sensors",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/factory-sensors/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "factory-sensors",
+            22
+          ]
+        }
+      ],
+      "conditionals-ternary": [
+        {
+          "slug": "custom-signs",
+          "url": "/tracks/javascript/exercises/custom-signs",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/custom-signs/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "custom-signs",
+            24
+          ]
+        }
+      ],
+      "array-transformations": [
+        {
+          "slug": "elyses-transformative-enchantments",
+          "url": "/tracks/javascript/exercises/elyses-transformative-enchantments",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/elyses-transformative-enchantments/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "elyses-transformative-enchantments",
+            23
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "slug": "windowing-system",
+          "url": "/tracks/javascript/exercises/windowing-system",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/windowing-system/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "windowing-system",
+            25
+          ]
+        }
+      ],
+      "dates": [],
+      "regular-expressions": [
+        {
+          "slug": "regular-chatbot",
+          "url": "/tracks/javascript/exercises/regular-chatbot",
+          "tooltip_url": "https://exercism.org/tracks/javascript/exercises/regular-chatbot/tooltip",
+          "status": "available",
+          "type": "concept",
+          "position": [
+            "regular-chatbot",
+            26
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -21,7 +21,7 @@ interface PageNavigationMenuProps {
 
 export default function PageNavigationMenu({ courses }: PageNavigationMenuProps) {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="mr-auto">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Programs</NavigationMenuTrigger>

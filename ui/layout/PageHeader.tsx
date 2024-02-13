@@ -4,6 +4,8 @@ import Container from './container'
 import PageNavigationMenu from './PageNavigationMenu'
 import { Course } from '@/types/course.types'
 import courseController from '@/controllers/course.controller'
+import Login from '../auth/Login'
+import AuthUser from '../auth/AuthUser'
 
 type Props = {}
 
@@ -14,6 +16,7 @@ async function PageHeader({ }: Props) {
       <Container className='flex gap-4 items-center'>
         <FullstackInstituteLogo />
         <PageNavigationMenu courses={courses} />
+        <AuthUser />
       </Container>
     </div>
   )
