@@ -5,10 +5,21 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { CardHeader, CardTitle } from "@/components/ui/card";
 import { TextareaDemo } from '../dateui/input';
+import { LabelInput } from '@/components/form/LabelInput';
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+
 
 type Props = {};
 
 const Skills = (props: Props) => {
+
+  const fields = [
+    { id: 'professionalSkills', label: 'Professional Skills', placeholder: 'Details' },
+    { id: 'advancedSkills', label: 'Advanced Skills', placeholder: 'Details' },
+    
+  ]
+
   const [skills1, setSkills1] = useState('');
   const [skills2, setSkills2] = useState('');
 
@@ -39,10 +50,23 @@ const Skills = (props: Props) => {
    }
 
   return (
-    <Container className='bg-slate-200 p-16'>
-      <CardHeader>
-        <CardTitle>Your Skills According to your work</CardTitle>
-      </CardHeader>
+    <Container>
+       <div className='grid gap-8 md:grid-cols-2 grid-cols-1 pb-5'>
+         {fields.map(({ id, placeholder, label }) => <LabelInput
+          inputProps={{
+            id,
+            placeholder,
+            //onChange: handleChange1
+          }}
+          labelProps={{
+            htmlFor: id,
+            children: label
+          }}
+        />)}
+  </div>
+
+
+    {/*  
       <Label htmlFor="professionalSkills">
         Professional Skills
       </Label>
@@ -60,6 +84,14 @@ const Skills = (props: Props) => {
         value={skills2}
         onChange={handleChange2}
       />
+        */}
+
+<footer className='flex justify-between'>
+        <Link  href='/resume/education'><Button >preview</Button></Link> 
+        <Link  href='/resume'><Button >Next</Button></Link>
+      </footer>
+     
+
     </Container>
   );
 }

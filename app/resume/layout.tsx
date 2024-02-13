@@ -17,10 +17,6 @@ const sidebarNavItems = [
     href: "/resume",
   },
   {
-    title: "Summary",
-    href: "/resume/summary"
-  },
-  {
     title: "Experience",
     href: "/resume/experience"
   },

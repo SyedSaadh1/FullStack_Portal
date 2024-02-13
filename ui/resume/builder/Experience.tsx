@@ -10,10 +10,21 @@ import {
 } from "@/components/ui/card";
 import { DatePicker } from '../dateui/DatePicker';
 import { TextareaDemo } from '../dateui/input';
+import { LabelInput } from '@/components/form/LabelInput';
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 type Props = {};
 
 const Experience = (props: Props) => {
+
+  const fields = [
+    { id: 'companyname', label: 'Name of Company', placeholder: 'Company Name' },
+    { id: 'Position', label: 'Position', placeholder: 'Details' },
+    {id: 'location', label: 'Location Type', placeholder: ''},
+  ]
+  
+
   const [company1, setCompany1] = useState('');
   const [company1Date, setCompany1Date] = useState('');
   const [position, setPosition] = useState('')
@@ -64,41 +75,51 @@ const Experience = (props: Props) => {
 
   
   return (
-    <Container className='bg-slate-200 p-16'>
-        <CardHeader>
-          <CardTitle>Your Experience Details</CardTitle>
-        </CardHeader>
-        <Label htmlFor="company1" className=''>Name of Company</Label>
-        <Input
-          id="company1"
-          value={company1}
-          onChange={handleCompany1Change}
-          placeholder="Details."
-          className=''
-        />
-         <Label >Your Position In Last Company </Label>
-        <TextareaDemo  
-           value={position}
-           onChange={handlePosition}
-        />
-        <Label className='flex '>Last Date :- </Label>
-        <DatePicker
-          value={new Date(company1Date)}
-          onChange={handleCompany1DateChange}
-        />
-        <Label className='flex '>End Date :- </Label>
-        <DatePicker
-          value={new Date(company1Date)}
-          onChange={handleCompany1DateChange}
-        />
+    <Container>
+<div className='grid gap-8 md:grid-cols-3 grid-cols-1 pb-8'>
+{fields.map(({ id, placeholder, label }) => <LabelInput
+          inputProps={{
+            id,
+            placeholder,
+            onChange: handleCompany1Change
+          }}
+          labelProps={{
+            htmlFor: id,
+            children: label
+          }}
+        />)}
+        </div>
 
-     <Label className='flex'>Roles And Response </Label>
-     <TextareaDemo
-          id='rolesAndResponse'
-          value={response}
-          onChange={handleResponse}
-     />
+        <div className='md:col-span-3 col-span-1 flex flex-col gap-2 pb-8'>
+        
+        <Label >Role And Responsibilities </Label>
+        <TextareaDemo  
+           //value={position}
+           //onChange={handlePosition}
           
+         />
+        </div>
+         <div className='flex gap-2 pb-8'>
+         <Label className=' '>Last Date :- 
+        <DatePicker
+          //value={new Date(company1Date)}
+          //onChange={handleCompany1DateChange}
+        />
+      </Label>
+
+        <Label className=' '>End Date :- 
+        <DatePicker
+          //value={new Date(company1Date)}
+          //onChange={handleCompany1DateChange}
+        />
+        </Label>
+         </div>
+       
+        <footer className='flex justify-between'>
+        <Link  href='/resume/experience'><Button >preview</Button></Link> 
+        <Link  href='/resume/education'><Button >Next</Button></Link>
+      </footer>
+     
         
       </Container>
   );
