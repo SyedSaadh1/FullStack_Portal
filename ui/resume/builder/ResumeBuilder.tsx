@@ -8,8 +8,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { LabelInput } from '@/components/form/LabelInput'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 type Props = {}
+
+const fields = [
+  { id: 'name', label: 'Name', placeholder: 'Write your fullname' },
+  { id: 'phonenumber', label: 'Phone number', placeholder: 'Phone number' },
+  { id: 'email', label: 'Email', placeholder: 'Write your email' },
+]
 
 const ResumeBuilder = (props: Props) => {
   const [name, setName] = useState('');
@@ -46,36 +56,35 @@ const ResumeBuilder = (props: Props) => {
 
   return (
     <Container className=''>
-      <CardHeader>
-        <CardTitle>Profile Name</CardTitle>
-        <CardDescription>This is how everyone sees your name.</CardDescription>
-      </CardHeader>
-      
-      <Label htmlFor="name">Name</Label>
-      <Input
-        id="name"
-        value={name}
-        placeholder="Write Your FullName."
-        onChange={handleChange}
-      />
-      
-      <Label htmlFor="phoneNumber">Phone Number</Label>
-      <Input
-        id="phoneNumber"
-        value={phoneNumber}
-        placeholder="Write Your Phone Number."
-        onChange={handleChange}
-      />
+      <div className='grid gap-8 md:grid-cols-3 grid-cols-1'>
+        {fields.map(({ id, placeholder, label }) => <LabelInput
+          inputProps={{
+            id,
+            placeholder,
+            onChange: handleChange
+          }}
+          labelProps={{
+            htmlFor: id,
+            children: label
+          }}
+        />)}
 
-      <Label htmlFor="email">Email</Label>
-      <Input
-        id="email"
-        type="email"
-        value={email}
-        placeholder="Your Email"
-        onChange={handleChange}
-      />
+        <div className='md:col-span-3 col-span-1 flex flex-col gap-2'>
+          <Label htmlFor="summary">Information</Label>
+          <Textarea
+            id="summary"
+            placeholder="Write Your Summary."
+            onChange={handleChange}
+          />
+        </div>
+      </div>
+
+      <footer className='text-right mt-8'>
+        <Link  href='/resume/experience'><Button>Next</Button></Link> 
+      </footer>
+
     </Container>
+
   )
 }
 

@@ -32,13 +32,7 @@ const Summary = (props: Props) => {
       <CardHeader>
         <CardTitle>Summary</CardTitle>
       </CardHeader>
-      <Label htmlFor="summary">Information</Label>
-      <TextareaDemo
-        id="summary"
-        placeholder="Write Your Summary."
-        value={summary}
-        onChange={handleChange}
-      />
+      
     </Container>
   )
 }
