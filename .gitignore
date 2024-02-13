@@ -11,3 +11,5 @@ keystone.db
 *.log
 
 *.db
+
+.next

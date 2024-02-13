@@ -1,0 +1,127 @@
+{
+  "course_title": "HTML Fundamentals",
+  "modules": [
+    {
+      "module_title": "Introduction to HTML Basics",
+      "duration": "1 hour",
+      "context": "Understand the role of HTML in web development.",
+      "content": [
+        "Introduction to HTML.",
+        "Basic structure of an HTML document.",
+        "Commonly used HTML tags (e.g., <html>, <head>, <body>).",
+        "Creating your first HTML page."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "HTML basics"
+        },
+        {
+          "activity_type": "Theory discussion",
+          "description": "Discuss fundamental concepts"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Assess understanding"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Create a simple webpage"
+        }
+      ]
+    },
+    {
+      "module_title": "Tables and Forms",
+      "duration": "2 hours",
+      "context": "Dive deeper into specific HTML elements.",
+      "content": [
+        "Creating tables using <table>, <tr>, and <td> tags.",
+        "Formatting tables with attributes (e.g., colspan, rowspan).",
+        "Building HTML forms (input fields, buttons, labels).",
+        "Understanding form validation."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "Tables and forms"
+        },
+        {
+          "activity_type": "Hands-on practice",
+          "description": "Create tables and forms"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Test knowledge of table and form concepts"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Design a registration form"
+        }
+      ]
+    },
+    {
+      "module_title": "Semantic HTML and Accessibility",
+      "duration": "1 hour",
+      "context": "Emphasize the importance of semantic HTML.",
+      "content": [
+        "Semantic HTML tags (e.g., <header>, <nav>, <article>).",
+        "ARIA roles and attributes.",
+        "Best practices for accessible web content."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "Semantic HTML"
+        },
+        {
+          "activity_type": "Discussion",
+          "description": "Explore accessibility concepts"
+        },
+        {
+          "activity_type": "Quiz",
+          "description": "Assess understanding of semantic tags and accessibility"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Convert existing content to semantic HTML"
+        }
+      ]
+    },
+    {
+      "module_title": "Putting It All Together",
+      "duration": "2 hours",
+      "context": "Apply knowledge gained from previous modules.",
+      "content": [
+        "Combining HTML, CSS, and JavaScript.",
+        "Structuring a multi-page website.",
+        "Responsive design considerations."
+      ],
+      "activities": [
+        {
+          "activity_type": "Video explanation",
+          "description": "Building a complete webpage"
+        },
+        {
+          "activity_type": "Hands-on project",
+          "description": "Develop a personal portfolio page"
+        },
+        {
+          "activity_type": "Final quiz",
+          "description": "Covering all topics"
+        },
+        {
+          "activity_type": "Coding task",
+          "description": "Implement responsive features"
+        }
+      ]
+    }
+  ],
+  "assessment_and_certification": {
+    "duration": "1 hour",
+    "context": "Evaluate learners' understanding.",
+    "content": [
+      "Comprehensive assessment covering all modules.",
+      "Certificate for successful participants."
+    ]
+  }
+}

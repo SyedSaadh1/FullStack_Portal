@@ -10,13 +10,14 @@ class CoursesService extends HttpService {
   }
 
   public async getAllPublicCourses(): Promise<Course[]> {
+    console.log("Calling getAllPublicCourses...")
     const response: AxiosResponse<Course[]> = await this.get('/courses');
     return (response.data || []).map(this.mapImages)
   }
 
 
-  private mapImages(course: Course) {
-    let { thumbnail, banner } = course;
+  private mapImages = (course: Course) => {
+    let { thumbnail, banner, id, name } = course;
     if (thumbnail && thumbnail?.url) {
       thumbnail.url = `${ENDPOINTS.CMS_ENDPOINT}${thumbnail.url}`
     }
@@ -24,10 +25,18 @@ class CoursesService extends HttpService {
     if (banner && banner?.url) {
       banner.url = `${ENDPOINTS.CMS_ENDPOINT}${banner.url}`
     }
+    const url = this.generateCourseUrl(course);
     return {
       ...course,
+      url,
       thumbnail,
     }
+  }
+
+  private generateCourseUrl = (course: Course): string => {
+    const { id, name } = course;
+    const url = `${name.toLowerCase().replaceAll(" ", "-")}-${id}`
+    return url;
   }
 
 

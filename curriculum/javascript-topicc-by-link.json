@@ -1,0 +1,1266 @@
+{
+  "https://javascript.info/intro": [
+    "What is JavaScript?",
+    "What can in-browser JavaScript do?",
+    "What CAN’T in-browser JavaScript do?",
+    "What makes JavaScript unique?",
+    "Languages “over” JavaScript",
+    "Summary"
+  ],
+  "https://javascript.info/manuals-specifications": [
+    "Specification",
+    "Manuals",
+    "Compatibility tables"
+  ],
+  "https://javascript.info/code-editors": [
+    "IDE",
+    "Lightweight editors",
+    "Let’s not argue"
+  ],
+  "https://javascript.info/devtools": [
+    "Google Chrome",
+    "Firefox, Edge, and others",
+    "Safari",
+    "Summary"
+  ],
+  "https://javascript.info/hello-world": [
+    "The “script” tag",
+    "Modern markup",
+    "External scripts",
+    "Summary"
+  ],
+  "https://javascript.info/structure": [
+    "Statements",
+    "Semicolons",
+    "Comments"
+  ],
+  "https://javascript.info/strict-mode": [
+    "“use strict”",
+    "Browser console",
+    "Should we “use strict”?"
+  ],
+  "https://javascript.info/variables": [
+    "A variable",
+    "A real-life analogy",
+    "Variable naming",
+    "Constants",
+    "Name things right",
+    "Summary"
+  ],
+  "https://javascript.info/types": [
+    "Number",
+    "BigInt",
+    "String",
+    "Boolean (logical type)",
+    "The “null” value",
+    "The “undefined” value",
+    "Objects and Symbols",
+    "The typeof operator",
+    "Summary"
+  ],
+  "https://javascript.info/alert-prompt-confirm": [
+    "alert",
+    "prompt",
+    "confirm",
+    "Summary"
+  ],
+  "https://javascript.info/type-conversions": [
+    "String Conversion",
+    "Numeric Conversion",
+    "Boolean Conversion",
+    "Summary"
+  ],
+  "https://javascript.info/operators": [
+    "Terms: “unary”, “binary”, “operand”",
+    "Maths",
+    "String concatenation with binary +",
+    "Numeric conversion, unary +",
+    "Operator precedence",
+    "Assignment",
+    "Modify-in-place",
+    "Increment/decrement",
+    "Bitwise operators",
+    "Comma"
+  ],
+  "https://javascript.info/comparison": [
+    "Boolean is the result",
+    "String comparison",
+    "Comparison of different types",
+    "Strict equality",
+    "Comparison with null and undefined",
+    "Summary"
+  ],
+  "https://javascript.info/ifelse": [
+    "The “if” statement",
+    "Boolean conversion",
+    "The “else” clause",
+    "Several conditions: “else if”",
+    "Conditional operator ‘?’",
+    "Multiple ‘?’",
+    "Non-traditional use of ‘?’"
+  ],
+  "https://javascript.info/logical-operators": [
+    "|| (OR)",
+    "OR \"||\" finds the first truthy value",
+    "&& (AND)",
+    "AND “&&” finds the first falsy value",
+    "! (NOT)"
+  ],
+  "https://javascript.info/nullish-coalescing-operator": [
+    "Comparison with ||",
+    "Precedence",
+    "Summary"
+  ],
+  "https://javascript.info/while-for": [
+    "The “while” loop",
+    "The “do…while” loop",
+    "The “for” loop",
+    "Breaking the loop",
+    "Continue to the next iteration",
+    "Labels for break/continue",
+    "Summary"
+  ],
+  "https://javascript.info/switch": [
+    "The syntax",
+    "An example",
+    "Grouping of “case”",
+    "Type matters"
+  ],
+  "https://javascript.info/function-basics": [
+    "Function Declaration",
+    "Local variables",
+    "Outer variables",
+    "Parameters",
+    "Default values",
+    "Returning a value",
+    "Naming a function",
+    "Functions == Comments",
+    "Summary"
+  ],
+  "https://javascript.info/function-expressions": [
+    "Function is a value",
+    "Callback functions",
+    "Function Expression vs Function Declaration",
+    "Summary"
+  ],
+  "https://javascript.info/arrow-functions-basics": [
+    "Multiline arrow functions",
+    "Summary"
+  ],
+  "https://javascript.info/javascript-specials": [
+    "Code structure",
+    "Strict mode",
+    "Variables",
+    "Interaction",
+    "Operators",
+    "Loops",
+    "The “switch” construct",
+    "Functions",
+    "More to come"
+  ],
+  "https://javascript.info/debugging-chrome": [
+    "The “Sources” panel",
+    "Console",
+    "Breakpoints",
+    "The command “debugger”",
+    "Pause and look around",
+    "Tracing the execution",
+    "Logging",
+    "Summary"
+  ],
+  "https://javascript.info/coding-style": [
+    "Syntax",
+    "Function Placement",
+    "Style Guides",
+    "Automated Linters",
+    "Summary"
+  ],
+  "https://javascript.info/comments": [
+    "Bad comments",
+    "Good comments",
+    "Summary"
+  ],
+  "https://javascript.info/ninja-code": [
+    "Brevity is the soul of wit",
+    "One-letter variables",
+    "Use abbreviations",
+    "Soar high. Be abstract.",
+    "Attention test",
+    "Smart synonyms",
+    "Reuse names",
+    "Underscores for fun",
+    "Show your love",
+    "Overlap outer variables",
+    "Side-effects everywhere!",
+    "Powerful functions!",
+    "Summary"
+  ],
+  "https://javascript.info/testing-mocha": [
+    "Why do we need tests?",
+    "Behavior Driven Development (BDD)",
+    "Development of “pow”: the spec",
+    "The development flow",
+    "The spec in action",
+    "Initial implementation",
+    "Improving the spec",
+    "Improving the implementation",
+    "Nested describe",
+    "Extending the spec",
+    "Summary"
+  ],
+  "https://javascript.info/polyfills": [
+    "Transpilers",
+    "Polyfills",
+    "Summary"
+  ],
+  "https://javascript.info/object": [
+    "Literals and properties",
+    "Square brackets",
+    "Property value shorthand",
+    "Property names limitations",
+    "Property existence test, “in” operator",
+    "The \"for..in\" loop",
+    "Summary"
+  ],
+  "https://javascript.info/object-copy": [
+    "Comparison by reference",
+    "Cloning and merging, Object.assign",
+    "Nested cloning",
+    "Summary"
+  ],
+  "https://javascript.info/garbage-collection": [
+    "Reachability",
+    "A simple example",
+    "Two references",
+    "Interlinked objects",
+    "Unreachable island",
+    "Internal algorithms",
+    "Summary"
+  ],
+  "https://javascript.info/object-methods": [
+    "Method examples",
+    "“this” in methods",
+    "“this” is not bound",
+    "Arrow functions have no “this”",
+    "Summary"
+  ],
+  "https://javascript.info/constructor-new": [
+    "Constructor function",
+    "Constructor mode test: new.target",
+    "Return from constructors",
+    "Methods in constructor",
+    "Summary"
+  ],
+  "https://javascript.info/optional-chaining": [
+    "The “non-existing property” problem",
+    "Optional chaining",
+    "Short-circuiting",
+    "Other variants: ?.(), ?.[]",
+    "Summary"
+  ],
+  "https://javascript.info/symbol": [
+    "Symbols",
+    "“Hidden” properties",
+    "Global symbols",
+    "System symbols",
+    "Summary"
+  ],
+  "https://javascript.info/object-toprimitive": [
+    "Conversion rules",
+    "Hints",
+    "Symbol.toPrimitive",
+    "toString/valueOf",
+    "Further conversions",
+    "Summary"
+  ],
+  "https://javascript.info/primitives-methods": [
+    "A primitive as an object",
+    "Summary"
+  ],
+  "https://javascript.info/number": [
+    "More ways to write a number",
+    "toString(base)",
+    "Rounding",
+    "Imprecise calculations",
+    "Tests: isFinite and isNaN",
+    "parseInt and parseFloat",
+    "Other math functions",
+    "Summary"
+  ],
+  "https://javascript.info/string": [
+    "Quotes",
+    "Special characters",
+    "String length",
+    "Accessing characters",
+    "Strings are immutable",
+    "Changing the case",
+    "Searching for a substring",
+    "Getting a substring",
+    "Comparing strings",
+    "Summary"
+  ],
+  "https://javascript.info/array": [
+    "Declaration",
+    "Get last elements with “at”",
+    "Methods pop/push, shift/unshift",
+    "Internals",
+    "Performance",
+    "Loops",
+    "A word about “length”",
+    "new Array()",
+    "Multidimensional arrays",
+    "toString",
+    "Don’t compare arrays with ==",
+    "Summary"
+  ],
+  "https://javascript.info/array-methods": [
+    "Add/remove items",
+    "Iterate: forEach",
+    "Searching in array",
+    "Transform an array",
+    "Array.isArray",
+    "Most methods support “thisArg”",
+    "Summary"
+  ],
+  "https://javascript.info/iterable": [
+    "Symbol.iterator",
+    "String is iterable",
+    "Calling an iterator explicitly",
+    "Iterables and array-likes",
+    "Array.from",
+    "Summary"
+  ],
+  "https://javascript.info/map-set": [
+    "Map",
+    "Iteration over Map",
+    "Object.entries: Map from Object",
+    "Object.fromEntries: Object from Map",
+    "Set",
+    "Iteration over Set",
+    "Summary"
+  ],
+  "https://javascript.info/weakmap-weakset": [
+    "WeakMap",
+    "Use case: additional data",
+    "Use case: caching",
+    "WeakSet",
+    "Summary"
+  ],
+  "https://javascript.info/keys-values-entries": [
+    "Object.keys, values, entries",
+    "Transforming objects"
+  ],
+  "https://javascript.info/destructuring-assignment": [
+    "Array destructuring",
+    "Object destructuring",
+    "Nested destructuring",
+    "Smart function parameters",
+    "Summary"
+  ],
+  "https://javascript.info/date": [
+    "Creation",
+    "Access date components",
+    "Setting date components",
+    "Autocorrection",
+    "Date to number, date diff",
+    "Date.now()",
+    "Benchmarking",
+    "Date.parse from a string",
+    "Summary"
+  ],
+  "https://javascript.info/json": [
+    "JSON.stringify",
+    "Excluding and transforming: replacer",
+    "Formatting: space",
+    "Custom “toJSON”",
+    "JSON.parse",
+    "Using reviver",
+    "Summary"
+  ],
+  "https://javascript.info/recursion": [
+    "Two ways of thinking",
+    "The execution context and stack",
+    "Recursive traversals",
+    "Recursive structures",
+    "Summary"
+  ],
+  "https://javascript.info/rest-parameters-spread": [
+    "Rest parameters ...",
+    "The “arguments” variable",
+    "Spread syntax",
+    "Copy an array/object",
+    "Summary"
+  ],
+  "https://javascript.info/closure": [
+    "Code blocks",
+    "Nested functions",
+    "Lexical Environment",
+    "Garbage collection"
+  ],
+  "https://javascript.info/var": [
+    "“var” has no block scope",
+    "“var” tolerates redeclarations",
+    "“var” variables can be declared below their use",
+    "IIFE",
+    "Summary"
+  ],
+  "https://javascript.info/global-object": [
+    "Using for polyfills",
+    "Summary"
+  ],
+  "https://javascript.info/function-object": [
+    "The “name” property",
+    "The “length” property",
+    "Custom properties",
+    "Named Function Expression",
+    "Summary"
+  ],
+  "https://javascript.info/new-function": [
+    "Syntax",
+    "Closure",
+    "Summary"
+  ],
+  "https://javascript.info/settimeout-setinterval": [
+    "setTimeout",
+    "setInterval",
+    "Nested setTimeout",
+    "Zero delay setTimeout",
+    "Summary"
+  ],
+  "https://javascript.info/call-apply-decorators": [
+    "Transparent caching",
+    "Using “func.call” for the context",
+    "Going multi-argument",
+    "func.apply",
+    "Borrowing a method",
+    "Decorators and function properties",
+    "Summary"
+  ],
+  "https://javascript.info/bind": [
+    "Losing “this”",
+    "Solution 1: a wrapper",
+    "Solution 2: bind",
+    "Partial functions",
+    "Going partial without context",
+    "Summary"
+  ],
+  "https://javascript.info/arrow-functions": [
+    "Arrow functions have no “this”",
+    "Arrows have no “arguments”",
+    "Summary"
+  ],
+  "https://javascript.info/property-descriptors": [
+    "Property flags",
+    "Non-writable",
+    "Non-enumerable",
+    "Non-configurable",
+    "Object.defineProperties",
+    "Object.getOwnPropertyDescriptors",
+    "Sealing an object globally"
+  ],
+  "https://javascript.info/property-accessors": [
+    "Getters and setters",
+    "Accessor descriptors",
+    "Smarter getters/setters",
+    "Using for compatibility"
+  ],
+  "https://javascript.info/prototype-inheritance": [
+    "[[Prototype]]",
+    "Writing doesn’t use prototype",
+    "The value of “this”",
+    "for…in loop",
+    "Summary"
+  ],
+  "https://javascript.info/function-prototype": [
+    "Default F.prototype, constructor property",
+    "Summary"
+  ],
+  "https://javascript.info/native-prototypes": [
+    "Object.prototype",
+    "Other built-in prototypes",
+    "Primitives",
+    "Changing native prototypes",
+    "Borrowing from prototypes",
+    "Summary"
+  ],
+  "https://javascript.info/prototype-methods": [
+    "Brief history",
+    "\"Very plain\" objects",
+    "Summary"
+  ],
+  "https://javascript.info/class": [
+    "The “class” syntax",
+    "What is a class?",
+    "Not just a syntactic sugar",
+    "Class Expression",
+    "Getters/setters",
+    "Computed names […]",
+    "Class fields",
+    "Summary"
+  ],
+  "https://javascript.info/class-inheritance": [
+    "The “extends” keyword",
+    "Overriding a method",
+    "Overriding constructor",
+    "Super: internals, [[HomeObject]]",
+    "Summary"
+  ],
+  "https://javascript.info/static-properties-methods": [
+    "Static properties",
+    "Inheritance of static properties and methods",
+    "Summary"
+  ],
+  "https://javascript.info/private-protected-properties-methods": [
+    "A real-life example",
+    "Internal and external interface",
+    "Protecting “waterAmount”",
+    "Read-only “power”",
+    "Private “#waterLimit”",
+    "Summary"
+  ],
+  "https://javascript.info/extend-natives": [
+    "No static inheritance in built-ins"
+  ],
+  "https://javascript.info/instanceof": [
+    "The instanceof operator",
+    "Bonus: Object.prototype.toString for the type",
+    "Summary"
+  ],
+  "https://javascript.info/mixins": [
+    "A mixin example",
+    "EventMixin",
+    "Summary"
+  ],
+  "https://javascript.info/try-catch": [
+    "The “try…catch” syntax",
+    "Error object",
+    "Optional “catch” binding",
+    "Using “try…catch”",
+    "Throwing our own errors",
+    "Rethrowing",
+    "try…catch…finally",
+    "Global catch",
+    "Summary"
+  ],
+  "https://javascript.info/custom-errors": [
+    "Extending Error",
+    "Further inheritance",
+    "Wrapping exceptions",
+    "Summary"
+  ],
+  "https://javascript.info/callbacks": [
+    "Callback in callback",
+    "Handling errors",
+    "Pyramid of Doom"
+  ],
+  "https://javascript.info/promise-basics": [
+    "Consumers: then, catch",
+    "Cleanup: finally",
+    "Example: loadScript"
+  ],
+  "https://javascript.info/promise-chaining": [
+    "Returning promises",
+    "Example: loadScript",
+    "Bigger example: fetch",
+    "Summary"
+  ],
+  "https://javascript.info/promise-error-handling": [
+    "Implicit try…catch",
+    "Rethrowing",
+    "Unhandled rejections",
+    "Summary"
+  ],
+  "https://javascript.info/promise-api": [
+    "Promise.all",
+    "Promise.allSettled",
+    "Promise.race",
+    "Promise.any",
+    "Promise.resolve/reject",
+    "Summary"
+  ],
+  "https://javascript.info/promisify": [],
+  "https://javascript.info/microtask-queue": [
+    "Microtasks queue",
+    "Unhandled rejection",
+    "Summary"
+  ],
+  "https://javascript.info/async-await": [
+    "Async functions",
+    "Await",
+    "Error handling",
+    "Summary"
+  ],
+  "https://javascript.info/generators": [
+    "Generator functions",
+    "Generators are iterable",
+    "Using generators for iterables",
+    "Generator composition",
+    "“yield” is a two-way street",
+    "generator.throw",
+    "generator.return",
+    "Summary"
+  ],
+  "https://javascript.info/async-iterators-generators": [
+    "Recall iterables",
+    "Async iterables",
+    "Recall generators",
+    "Async generators (finally)",
+    "Real-life example: paginated data",
+    "Summary"
+  ],
+  "https://javascript.info/modules-intro": [
+    "What is a module?",
+    "Core module features",
+    "Browser-specific features",
+    "Build tools",
+    "Summary"
+  ],
+  "https://javascript.info/import-export": [
+    "Export before declarations",
+    "Export apart from declarations",
+    "Import *",
+    "Import “as”",
+    "Export “as”",
+    "Export default",
+    "Re-export",
+    "Summary"
+  ],
+  "https://javascript.info/modules-dynamic-imports": [
+    "The import() expression"
+  ],
+  "https://javascript.info/proxy": [
+    "Proxy",
+    "Default value with “get” trap",
+    "Validation with “set” trap",
+    "Iteration with “ownKeys” and “getOwnPropertyDescriptor”",
+    "Protected properties with “deleteProperty” and other traps",
+    "“In range” with “has” trap",
+    "Wrapping functions: \"apply\"",
+    "Reflect",
+    "Proxy limitations",
+    "Revocable proxies",
+    "References",
+    "Summary"
+  ],
+  "https://javascript.info/eval": [
+    "Using “eval”",
+    "Summary"
+  ],
+  "https://javascript.info/currying-partials": [
+    "Currying? What for?",
+    "Advanced curry implementation",
+    "Summary"
+  ],
+  "https://javascript.info/reference-type": [
+    "Reference type explained",
+    "Summary"
+  ],
+  "https://javascript.info/bigint": [
+    "Math operators",
+    "Comparisons",
+    "Boolean operations",
+    "Polyfills",
+    "References"
+  ],
+  "https://javascript.info/unicode": [
+    "Surrogate pairs",
+    "Diacritical marks and normalization"
+  ],
+  "https://javascript.info/weakref-finalizationregistry": [
+    "WeakRef",
+    "WeakRef use cases",
+    "Example №1: using WeakRef for caching",
+    "Example №2: Using WeakRef to track DOM objects",
+    "FinalizationRegistry",
+    "Caching with FinalizationRegistry",
+    "Using WeakRef and FinalizationRegistry in practice",
+    "Summary"
+  ],
+  "https://javascript.info/browser-environment": [
+    "DOM (Document Object Model)",
+    "BOM (Browser Object Model)",
+    "Summary"
+  ],
+  "https://javascript.info/dom-nodes": [
+    "An example of the DOM",
+    "Autocorrection",
+    "Other node types",
+    "See it for yourself",
+    "Interaction with console",
+    "Summary"
+  ],
+  "https://javascript.info/dom-navigation": [
+    "On top: documentElement and body",
+    "Children: childNodes, firstChild, lastChild",
+    "Siblings and the parent",
+    "Element-only navigation",
+    "More links: tables",
+    "Summary"
+  ],
+  "https://javascript.info/searching-elements-dom": [
+    "document.getElementById or just id",
+    "querySelectorAll",
+    "querySelector",
+    "matches",
+    "closest",
+    "getElementsBy*",
+    "Live collections",
+    "Summary"
+  ],
+  "https://javascript.info/basic-dom-node-properties": [
+    "DOM node classes",
+    "The “nodeType” property",
+    "Tag: nodeName and tagName",
+    "innerHTML: the contents",
+    "outerHTML: full HTML of the element",
+    "nodeValue/data: text node content",
+    "textContent: pure text",
+    "The “hidden” property",
+    "More properties",
+    "Summary"
+  ],
+  "https://javascript.info/dom-attributes-and-properties": [
+    "DOM properties",
+    "HTML attributes",
+    "Property-attribute synchronization",
+    "DOM properties are typed",
+    "Non-standard attributes, dataset",
+    "Summary"
+  ],
+  "https://javascript.info/modifying-document": [
+    "Example: show a message",
+    "Creating an element",
+    "Insertion methods",
+    "insertAdjacentHTML/Text/Element",
+    "Node removal",
+    "Cloning nodes: cloneNode",
+    "DocumentFragment",
+    "Old-school insert/remove methods",
+    "A word about “document.write”",
+    "Summary"
+  ],
+  "https://javascript.info/styles-and-classes": [
+    "className and classList",
+    "Element style",
+    "Resetting the style property",
+    "Mind the units",
+    "Computed styles: getComputedStyle",
+    "Summary"
+  ],
+  "https://javascript.info/size-and-scroll": [
+    "Sample element",
+    "Geometry",
+    "offsetParent, offsetLeft/Top",
+    "offsetWidth/Height",
+    "clientTop/Left",
+    "clientWidth/Height",
+    "scrollWidth/Height",
+    "scrollLeft/scrollTop",
+    "Don’t take width/height from CSS",
+    "Summary"
+  ],
+  "https://javascript.info/size-and-scroll-window": [
+    "Width/height of the window",
+    "Width/height of the document",
+    "Get the current scroll",
+    "Scrolling: scrollTo, scrollBy, scrollIntoView",
+    "scrollIntoView",
+    "Forbid the scrolling",
+    "Summary"
+  ],
+  "https://javascript.info/coordinates": [
+    "Element coordinates: getBoundingClientRect",
+    "elementFromPoint(x, y)",
+    "Using for “fixed” positioning",
+    "Document coordinates",
+    "Summary"
+  ],
+  "https://javascript.info/introduction-browser-events": [
+    "Event handlers",
+    "Accessing the element: this",
+    "Possible mistakes",
+    "addEventListener",
+    "Event object",
+    "Object handlers: handleEvent",
+    "Summary"
+  ],
+  "https://javascript.info/bubbling-and-capturing": [
+    "Bubbling",
+    "event.target",
+    "Stopping bubbling",
+    "Capturing",
+    "Summary"
+  ],
+  "https://javascript.info/event-delegation": [
+    "Delegation example: actions in markup",
+    "The “behavior” pattern",
+    "Summary"
+  ],
+  "https://javascript.info/default-browser-action": [
+    "Preventing browser actions",
+    "The “passive” handler option",
+    "event.defaultPrevented",
+    "Summary"
+  ],
+  "https://javascript.info/dispatch-events": [
+    "Event constructor",
+    "dispatchEvent",
+    "Bubbling example",
+    "MouseEvent, KeyboardEvent and others",
+    "Custom events",
+    "event.preventDefault()",
+    "Events-in-events are synchronous",
+    "Summary"
+  ],
+  "https://javascript.info/mouse-events-basics": [
+    "Mouse event types",
+    "Events order",
+    "Mouse button",
+    "Modifiers: shift, alt, ctrl and meta",
+    "Coordinates: clientX/Y, pageX/Y",
+    "Preventing selection on mousedown",
+    "Summary"
+  ],
+  "https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave": [
+    "Events mouseover/mouseout, relatedTarget",
+    "Skipping elements",
+    "Mouseout when leaving for a child",
+    "Events mouseenter and mouseleave",
+    "Event delegation",
+    "Summary"
+  ],
+  "https://javascript.info/mouse-drag-and-drop": [
+    "Drag’n’Drop algorithm",
+    "Correct positioning",
+    "Potential drop targets (droppables)",
+    "Summary"
+  ],
+  "https://javascript.info/pointer-events": [
+    "The brief history",
+    "Pointer event types",
+    "Pointer event properties",
+    "Multi-touch",
+    "Event: pointercancel",
+    "Pointer capturing",
+    "Summary"
+  ],
+  "https://javascript.info/keyboard-events": [
+    "Teststand",
+    "Keydown and keyup",
+    "Auto-repeat",
+    "Default actions",
+    "Legacy",
+    "Mobile Keyboards",
+    "Summary"
+  ],
+  "https://javascript.info/onscroll": [
+    "Prevent scrolling"
+  ],
+  "https://javascript.info/form-elements": [
+    "Navigation: form and elements",
+    "Backreference: element.form",
+    "Form elements",
+    "References",
+    "Summary"
+  ],
+  "https://javascript.info/focus-blur": [
+    "Events focus/blur",
+    "Methods focus/blur",
+    "Allow focusing on any element: tabindex",
+    "Delegation: focusin/focusout",
+    "Summary"
+  ],
+  "https://javascript.info/events-change-input": [
+    "Event: change",
+    "Event: input",
+    "Events: cut, copy, paste",
+    "Summary"
+  ],
+  "https://javascript.info/forms-submit": [
+    "Event: submit",
+    "Method: submit"
+  ],
+  "https://javascript.info/onload-ondomcontentloaded": [
+    "DOMContentLoaded",
+    "window.onload",
+    "window.onunload",
+    "window.onbeforeunload",
+    "readyState",
+    "Summary"
+  ],
+  "https://javascript.info/script-async-defer": [
+    "defer",
+    "async",
+    "Dynamic scripts",
+    "Summary"
+  ],
+  "https://javascript.info/onload-onerror": [
+    "Loading a script",
+    "Other resources",
+    "Crossorigin policy",
+    "Summary"
+  ],
+  "https://javascript.info/mutation-observer": [
+    "Syntax",
+    "Usage for integration",
+    "Usage for architecture",
+    "Additional methods",
+    "Summary"
+  ],
+  "https://javascript.info/selection-range": [
+    "Range",
+    "Range properties",
+    "Range selection methods",
+    "Range editing methods",
+    "Selection",
+    "Selection properties",
+    "Selection events",
+    "Selection methods",
+    "Selection in form controls",
+    "Making unselectable",
+    "References",
+    "Summary"
+  ],
+  "https://javascript.info/event-loop": [
+    "Event Loop",
+    "Use-case 1: splitting CPU-hungry tasks",
+    "Use case 2: progress indication",
+    "Use case 3: doing something after the event",
+    "Macrotasks and Microtasks",
+    "Summary"
+  ],
+  "https://javascript.info/popup-windows": [
+    "Popup blocking",
+    "window.open",
+    "Example: a minimalistic window",
+    "Accessing popup from window",
+    "Accessing window from popup",
+    "Closing a popup",
+    "Moving and resizing",
+    "Scrolling a window",
+    "Focus/blur on a window",
+    "Summary"
+  ],
+  "https://javascript.info/cross-window-communication": [
+    "Same Origin",
+    "Windows on subdomains: document.domain",
+    "Iframe: wrong document pitfall",
+    "Collection: window.frames",
+    "The “sandbox” iframe attribute",
+    "Cross-window messaging",
+    "Summary"
+  ],
+  "https://javascript.info/clickjacking": [
+    "The idea",
+    "The demo",
+    "Old-school defences (weak)",
+    "X-Frame-Options",
+    "Showing with disabled functionality",
+    "Samesite cookie attribute",
+    "Summary"
+  ],
+  "https://javascript.info/arraybuffer-binary-arrays": [
+    "TypedArray",
+    "TypedArray methods",
+    "DataView",
+    "Summary"
+  ],
+  "https://javascript.info/text-decoder": [
+    "TextEncoder"
+  ],
+  "https://javascript.info/blob": [
+    "Blob as URL",
+    "Blob to base64",
+    "Image to blob",
+    "From Blob to ArrayBuffer",
+    "From Blob to stream",
+    "Summary"
+  ],
+  "https://javascript.info/file": [
+    "FileReader",
+    "Summary"
+  ],
+  "https://javascript.info/fetch": [
+    "Response headers",
+    "Request headers",
+    "POST requests",
+    "Sending an image",
+    "Summary"
+  ],
+  "https://javascript.info/formdata": [
+    "Sending a simple form",
+    "FormData Methods",
+    "Sending a form with a file",
+    "Sending a form with Blob data",
+    "Summary"
+  ],
+  "https://javascript.info/fetch-progress": [],
+  "https://javascript.info/fetch-abort": [
+    "The AbortController object",
+    "Using with fetch",
+    "AbortController is scalable",
+    "Summary"
+  ],
+  "https://javascript.info/fetch-crossorigin": [
+    "Why is CORS needed? A brief history",
+    "Safe requests",
+    "CORS for safe requests",
+    "Response headers",
+    "“Unsafe” requests",
+    "Credentials",
+    "Summary"
+  ],
+  "https://javascript.info/fetch-api": [
+    "referrer, referrerPolicy",
+    "mode",
+    "credentials",
+    "cache",
+    "redirect",
+    "integrity",
+    "keepalive"
+  ],
+  "https://javascript.info/url": [
+    "Creating a URL",
+    "SearchParams “?…”",
+    "Encoding"
+  ],
+  "https://javascript.info/xmlhttprequest": [
+    "The basics",
+    "Response Type",
+    "Ready states",
+    "Aborting request",
+    "Synchronous requests",
+    "HTTP-headers",
+    "POST, FormData",
+    "Upload progress",
+    "Cross-origin requests",
+    "Summary"
+  ],
+  "https://javascript.info/resume-upload": [
+    "Not-so-useful progress event",
+    "Algorithm"
+  ],
+  "https://javascript.info/long-polling": [
+    "Regular Polling",
+    "Long polling",
+    "Demo: a chat",
+    "Area of usage"
+  ],
+  "https://javascript.info/websocket": [
+    "A simple example",
+    "Opening a websocket",
+    "Data transfer",
+    "Rate limiting",
+    "Connection close",
+    "Connection state",
+    "Chat example",
+    "Summary"
+  ],
+  "https://javascript.info/server-sent-events": [
+    "Getting messages",
+    "Reconnection",
+    "Message id",
+    "Connection status: readyState",
+    "Event types",
+    "Full example",
+    "Summary"
+  ],
+  "https://javascript.info/cookie": [
+    "Reading from document.cookie",
+    "Writing to document.cookie",
+    "path",
+    "domain",
+    "expires, max-age",
+    "secure",
+    "samesite",
+    "httpOnly",
+    "Appendix: Cookie functions",
+    "Appendix: Third-party cookies",
+    "Appendix: GDPR",
+    "Summary"
+  ],
+  "https://javascript.info/localstorage": [
+    "localStorage demo",
+    "Object-like access",
+    "Looping over keys",
+    "Strings only",
+    "sessionStorage",
+    "Storage event",
+    "Summary"
+  ],
+  "https://javascript.info/indexeddb": [
+    "Open database",
+    "Object store",
+    "Transactions",
+    "Transactions’ autocommit",
+    "Error handling",
+    "Searching",
+    "Deleting from store",
+    "Cursors",
+    "Promise wrapper",
+    "Summary"
+  ],
+  "https://javascript.info/bezier-curve": [
+    "Control points",
+    "De Casteljau’s algorithm",
+    "Maths",
+    "Summary"
+  ],
+  "https://javascript.info/css-animations": [
+    "CSS transitions",
+    "transition-property",
+    "transition-duration",
+    "transition-delay",
+    "transition-timing-function",
+    "Event: “transitionend”",
+    "Keyframes",
+    "Performance",
+    "Summary"
+  ],
+  "https://javascript.info/js-animation": [
+    "Using setInterval",
+    "Using requestAnimationFrame",
+    "Structured animation",
+    "Timing functions",
+    "Reversal: ease*",
+    "More interesting “draw”",
+    "Summary"
+  ],
+  "https://javascript.info/webcomponents-intro": [
+    "What’s common between…",
+    "Component architecture"
+  ],
+  "https://javascript.info/custom-elements": [
+    "Example: “time-formatted”",
+    "Observing attributes",
+    "Rendering order",
+    "Customized built-in elements",
+    "References",
+    "Summary"
+  ],
+  "https://javascript.info/shadow-dom": [
+    "Built-in shadow DOM",
+    "Shadow tree",
+    "Encapsulation",
+    "References",
+    "Summary"
+  ],
+  "https://javascript.info/template-element": [
+    "Inserting template",
+    "Summary"
+  ],
+  "https://javascript.info/slots-composition": [
+    "Named slots",
+    "Slot fallback content",
+    "Default slot: first unnamed",
+    "Menu example",
+    "Updating slots",
+    "Slot API",
+    "Summary"
+  ],
+  "https://javascript.info/shadow-dom-style": [
+    ":host",
+    "Cascading",
+    ":host(selector)",
+    "Styling slotted content",
+    "CSS hooks with custom properties",
+    "Summary"
+  ],
+  "https://javascript.info/shadow-dom-events": [
+    "Bubbling, event.composedPath()",
+    "event.composed",
+    "Custom events",
+    "Summary"
+  ],
+  "https://javascript.info/regexp-introduction": [
+    "Regular Expressions",
+    "Flags",
+    "Searching: str.match",
+    "Replacing: str.replace",
+    "Testing: regexp.test",
+    "Summary"
+  ],
+  "https://javascript.info/regexp-character-classes": [
+    "Inverse classes",
+    "A dot is “any character”",
+    "Summary"
+  ],
+  "https://javascript.info/regexp-unicode": [
+    "Unicode properties \\p{…}",
+    "Summary"
+  ],
+  "https://javascript.info/regexp-anchors": [
+    "Testing for a full match"
+  ],
+  "https://javascript.info/regexp-multiline-mode": [
+    "Searching at line start ^",
+    "Searching at line end $",
+    "Searching for \\n instead of ^ $"
+  ],
+  "https://javascript.info/regexp-boundary": [],
+  "https://javascript.info/regexp-escaping": [
+    "Escaping",
+    "A slash",
+    "new RegExp",
+    "Summary"
+  ],
+  "https://javascript.info/regexp-character-sets-and-ranges": [
+    "Sets",
+    "Ranges",
+    "Excluding ranges",
+    "Escaping in […]",
+    "Ranges and flag “u”"
+  ],
+  "https://javascript.info/regexp-quantifiers": [
+    "Quantity {n}",
+    "Shorthands",
+    "More examples"
+  ],
+  "https://javascript.info/regexp-greedy-and-lazy": [
+    "Greedy search",
+    "Lazy mode",
+    "Alternative approach",
+    "Summary"
+  ],
+  "https://javascript.info/regexp-groups": [
+    "Examples",
+    "Parentheses contents in the match",
+    "Searching for all matches with groups: matchAll",
+    "Named groups",
+    "Capturing groups in replacement",
+    "Non-capturing groups with ?:",
+    "Summary"
+  ],
+  "https://javascript.info/regexp-backreferences": [
+    "Backreference by number: \\N",
+    "Backreference by name: \\k<name>"
+  ],
+  "https://javascript.info/regexp-alternation": [
+    "Example: regexp for time"
+  ],
+  "https://javascript.info/regexp-lookahead-lookbehind": [
+    "Lookahead",
+    "Negative lookahead",
+    "Lookbehind",
+    "Capturing groups",
+    "Summary"
+  ],
+  "https://javascript.info/regexp-catastrophic-backtracking": [
+    "Example",
+    "Simplified example",
+    "Back to words and strings",
+    "How to fix?",
+    "Preventing backtracking"
+  ],
+  "https://javascript.info/regexp-sticky": [],
+  "https://javascript.info/regexp-methods": [
+    "str.match(regexp)",
+    "str.matchAll(regexp)",
+    "str.split(regexp|substr, limit)",
+    "str.search(regexp)",
+    "str.replace(str|regexp, str|func)",
+    "str.replaceAll(str|regexp, str|func)",
+    "regexp.exec(str)",
+    "regexp.test(str)"
+  ]
+}

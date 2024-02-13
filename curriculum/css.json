@@ -1,0 +1,139 @@
+{
+  "title": "CSS Intro",
+  "description": "This course is designed to provide a comprehensive introduction to CSS, covering the fundamentals of styling web pages, advanced techniques, and best practices. Participants will learn how to use CSS to create visually appealing and responsive layouts, leverage preprocessors and frameworks, and optimize their stylesheets for performance and maintainability.",
+  "courseDuration": "Approximately 20-25 hours",
+  "softwareRequired": [
+    "Any text editor (e.g., Sublime Text, Visual Studio Code)",
+    "A web browser with developer tools (e.g., Chrome DevTools)"
+  ],
+  "thumbnail": {
+    "url": "https://ictacademy.com.ng/wp-content/uploads/2017/10/CSS.jpg"
+  },
+  "modules": [
+    {
+      "title": "Module 1: CSS Fundamentals",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "title": "Introduction to CSS and its Relationship with HTML",
+          "content": {
+            "theory": "What is CSS, syntax, linking CSS to HTML, external and internal stylesheets.",
+            "video": "Explanation of CSS and its role in styling web pages, demonstration of linking methods.",
+            "quiz": "True/False statements about basic CSS concepts and syntax.",
+            "codingTask": "Create a simple HTML document with basic tags and link an external CSS stylesheet to style the elements."
+          }
+        },
+        {
+          "sessionNumber": 2,
+          "title": "Understanding Selectors and Properties",
+          "content": {
+            "theory": "Different types of CSS selectors (e.g., ID, class, element), common CSS properties (e.g., color, font, background).",
+            "video": "Demonstration of using various selectors and properties to target and style elements.",
+            "quiz": "Matching selectors with their corresponding elements and identifying property values.",
+            "codingTask": "Style various elements on a webpage using specific selectors and properties (e.g., change font color, add borders, set background image)."
+          }
+        },
+        {
+          "sessionNumber": 3,
+          "title": "Basic Layout and Positioning Techniques",
+          "content": {
+            "theory": "Box model fundamentals, basic layout techniques (e.g., floats, positioning), understanding responsive design principles.",
+            "video": "Explanation of the box model, demonstrating layout techniques with examples.",
+            "quiz": "Identifying layout issues and suggesting solutions using specific CSS properties.",
+            "codingTask": "Implement a basic layout for a webpage using floats or basic positioning, ensuring responsiveness across different screen sizes."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Module 2: Advanced CSS Styling and Techniques",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "title": "Working with Colors, Gradients, and Transitions",
+          "content": {
+            "theory": "Understanding color formats (e.g., HEX, RGB), creating color gradients, adding CSS transitions for animations.",
+            "video": "Demonstrating color usage, creating gradients, and implementing basic transitions on elements.",
+            "quiz": "Choosing appropriate color formats and syntax for specific scenarios.",
+            "codingTask": "Implement color gradients and smooth transitions on elements within a webpage."
+          }
+        },
+        {
+          "sessionNumber": 2,
+          "title": "Mastering Pseudo-Classes and Pseudo-Elements",
+          "content": {
+            "theory": "Introduction to pseudo-classes (e.g., hover, active) and pseudo-elements (e.g., ::before, ::after), their functionalities and applications.",
+            "video": "Demonstrating the use of pseudo-classes and pseudo-elements for dynamic styling and visual enhancements.",
+            "quiz": "Identifying the correct pseudo-class or pseudo-element for specific styling needs.",
+            "codingTask": "Add hover effects, link styling, and other visual enhancements using pseudo-classes and pseudo-elements."
+          }
+        },
+        {
+          "sessionNumber": 3,
+          "title": "Media Queries and Responsive Design",
+          "content": {
+            "theory": "Understanding media queries, targeting different screen sizes, creating responsive layouts.",
+            "video": "Introduction to media queries, demonstration of creating responsive layouts for various devices.",
+            "quiz": "Writing correct media query syntax and targeting specific screen sizes.",
+            "codingTask": "Implement responsive design for a webpage using media queries to adapt the layout and styles based on different screen sizes."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Module 3: Preprocessors and Frameworks",
+      "sessions": [
+        {
+          "sessionNumber": 1,
+          "title": "Introduction to CSS Preprocessors (e.g., SASS, LESS)",
+          "content": {
+            "theory": "Benefits of using CSS preprocessors, variables, mixins, functions, and nesting concepts.",
+            "video": "Explanation of basic SASS or LESS syntax and demonstration of their functionalities.",
+            "quiz": "Identifying the advantages and applications of using CSS preprocessors.",
+            "codingTask": "Rewrite a basic CSS stylesheet using a chosen preprocessor, implementing variables, mixins, or nesting for better organization."
+          }
+        },
+        {
+          "sessionNumber": 2,
+          "title": "Exploring Popular CSS Frameworks (e.g., Bootstrap, Tailwind CSS)",
+          "content": {
+            "theory": "Introduction to popular CSS frameworks, their features, and benefits of using them.",
+            "video": "Overview of chosen frameworks (e.g., Bootstrap, Tailwind CSS), showcasing their functionalities and grid systems.",
+            "quiz": "Identifying the appropriate framework for different project needs and comparing their features.",
+            "codingTask": "Build a webpage layout using a chosen framework to leverage its pre-built styles and components."
+          }
+        }
+      ]
+    },
+    {
+      "title": "Module 4: Best Practices and Optimization",
+      "sessions": [
+        {
+          "sessionNumber": 2,
+          "title": "Debugging and Troubleshooting CSS Issues",
+          "content": {
+            "theory": "Common CSS errors and debugging techniques, using browser developer tools to inspect and fix styles.",
+            "video": "Demonstration of using browser developer tools to identify and resolve CSS issues.",
+            "quiz": "Matching error messages with potential causes and suggesting solutions.",
+            "codingTask": "Introduce intentional errors into a website's CSS and practice debugging them using developer tools."
+          }
+        },
+        {
+          "sessionNumber": 3,
+          "title": "CSS Best Practices and Future Trends",
+          "content": {
+            "theory": "Principles of clean and maintainable CSS code, writing modular and reusable styles, understanding future directions in CSS.",
+            "video": "Showcase best practices for organizing and writing efficient CSS, discuss emerging trends and tools.",
+            "quiz": "Identifying good and bad practices based on presented scenarios.",
+            "codingTask": "Refactor an existing CSS stylesheet to follow best practices and improve maintainability."
+          }
+        }
+      ]
+    }
+  ],
+  "additionalNotes": [
+    "This curriculum provides a general framework and can be adapted to specific learning needs and interests.",
+    "Consider adding bonus sessions or projects to explore specific areas further (e.g., working with animation libraries, advanced grid systems).",
+    "Encourage ongoing practice and exploration to solidify learning and build expertise in CSS styling."
+  ]
+}

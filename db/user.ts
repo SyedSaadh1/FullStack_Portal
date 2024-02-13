@@ -63,40 +63,4 @@ export class User {
     })
     return user;
   }
-
-  public static async generateToken(user: IUser) {
-    if (!user?.hashedToken) throw new Error("User Hash token is required");
-
-    authenticator.options = { digits: 6 };
-    const otpCode = authenticator.generate(user.hashedToken);
-
-    const token = await db.token.create({
-      data: {
-        userId: user.id,
-        emailToken: otpCode,
-        expiration: new Date(Date.now() + 2 * 60 * 1000)
-      }
-    });
-    return token;
-  }
-
-  public static async deleteAllToken(userId: string) {
-    return await db.token.deleteMany({
-      where: { userId }
-    });
-  }
-
-  public static async getVerifyOtpUser({ otp, token, registerId }: IUserVerification) {
-    return await db.user.findFirstOrThrow({
-      where: {
-        hashedToken: registerId,
-        tokens: {
-          some: {
-            emailToken: otp,
-            id: token
-          }
-        }
-      },
-    })
-  }
 }

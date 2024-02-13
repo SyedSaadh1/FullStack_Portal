@@ -1,6 +1,6 @@
 
 import crypto from 'crypto'
-import type { User as IUser, Token } from "@prisma/client";
+import type { User as IUser } from "@prisma/client";
 import { User } from 'db/user';
 import { sendVerificationCode } from 'utils/mail.server';
 import type { IUserRegister, IUserVerification } from 'types/user.types';
@@ -19,8 +19,8 @@ export default class UserService {
 
   public static async registerAndGenerateOtp({ email }: IUserRegister) {
     const user = await this.register({ email })
-    await User.deleteAllToken(user?.id);
-    const newToken = await User.generateToken(user);
+    // await User.deleteAllToken(user?.id);
+    const newToken: any = {}; // await User.generateToken(user);
 
     const { id, hashedToken: registerId } = user;
     const { emailToken, id: token } = newToken;
@@ -36,7 +36,7 @@ export default class UserService {
     };
   }
 
-  public static async sendEmailOtpVerification({ email }: IUser, { emailToken: code }: Token) {
+  public static async sendEmailOtpVerification({ email }: IUser, { emailToken: code }: any) {
     return await sendVerificationCode({ email, code: code || "" });
   }
 
@@ -57,7 +57,7 @@ export default class UserService {
     if (!verificationPayload?.registerId) throw new Error(Errors.INVALID_TOKEN);
     const user = await User.getByHashedToken(verificationPayload?.registerId);
     if (!user) throw new Error(Errors.TOKEN_EXPIRED);
-    return await User.getVerifyOtpUser(verificationPayload)
+    return null; // await User.getVerifyOtpUser(verificationPayload)
   }
 
 
