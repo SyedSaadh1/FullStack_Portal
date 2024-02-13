@@ -51,7 +51,7 @@ export default function AuthUserNav({ user }: AuthUserNavProps) {
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
             <DropdownMenuItem>
-              Profile
+              <Link href="/resume">Profile</Link>
               {/* <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut> */}
             </DropdownMenuItem>
           </DropdownMenuGroup>

@@ -35,7 +35,7 @@ const CVPreview = (props: Props) => {
 			<Personalroles />
 			<Professionalexperience />
 			<Projects />
-			<Object />
+			{/* <Object /> */}
 		</div>)
 }
 

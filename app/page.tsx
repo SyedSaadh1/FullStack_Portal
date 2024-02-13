@@ -23,25 +23,31 @@ export default async function Home() {
 	const data = await getServerSession()
 	return (
 		<div>
-			<section className='bg-white' >
+			<section className='' >
 				<PageHeader className='grid md:grid-cols-2 grid-cols-1 gap-4'>
 					<div className=''>
-						<Balancer>
-							<PageHeaderHeading className='text-left'>Elevate Your Full Stack Development Journey</PageHeaderHeading>
-						</Balancer>
+
+						<PageHeaderHeading className='text-left'>
+							<Balancer>
+								Elevate Your Full Stack Development Journey
+							</Balancer>
+						</PageHeaderHeading>
+
 						<PageHeaderDescription className='mt-4 text-left'>Master Programming Excellence with a Blend of Learning, Practice, and Expert Guidance</PageHeaderDescription>
 					</div>
-					<div className=''>
+					<div className='mix-blend-multiply'>
 						<img src={'/images/Elevate-Your-FullStack.svg'} />
 					</div>
 				</PageHeader>
 			</section>
 
-			<section className='text-center bg-white z-10 relative pt-24  border-white'>
+			<section className='text-center bg-white z-10 relative pt-24  border-white border-t-2 shadow-2xl'>
 				<Container>
-					<Balancer>
-						<Title>Dive into Web Programming Languages and Achieve Fluency</Title>
-					</Balancer>
+					<Title>
+						<Balancer>
+							Dive into Web Programming Languages and Achieve Fluency
+						</Balancer>
+					</Title>
 
 					<HomePageCourses />
 				</Container>

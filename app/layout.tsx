@@ -3,6 +3,14 @@ import FluentUIProvider from "./FluentUIProvider"
 import NextAuthProvider from "./NextAuthProvider"
 import "./tailwind.css"
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Fullstack Institute | Elevate Your Development Journey',
+  description: 'Master full stack development with hands-on training, expert guidance, and real-world projects. Become a highly skilled programmer.',
+  keywords: 'full stack development, programming, web development, JavaScript, React, Node.js, institute, training'
+}
+
 export default function RootLayout({
   children,
 }: {
