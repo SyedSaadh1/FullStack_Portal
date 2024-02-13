@@ -23,7 +23,7 @@ const handler = NextAuth({
   ],
   adapter: PrismaAdapter(prisma),
   session: {
-    strategy: "database"
+    strategy: "jwt",
   }
 })
 
