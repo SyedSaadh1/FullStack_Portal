@@ -17,9 +17,9 @@ const ResumeBuilder = (props: Props) => {
   const [email, setEmail] = useState('')
 
   useEffect(() => {
-    const storename = localStorage.getItem('name');
-    const storenumber = localStorage.getItem('phonenumber');
-    const storeemail = localStorage.getItem('email');
+    const storename = ''; //localStorage.getItem('name');
+    const storenumber = ''; //localStorage.getItem('phonenumber');
+    const storeemail = ''; //localStorage.getItem('email');
 
     if (storename) {
       setName(storename);
@@ -34,7 +34,7 @@ const ResumeBuilder = (props: Props) => {
 
   const handleChange = (e: any) => {
     const { id, value } = e.target;
-    localStorage.setItem(id, value);
+    // localStorage.setItem(id, value);
     if (id === 'name') {
       setName(value);
     } else if (id === 'phoneNumber') {

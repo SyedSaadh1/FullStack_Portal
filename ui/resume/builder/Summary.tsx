@@ -15,7 +15,7 @@ const Summary = (props: Props) => {
   const [summary, setSummary] = useState('');
 
   useEffect(() => {
-    const storedsummary = localStorage.getItem('summary');
+    const storedsummary = ''; //localStorage.getItem('summary');
     if (storedsummary) {
       setSummary(storedsummary);
     }
@@ -24,7 +24,7 @@ const Summary = (props: Props) => {
   const handleChange = (e: any) => {
     const newsummary = e.target.value;
     setSummary(newsummary);
-    localStorage.setItem('summary', newsummary);
+    // localStorage.setItem('summary', newsummary);
   }
 
   return (

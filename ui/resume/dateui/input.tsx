@@ -1,5 +1,5 @@
 import { Textarea } from "@/components/ui/textarea"
  
-export function TextareaDemo() {
-  return <Textarea placeholder="Details ..."/>
+export function TextareaDemo(props: any) {
+  return <Textarea placeholder="Details ..." {...props}/>
 }

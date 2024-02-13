@@ -13,25 +13,25 @@ import { DatePicker } from '../dateui/DatePicker';
 type Props = {};
 
 const Education = (props: Props) => {
-  const [scc, setScc] = useState(() => localStorage.getItem('scc') || '');
-  const [higherSecondary, setHigherSecondary] = useState(() => localStorage.getItem('higherSecondary') || '');
-  const [bachelor, setBachelor] = useState(() => localStorage.getItem('bachelor') || '');
-  const [others, setOthers] = useState(() => localStorage.getItem('others') || '');
+  const [scc, setScc] = useState(() => '');
+  const [higherSecondary, setHigherSecondary] = useState(() => '');
+  const [bachelor, setBachelor] = useState(() => '');
+  const [others, setOthers] = useState(() => '');
 
   useEffect(() => {
-    localStorage.setItem('scc', scc);
+    // localStorage.setItem('scc', scc);
   }, [scc]);
 
   useEffect(() => {
-    localStorage.setItem('higherSecondary', higherSecondary);
+    // localStorage.setItem('higherSecondary', higherSecondary);
   }, [higherSecondary]);
 
   useEffect(() => {
-    localStorage.setItem('bachelor', bachelor);
+    // localStorage.setItem('bachelor', bachelor);
   }, [bachelor]);
 
   useEffect(() => {
-    localStorage.setItem('others', others);
+    // localStorage.setItem('others', others);
   }, [others]);
 
   return (

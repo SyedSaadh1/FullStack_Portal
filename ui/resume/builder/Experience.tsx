@@ -20,10 +20,10 @@ const Experience = (props: Props) => {
   const [response, setResponse] = useState('')
 
   useEffect(() => {
-    const storedCompany1 = localStorage.getItem('company1');
-    const storedCompany1Date = localStorage.getItem('company1Date');
-    const storedposition = localStorage.getItem('position')
-    const storedresponse = localStorage.getItem('response')
+    const storedCompany1 = ''; //localStorage.getItem('company1');
+    const storedCompany1Date = ''; //localStorage.getItem('company1Date');
+    const storedposition = ''; //localStorage.getItem('position')
+    const storedresponse = ''; //localStorage.getItem('response')
 
     if (storedCompany1) {
       setCompany1(storedCompany1)
@@ -42,24 +42,24 @@ const Experience = (props: Props) => {
   const handleCompany1Change = (e: any) => {
     const value = e.target.value;
     setCompany1(value);
-    localStorage.setItem('company1', value);
+    // localStorage.setItem('company1', value);
   };
 
   const handleCompany1DateChange = (date: any) => {
     setCompany1Date(date);
-    localStorage.setItem('company1Date', date);
+    // localStorage.setItem('company1Date', date);
   };
 
   const handlePosition = (e: any) => {
     const v = e.target.value
-    setPosition(v)
-    localStorage.setItem('position', v)
+    setPosition(v);
+    // localStorage.setItem('position', v)
   }
 
   const handleResponse = (e: any) => {
     const v = e.target.value
-    setResponse(v)
-    localStorage.setItem('response', v)
+    setResponse(v);
+    // localStorage.setItem('response', v)
   }
 
   
@@ -78,7 +78,6 @@ const Experience = (props: Props) => {
         />
          <Label >Your Position In Last Company </Label>
         <TextareaDemo  
-           id='position'
            value={position}
            onChange={handlePosition}
         />
