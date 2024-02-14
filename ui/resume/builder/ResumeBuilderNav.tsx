@@ -5,9 +5,6 @@ import { usePathname } from "next/navigation"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-import Summery from "./Summary"
-import Page from "~/resume/summary/page"
-import { pages } from "next/dist/build/templates/app-page"
 
 interface ResumeBuilderNavProps extends React.HTMLAttributes<HTMLElement> {
   items: {
