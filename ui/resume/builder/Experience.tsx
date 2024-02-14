@@ -21,7 +21,7 @@ const Experience = (props: Props) => {
   const fields = [
     { id: 'companyname', label: 'Name of Company', placeholder: 'Company Name' },
     { id: 'Position', label: 'Position', placeholder: 'Details' },
-    {id: 'location', label: 'Location Type', placeholder: ''},
+    {id: 'location', label: 'Location Type', placeholder: 'Ex:-Working Type'},
   ]
   
 
@@ -99,21 +99,23 @@ const Experience = (props: Props) => {
           
          />
         </div>
-         <div className='flex gap-2 pb-8'>
-         <Label className=' '>Last Date :- 
-        <DatePicker
-          //value={new Date(company1Date)}
-          //onChange={handleCompany1DateChange}
-        />
-      </Label>
 
-        <Label className=' '>End Date :- 
-        <DatePicker
+         <div className='grid gap-8 md:grid-cols-2 grid-cols-1'>
+  <Label className=' '>Last Date</Label>
+  
+ <Label className=''>End Date</Label>
+ 
+  </div>
+  <div className='grid gap-8 md:grid-cols-2 grid-cols-1 pb-8'>
+  <DatePicker
           //value={new Date(company1Date)}
           //onChange={handleCompany1DateChange}
         />
-        </Label>
-         </div>
+  <DatePicker
+          //value={new Date(company1Date)}
+          //onChange={handleCompany1DateChange}
+        />
+  </div>
        
         <footer className='flex justify-between'>
         <Link  href='/resume/experience'><Button >preview</Button></Link> 

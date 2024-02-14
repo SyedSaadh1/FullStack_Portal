@@ -61,11 +61,15 @@ const Education = (props: Props) => {
           }}
         />)}
   </div>
-  <div className='pb-10'>
+  <div className='grid gap-8 md:grid-cols-2 grid-cols-1'>
   <Label className=' '>Last Date</Label>
+  
+ <Label className=''>End Date</Label>
+ 
+  </div>
+  <div className='grid gap-8 md:grid-cols-2 grid-cols-1 pb-8'>
   <DatePicker/>
- <Label className=' '>End Date</Label>
- <DatePicker/>
+  <DatePicker/>
   </div>
   <div className='md:col-span-3 col-span-1 flex flex-col gap-2 pb-8'>
         
