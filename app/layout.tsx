@@ -4,6 +4,7 @@ import NextAuthProvider from "./NextAuthProvider"
 import "./tailwind.css"
 
 import { Metadata } from 'next'
+import PageFooter from "@/ui/layout/PageFooter"
 
 export const metadata: Metadata = {
   title: 'Fullstack Institute | Elevate Your Development Journey',
@@ -24,6 +25,7 @@ export default function RootLayout({
             <main className="bg">
               <PageHeader />
               {children}
+              <PageFooter />
             </main>
           </NextAuthProvider>
         </FluentUIProvider>
