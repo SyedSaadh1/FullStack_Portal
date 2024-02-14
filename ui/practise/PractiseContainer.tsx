@@ -5,6 +5,7 @@ import PractiseExerciseTypes from "./PractiseExerciseTypes";
 import exercises from "@/curriculum/practise-tasks/techiedelight.json";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 interface PractiseContainerProps {
 }
@@ -24,10 +25,12 @@ export default function PractiseContainer({ }: PractiseContainerProps) {
 				<div className="grid md:grid-cols-3 grid-cols-2 gap-4">
 					{exercises.map(topic => <Card key={topic.link}>
 						<CardHeader className="">
-							<CardTitle className="flex justify-between">
-								<span>{topic.title}</span>
-								<Badge variant="secondary">{topic.type}</Badge>
-							</CardTitle>
+							<Link href="/practise/test">
+								<CardTitle className="flex justify-between">
+									<span>{topic.title}</span>
+									<Badge variant="secondary">{topic.type}</Badge>
+								</CardTitle>
+							</Link>
 
 						</CardHeader>
 					</Card>)}
