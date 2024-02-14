@@ -12,8 +12,8 @@ import {
     TabsTrigger,
 } from "@/components/ui/tabs"
 import { Label } from '@radix-ui/react-label'
-import { Star, ThumbsDown, ThumbsDownIcon, ThumbsUp, ThumbsUpIcon } from 'lucide-react'
-import { ChartBarIcon, ChatBubbleBottomCenterIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/outline'
+import { Star, ThumbsDown, ThumbsUp} from 'lucide-react'
+import { ChatBubbleBottomCenterIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/outline'
 
 type Props = {}
 
