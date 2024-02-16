@@ -6,7 +6,7 @@ type Props = {}
 
 const Submissions = (props: Props) => {
 	return (
-		<Container className="p-5 bg-white row-span-2 min-h-80 border-4">
+		<Container className="p-5 bg-white row-span-2 min-h-80">
 			<Title4>Submissions</Title4>
 		</Container>
 	)

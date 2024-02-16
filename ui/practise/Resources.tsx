@@ -6,7 +6,7 @@ type Props = {}
 
 const Resources = (props: Props) => {
 	return (
-		<Container className="p-5 bg-white row-span-2 min-h-80 border-4">
+		<Container className="p-5 bg-white row-span-2 min-h-80">
 			<Title4>Resources</Title4>
 		</Container>
 	)
