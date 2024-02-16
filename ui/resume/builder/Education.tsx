@@ -9,10 +9,22 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { DatePicker } from '../dateui/DatePicker';
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { LabelInput } from '@/components/form/LabelInput';
+import { TextareaDemo } from '../dateui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 type Props = {};
 
 const Education = (props: Props) => {
+
+  const fields = [
+    { id: 'school', label: 'Schooling', placeholder: 'Details' },
+    { id: 'degree', label: 'Degree', placeholder: 'Details' },
+  ]
+
+
   const [scc, setScc] = useState(() => '');
   const [higherSecondary, setHigherSecondary] = useState(() => '');
   const [bachelor, setBachelor] = useState(() => '');
@@ -35,45 +47,41 @@ const Education = (props: Props) => {
   }, [others]);
 
   return (
-    <Container className='bg-slate-200 p-16'>
-      <CardHeader>
-        <CardTitle>Education Details</CardTitle>
-      </CardHeader>
-      <Label className='flex'>SCC Details</Label>
-      <Input
-        id="scc"
-        placeholder="Write Your FullName."
-        value={scc}
-        onChange={(e) => setScc(e.target.value)}
-      />
-      <DatePicker />
+    <Container>
+      <div className='grid grid-cols-2 gap-4 pb-8'>
+        <div className='col-span-1 flex flex-col gap-4'>
+          {fields.map(({ id, placeholder, label }) => <LabelInput
+            inputProps={{
+              id,
+              placeholder,
+              //onChange: handleChange
+            }}
+            labelProps={{
+              htmlFor: id,
+              children: label
+            }}
+          />)}
+          <div className='flex flex-col gap-2'>
+            <Label>Start Date</Label>
+            <DatePicker />
+          </div>
+          <div className='flex flex-col gap-2'>
+            <Label>End Date</Label>
+            <DatePicker />
+          </div>
+        </div>
 
-      <Label className='flex'>HigherSecondary</Label>
-      <Input
-        id="higherSecondary"
-        placeholder="Write Your FullName."
-        value={higherSecondary}
-        onChange={(e) => setHigherSecondary(e.target.value)}
-      />
-      <DatePicker />
+        <div className='col-span-1'>
+          <Label >Description</Label>
+          <Textarea />
+        </div>
 
-      <Label className='flex'>Bachelor</Label>
-      <Input
-        id="bachelor"
-        placeholder="Write Your FullName."
-        value={bachelor}
-        onChange={(e) => setBachelor(e.target.value)}
-      />
-      <DatePicker />
+      </div>
 
-      <Label className='flex'>Others</Label>
-      <Input
-        id="others"
-        placeholder="Write Your FullName."
-        value={others}
-        onChange={(e) => setOthers(e.target.value)}
-      />
-      <DatePicker />
+      <footer className='flex justify-between'>
+        <Link href='/resume/experience'><Button >previous</Button></Link>
+        <Link href='/resume/skills'><Button >Next</Button></Link>
+      </footer>
     </Container>
   );
 }

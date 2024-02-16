@@ -10,10 +10,22 @@ import {
 } from "@/components/ui/card";
 import { DatePicker } from '../dateui/DatePicker';
 import { TextareaDemo } from '../dateui/input';
+import { LabelInput } from '@/components/form/LabelInput';
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea';
 
 type Props = {};
 
 const Experience = (props: Props) => {
+
+  const fields = [
+    { id: 'companyname', label: 'Name of Company', placeholder: 'Company Name' },
+    { id: 'Position', label: 'Position', placeholder: 'Details' },
+    { id: 'location', label: 'Location Type', placeholder: 'Ex:-Working Type' },
+  ]
+
+
   const [company1, setCompany1] = useState('');
   const [company1Date, setCompany1Date] = useState('');
   const [position, setPosition] = useState('')
@@ -31,12 +43,12 @@ const Experience = (props: Props) => {
     if (storedCompany1Date) {
       setCompany1Date(storedCompany1Date)
     };
-     if (storedposition) {
+    if (storedposition) {
       setPosition(storedposition)
-     }
-     if (storedresponse) {
+    }
+    if (storedresponse) {
       setResponse(storedresponse)
-     }
+    }
   }, []);
 
   const handleCompany1Change = (e: any) => {
@@ -62,45 +74,48 @@ const Experience = (props: Props) => {
     // localStorage.setItem('response', v)
   }
 
-  
-  return (
-    <Container className='bg-slate-200 p-16'>
-        <CardHeader>
-          <CardTitle>Your Experience Details</CardTitle>
-        </CardHeader>
-        <Label htmlFor="company1" className=''>Name of Company</Label>
-        <Input
-          id="company1"
-          value={company1}
-          onChange={handleCompany1Change}
-          placeholder="Details."
-          className=''
-        />
-         <Label >Your Position In Last Company </Label>
-        <TextareaDemo  
-           value={position}
-           onChange={handlePosition}
-        />
-        <Label className='flex '>Last Date :- </Label>
-        <DatePicker
-          value={new Date(company1Date)}
-          onChange={handleCompany1DateChange}
-        />
-        <Label className='flex '>End Date :- </Label>
-        <DatePicker
-          value={new Date(company1Date)}
-          onChange={handleCompany1DateChange}
-        />
 
-     <Label className='flex'>Roles And Response </Label>
-     <TextareaDemo
-          id='rolesAndResponse'
-          value={response}
-          onChange={handleResponse}
-     />
-          
-        
-      </Container>
+  return (
+    <Container>
+      <div className='grid gap-8 md:grid-cols-3 grid-cols-1 pb-8'>
+        {fields.map(({ id, placeholder, label }) => <LabelInput
+          inputProps={{
+            id,
+            placeholder,
+            onChange: handleCompany1Change
+          }}
+          labelProps={{
+            htmlFor: id,
+            children: label
+          }}
+        />)}
+
+        <div className="flex flex-col gap-8">
+          <div className='flex flex-col gap-2'>
+            <Label>Start Date</Label>
+            <DatePicker />
+          </div>
+          <div className='flex flex-col gap-2'>
+            <Label>End Date</Label>
+            <DatePicker />
+          </div>
+        </div>
+
+        <div className='md:col-span-2 col-span-1 flex flex-col gap-2'>
+          <Label>Role And Responsibilities </Label>
+          <Textarea />
+        </div>
+
+      </div>
+
+
+      <footer className='flex justify-between'>
+        <Link href='/resume/experience'><Button >previous</Button></Link>
+        <Link href='/resume/education'><Button >Next</Button></Link>
+      </footer>
+
+
+    </Container>
   );
 }
 
