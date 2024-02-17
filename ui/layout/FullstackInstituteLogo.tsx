@@ -1,32 +1,16 @@
-'use client'
 import React from 'react'
-import {
-  makeStyles, tokens
-} from '@fluentui/react-components';
+
 import Link from 'next/link';
+import Title3 from '@/components/ui/text/Title3';
+import TextSmall from '@/components/ui/text/TextSmall';
 
-const useStyles = makeStyles({
-  container: {
-    paddingTop: tokens.spacingHorizontalXXL,
-    paddingBottom: tokens.spacingHorizontalXXL,
-  },
-  title: {
-    color: tokens.colorBrandForegroundLink,
-    cursor: 'pointer',
-    fontSize: tokens.fontSizeHero700,
 
-    ':hover': {
-      color: tokens.colorBrandForegroundLinkHover,
-    }
-  }
-})
-
-function FullstackInstituteLogo() {
-  const styles = useStyles();
+function FullstackInstituteLogo({ className }: { className?: string }) {
   return (
-    <div className={styles.container}>
-      <Link className={styles.title} href='/'>Fullstack.Institute</Link>
-    </div>
+    <Link href='/' className={`py-4 inline-flex flex-col items-end ${className}`} >
+      <Title3 className='bg-gradient-to-r from-cyan-500 to-violet-500 bg-clip-text text-transparent inline-block'>Fullstack.Institute</Title3>
+      <TextSmall className='text-xs'>Beta</TextSmall>
+    </Link>
   )
 }
 

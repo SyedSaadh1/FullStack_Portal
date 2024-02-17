@@ -41,7 +41,7 @@ export default async function Home() {
 				</PageHeader>
 			</section>
 
-			<section className='text-center bg-white z-10 relative pt-24  border-white border-t-2 shadow-2xl'>
+			<section className='text-center bg-white z-10 relative pt-24  border-white border-t-2'>
 				<Container>
 					<Title>
 						<Balancer>

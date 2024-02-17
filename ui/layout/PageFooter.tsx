@@ -7,6 +7,7 @@ import Lead from '@/components/ui/text/Lead'
 import Link from "next/link";
 import FullstackInstituteLogo from './FullstackInstituteLogo'
 import Balancer from 'react-wrap-balancer'
+import TextSmall from '@/components/ui/text/TextSmall'
 
 const About = [
   { name: "about us", link: "about-us" },
@@ -30,17 +31,15 @@ type Props = {}
 
 const PageFooter = (props: Props) => {
   return (
-    <div className='mt-8 bg-slate-50'>
+    <div className='bg-slate-50'>
       <section className='border-t border-b shadow-sm'>
         <Container className='rounded-lg py-16'>
           <FullstackInstituteLogo />
           <div className='flex justify-between items-center'>
             <div className='flex-1'>
 
-              <Balancer>
-                <Title3>Comprehensive Full Stack Coding Exercises and Expert Mentorship for All</Title3>
-              </Balancer>
-              <Lead className="mt-4">Master Full Stack Development: A Fusion of Interactive Learning, Hands-On Practice, and Personalized Mentoring. Experience the Fun and Efficacy of Fullstack Programming.</Lead>
+              <Title3>Coding Exercises and Expert Mentorship for All</Title3>
+              <Lead className="mt-4">A Fusion of Interactive Learning, Hands-On Practice, and Personalized Mentoring. Experience the Fun and Efficacy of Fullstack Programming.</Lead>
 
             </div>
             <div className='flex-1 text-right'>
@@ -50,11 +49,13 @@ const PageFooter = (props: Props) => {
 
         </Container>
       </section>
-      <section className='bg-muted py-16'>
+      <section className='bg-muted py-8'>
         <Container className='flex'>
-
+          <div>
+            <TextSmall>© Copyright {(new Date()).getFullYear()} Fullstack.Institute - All Rights Reserved.</TextSmall>
+          </div>
           <footer className='flex gap-16'>
-            {navLinks.map(({ title, links }) => <div key={title} className="bg-neutral text-neutral-content">
+            {!true && navLinks.map(({ title, links }) => <div key={title} className="bg-neutral text-neutral-content">
               <h6 className="scroll-m-20 text-xl font-semibold tracking-tight pb-3">{title}</h6>
               <ul className='flex flex-col gap-2'>
                 {links.map(({ name, link }) => (
