@@ -1,6 +1,5 @@
 
 ## Application flow
---
 
 ### 1. User Onboarding
 - **Account Creation**
@@ -45,8 +44,9 @@
   - The backend updates the user's progress and returns confirmation to the frontend.
 
 
+<br >
+
 ## **Application Flow**
---- 
 
 **1. User Onboarding**
 
@@ -197,7 +197,7 @@ end
 ```
 
 ## Flow 3
-```mermiad
+```mermaid
 graph TD
 
 %% User Onboarding
