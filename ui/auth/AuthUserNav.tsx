@@ -25,6 +25,11 @@ export default function AuthUserNav({ user }: AuthUserNavProps) {
     await signOut();
   }
 
+  const adminUsers = [
+    'zakeer579@gmail.com',
+    'zakeer@zakeer.me'
+  ]
+
   return (
     <div className="flex items-center gap-4">
       <Button asChild>
@@ -55,6 +60,11 @@ export default function AuthUserNav({ user }: AuthUserNavProps) {
               {/* <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut> */}
             </DropdownMenuItem>
           </DropdownMenuGroup>
+          {adminUsers.includes(String(user?.email)) && <DropdownMenuGroup>
+            <DropdownMenuItem>
+              <Link href="/admin">admin</Link>
+            </DropdownMenuItem>
+          </DropdownMenuGroup>}
           <DropdownMenuSeparator />
           <DropdownMenuItem onClick={handleLogout}>
             Log out

@@ -16,6 +16,17 @@ export class User {
     this.instance = user
   }
 
+  public static async updateExternalId(email: string, externalId: string): Promise<IUser> {
+    return await db.user.update({
+      where: {
+        email
+      },
+      data: {
+        externalId
+      }
+    })
+  }
+
   public static async getByEmail(email: string): Promise<IUser> {
     return await db.user.findUniqueOrThrow({
       where: {

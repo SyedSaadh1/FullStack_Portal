@@ -11,6 +11,7 @@ import { PageHeader, PageHeaderDescription, PageHeaderHeading } from '@/componen
 import Balancer from 'react-wrap-balancer';
 import Title from '@/components/ui/text/Title';
 import Container from '@/ui/layout/container';
+import coursesServices from '@/services/courses.services';
 
 
 const TAB_VIEW: any = {

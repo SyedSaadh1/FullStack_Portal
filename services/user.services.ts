@@ -6,35 +6,46 @@ import { sendVerificationCode } from 'utils/mail.server';
 import type { IUserRegister, IUserVerification } from 'types/user.types';
 import Errors from 'contants/error.constants';
 import db from 'db';
+import HttpService from './http.services';
+import ENDPOINTS from '@/contants/api.constants';
 
 
 
-export default class UserService {
+class UserService extends HttpService {
 
-  public static async register({ email }: IUserRegister) {
-    const hashedToken = this.getNewHashToken();
-    const user = await User.createOrUpdate({ email, hashedToken });
-    return user;
+  constructor() {
+    super(`${ENDPOINTS.USER_ROUTE_PATH}`)
   }
 
-  public static async registerAndGenerateOtp({ email }: IUserRegister) {
-    const user = await this.register({ email })
-    // await User.deleteAllToken(user?.id);
-    const newToken: any = {}; // await User.generateToken(user);
-
-    const { id, hashedToken: registerId } = user;
-    const { emailToken, id: token } = newToken;
-
-    await this.sendEmailOtpVerification(user, newToken);
-
-    return {
-      id,
-      email,
-      registerId,
-      token,
-      emailToken,
-    };
+  public async register({ email, name, id }: IUser) {
+    try {
+      const response = await this.post('/create', { name, email, id });
+      const data = response.data;
+      await User.updateExternalId(email, data?.user?.id)
+      console.log(":: signIn ::", data);
+    } catch (error) {
+      console.log(":: signIn ERROR ::", error)
+    }
   }
+
+  // public static async registerAndGenerateOtp({ email }: IUserRegister) {
+  //   const user = await this.register({ email })
+  //   // await User.deleteAllToken(user?.id);
+  //   const newToken: any = {}; // await User.generateToken(user);
+
+  //   const { id, hashedToken: registerId } = user;
+  //   const { emailToken, id: token } = newToken;
+
+  //   await this.sendEmailOtpVerification(user, newToken);
+
+  //   return {
+  //     id,
+  //     email,
+  //     registerId,
+  //     token,
+  //     emailToken,
+  //   };
+  // }
 
   public static async sendEmailOtpVerification({ email }: IUser, { emailToken: code }: any) {
     return await sendVerificationCode({ email, code: code || "" });
@@ -61,7 +72,7 @@ export default class UserService {
   }
 
 
-  public static async getAllUsers() {
+  public async getAllUsers() {
     const allUsers = await db.user.findMany({
       select: {
         email: true,
@@ -69,26 +80,14 @@ export default class UserService {
         id: true,
         createdAt: true,
         updatedAt: true,
-        // roles: {
-        //   include: {
-        //     role: {
-        //       select: {
-        //         name: true
-        //       }
-        //     }
-        //   }
-        // }
       }
     });
 
     return allUsers
-    // .map(({ roles = [], ...fields }) => {
-    //   return {
-    //     ...fields,
-    //     isAdmin: roles.some(role => role?.role?.name === USER.IS_ADMIN)
-    //   }
-    // })
   }
 
 }
+
+
+export default new UserService();
 
