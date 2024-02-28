@@ -1,28 +1,24 @@
-import * as React from "react"
-
-
-import { cn } from "@/lib/utils"
-import { Input, InputProps } from "../ui/input"
-import { Label } from "../ui/label"
-import { LabelProps } from "@radix-ui/react-label";
+import React from 'react';
+import { Input, InputProps } from '../ui/input';
+import { Label } from '../ui/label';
+import { LabelProps } from '@radix-ui/react-label';
 
 export interface LabelInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   inputProps: InputProps;
-  labelProps: LabelProps
+  labelProps: LabelProps;
 }
 
 const LabelInput = React.forwardRef<HTMLDivElement, LabelInputProps>(
-  ({ className, type, labelProps, inputProps, ...props }, ref) => {
-    return (
-      <div className='flex flex-col gap-2'>
-        <Label {...labelProps} />
-        <Input {...inputProps} />
-      </div>
+	({ labelProps, inputProps }) => {
+		return (
+			<div className="flex flex-col gap-2">
+				<Label {...labelProps} />
+				<Input {...inputProps} />
+			</div>
+		);
+	}
+);
+LabelInput.displayName = 'LabelInput';
 
-    )
-  }
-)
-LabelInput.displayName = "LabelInput"
-
-export { LabelInput }
+export { LabelInput };

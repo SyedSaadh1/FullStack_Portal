@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "next",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "no-duplicate-case": "error", // this will turn off a rule
+    "no-unused-vars": "error", // this will notify violation but not output error
+    "no-func-assign": "error",
+    "indent": [
+      "warn",
+      "tab"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ]
+  }
+}
