@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button';
 import { EnvelopeOpenIcon } from '@heroicons/react/24/outline';
-
 
 export default function FullstackHeader() {
 	return (
-		<div className='bg-slate-100 flex justify-between items-center px-12'>
+		<div className="bg-slate-100 flex justify-between items-center px-12">
 			<h1 className="p-4 font-bold">Fullstack Portal</h1>
 			<Link href="/login">
 				<Button>

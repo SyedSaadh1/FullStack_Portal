@@ -1,14 +1,14 @@
 'use client';
 
 // Import necessary dependencies from 'react'
-import { PropsWithChildren, useEffect, useState } from 'react'
+import { PropsWithChildren, useEffect, useState } from 'react';
 // Import necessary dependencies from '@fluentui/react-components'
 import {
-  createDOMRenderer,
-  RendererProvider,
-  FluentProvider,
-  webLightTheme,
-  SSRProvider,
+	createDOMRenderer,
+	RendererProvider,
+	FluentProvider,
+	webLightTheme,
+	SSRProvider
 } from '@fluentui/react-components';
 import PageInitialLoader from '@/ui/common/PageInitialLoader';
 
@@ -26,27 +26,25 @@ const renderer = createDOMRenderer();
  * @returns {React.Element} The Providers component with child components.
  */
 export default function FluentUIProvider({ children }: PropsWithChildren) {
-  // Declare a state variable named 'hasMounted' and a function named 'setHasMounted' to update it.
-  const [hasMounted, setHasMounted] = useState(false);
+	// Declare a state variable named 'hasMounted' and a function named 'setHasMounted' to update it.
+	const [hasMounted, setHasMounted] = useState(false);
 
-  // Use the 'useEffect' hook to set 'hasMounted' to true once the component has mounted.
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
+	// Use the 'useEffect' hook to set 'hasMounted' to true once the component has mounted.
+	useEffect(() => {
+		setHasMounted(true);
+	}, []);
 
-  // If the component hasn't mounted yet, return nothing.
-  if (!hasMounted) {
-    return <PageInitialLoader>{children}</PageInitialLoader>;
-  }
+	// If the component hasn't mounted yet, return nothing.
+	if (!hasMounted) {
+		return <PageInitialLoader>{children}</PageInitialLoader>;
+	}
 
-  // If the component has mounted, return a set of providers.
-  return (
-    <RendererProvider renderer={renderer || createDOMRenderer()}>
-      <SSRProvider>
-        <FluentProvider theme={webLightTheme}>
-          {children}
-        </FluentProvider>
-      </SSRProvider>
-    </RendererProvider>
-  );
+	// If the component has mounted, return a set of providers.
+	return (
+		<RendererProvider renderer={renderer || createDOMRenderer()}>
+			<SSRProvider>
+				<FluentProvider theme={webLightTheme}>{children}</FluentProvider>
+			</SSRProvider>
+		</RendererProvider>
+	);
 }

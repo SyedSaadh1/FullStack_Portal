@@ -1,9 +1,10 @@
-
-import Skills from '@/ui/resume/builder/Skills'
-import React from 'react'
+import Skills from '@/ui/resume/builder/Skills';
+import React from 'react';
 
 export default function Page() {
-    return <div>
-        <Skills />
-    </div>
+	return (
+		<div>
+			<Skills />
+		</div>
+	);
 }
