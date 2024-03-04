@@ -7,6 +7,7 @@ import {
 import Balancer from 'react-wrap-balancer';
 import Title from '@/components/ui/text/Title';
 import Container from '@/ui/layout/container';
+
 import Image from 'next/image';
 
 export default async function Home() {
