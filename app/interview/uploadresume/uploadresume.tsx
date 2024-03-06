@@ -1,52 +1,50 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, DragEvent, ChangeEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import { FaCloudUploadAlt } from 'react-icons/fa';
 import { MdDelete } from 'react-icons/md';
 
-export default function InputFile() {
-	const [fileUploaded, setFileUploaded] = useState(false);
-	const [errorMessage, setErrorMessage] = useState('');
-	const [uploadedFileName, setUploadedFileName] = useState('');
+const BYTE_SIZE = 1024;
+const FILE_LIMIT = 5; // mb
+const FILE_SIZE_LIMIT = BYTE_SIZE * BYTE_SIZE * FILE_LIMIT;
 
-	const handleFileUpload = (file: any) => {
+export default function InputFile() {
+	const [errorMessage, setErrorMessage] = useState('');
+	const [file, setFile] = useState<File | null>(null);
+
+	const handleFileUpload = (file: File) => {
 		const size = file.size;
 
-		if (size > 5000000) {
+		if (size > FILE_SIZE_LIMIT) {
 			setErrorMessage(
-				`File is too big! Please upload a file less than 5 MB. Your file size is ${size} bytes. Thanks!!`
+				`File is too big! Please upload a file less than ${FILE_LIMIT} MB. Your file size is ${size} bytes. Thanks!!`
 			);
-			setFileUploaded(false);
+			setFile(null);
 		} else {
 			setErrorMessage('');
-			setFileUploaded(true);
-			setUploadedFileName(file.name);
+			setFile(file);
 		}
 	};
 
 	const handleDeleteResume = () => {
-		setFileUploaded(false);
 		setErrorMessage('');
-		setUploadedFileName('');
+		setFile(null);
 	};
 
-	const handleDrop = (event: any) => {
+	const handleDrop = (event: DragEvent<HTMLDivElement>) => {
 		event.preventDefault();
-
-		const file = event.dataTransfer.files?.[0];
-
+		const file = event.dataTransfer.files[0];
 		if (file) {
 			handleFileUpload(file);
 		}
 	};
 
-	const handleDragOver = (event: any) => {
+	const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
 		event.preventDefault();
 	};
 
-	const handleFileInput = (event: any) => {
-		const file = event.target.files?.[0];
-
+	const handleFileInput = (event: ChangeEvent<HTMLInputElement>) => {
+		const file = event.target.files?.[0]; // event.target.files?.[0];
 		if (file) {
 			handleFileUpload(file);
 		}
@@ -63,7 +61,7 @@ export default function InputFile() {
 		>
 			<FaCloudUploadAlt className="p-[10px] rounded-full ml-[10px] text-8xl" />
 
-			{fileUploaded && (
+			{file && (
 				<Button className="mt-[-68px] ml-[500px]" onClick={handleDeleteResume}>
 					<MdDelete />
 				</Button>
@@ -87,10 +85,10 @@ export default function InputFile() {
         Supported Formats: PDF, doc, or docx only, maximum file size-5MB
 			</p>
 
-			{fileUploaded && (
+			{file && (
 				<>
 					<div className="flex">
-						<p className="ml-2 text-green-500 text-lg">{` '${uploadedFileName}' uploaded successfully!`}</p>
+						<p className="ml-2 text-green-500 text-lg">{` '${file.name}' uploaded successfully!`}</p>
 					</div>
 					<Button className="ml-[40px]">Next</Button>
 				</>
