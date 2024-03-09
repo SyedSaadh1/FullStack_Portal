@@ -1,6 +1,6 @@
 // import Title from '@/components/ui/text/Title';
 // import Container from '@/ui/layout/container';
-import InputFile from './uploadresume/uploadresume';
+import Welcome from './components/Welcome';
 
 export default function Page() {
 	return (
@@ -10,7 +10,7 @@ export default function Page() {
 				
 				<p>Page content</p>
 			</Container> */}
-			<InputFile />
+			<Welcome />
 		</div>
 	);
 }

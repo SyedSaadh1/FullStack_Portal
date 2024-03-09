@@ -10,7 +10,12 @@
   ],
   "rules": {
     "no-duplicate-case": "error", // this will turn off a rule
-    "no-unused-vars": "error", // this will notify violation but not output error
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "no-func-assign": "error",
     "indent": [
       "warn",
