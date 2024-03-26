@@ -1,12 +1,15 @@
 'use client';
 import React, { useState, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
-import { MdDelete } from 'react-icons/md';
 import Balancer from 'react-wrap-balancer';
 import { CloudArrowUpIcon } from '@heroicons/react/24/outline';
+import axios from 'axios';
+import { useSession } from 'next-auth/react';
+import { Alert, AlertTitle } from '@/components/ui/alert';
+import { useRouter } from 'next/navigation';
 
 const BYTE_SIZE = 1024;
-const FILE_LIMIT = 5; // MB
+const FILE_LIMIT = 2; // MB
 const FILE_SIZE_LIMIT = BYTE_SIZE * BYTE_SIZE * FILE_LIMIT;
 
 type FileUploadProps = {
@@ -41,17 +44,14 @@ const useFileUpload = ({
 export default function InputFile() {
 	const [errorMessage, setErrorMessage] = useState('');
 	const [file, setFile] = useState<File | null>(null);
+	const [saving, setSaving] = useState(false);
+	const router = useRouter();
 
 	const { handleFileUpload } = useFileUpload({
 		maxSizeInBytes: FILE_SIZE_LIMIT,
 		onFileChange: setFile,
 		onError: setErrorMessage
 	});
-
-	const handleDeleteResume = () => {
-		setErrorMessage('');
-		setFile(null);
-	};
 
 	const handleDrop = (event: React.DragEvent<HTMLElement>) => {
 		event.preventDefault();
@@ -72,12 +72,29 @@ export default function InputFile() {
 		}
 	};
 
+	const user = useSession();
+	const onSubmit = async () => {
+		try {
+			setSaving(true);
+			const form = new FormData();
+			form.append('resume', file as File);
+			form.append('userId', user?.data?.user?.id as string);
+			const response = await axios.post('/api/resume', form);
+			if (response.data?.status) {
+				return router.push('/self-introduction');
+			}
+		} catch (error: any) {
+			setSaving(false);
+			setErrorMessage(error.message);
+		}
+	};
+
 	return (
 		<label
 			className="py-4 md:py-8 hover:bg-slate-200 text-center cursor-pointer mt-4 w-full items-center flex flex-col gap-4  p-3 border-2 border-dotted border-gray-300 rounded-lg drag-area"
 			onDrop={handleDrop}
 			onDragOver={handleDragOver}
-			htmlFor="resume"
+			htmlFor={file ? '' : 'resume'}
 		>
 			<p className="text-center">
 				<Balancer>
@@ -86,12 +103,6 @@ export default function InputFile() {
 				</Balancer>
 			</p>
 			<CloudArrowUpIcon className="rounded-full max-w-[4rem]" />
-
-			{file && (
-				<Button className="mt-[-68px] ml-[500px]" onClick={handleDeleteResume}>
-					<MdDelete />
-				</Button>
-			)}
 
 			<footer>
 				<p className="text-lg">
@@ -102,25 +113,37 @@ export default function InputFile() {
 					name="resume"
 					type="file"
 					className="hidden"
-					accept=".pdf, .doc, .docx"
+					accept=".pdf"
 					onChange={handleFileInput}
 				/>
 
 				<p className="text-gray-400 text-sm">
-          Supported Formats: PDF, doc, or docx only, maximum file size-5MB
+          Please upload your file as a single PDF under {FILE_LIMIT}MB.
 				</p>
 			</footer>
 
 			{file && (
 				<>
-					<div className="flex">
-						<p className="ml-2 text-green-500 text-lg">{`'${file.name}' uploaded successfully!`}</p>
+					<div className="flex gap-2 mt-2">
+						{/* <Link href="/self-introduction"> */}
+						<Button
+							disabled={saving}
+							className="min-w-24"
+							size="lg"
+							onClick={onSubmit}
+						>
+              Record Self Intro Video
+						</Button>
+						{/* </Link> */}
 					</div>
-					<Button className="ml-[40px]">Next</Button>
 				</>
 			)}
 
-			{errorMessage && <p className="text-red-500">{errorMessage}</p>}
+			{errorMessage && (
+				<Alert>
+					<AlertTitle>{errorMessage}</AlertTitle>
+				</Alert>
+			)}
 		</label>
 	);
 }

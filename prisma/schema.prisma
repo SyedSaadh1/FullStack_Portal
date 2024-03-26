@@ -7,7 +7,7 @@ generator client {
 }
 
 generator jsonSchema {
-  provider = "prisma-json-schema-generator"
+  provider              = "prisma-json-schema-generator"
   includeRequiredFields = "true"
 }
 
@@ -47,19 +47,21 @@ model Session {
 }
 
 model User {
-  id          String     @id @default(cuid())
-  name        String     @default("")
-  email       String     @unique @default("")
-  password    String?
-  hashedToken String?
-  roles       UserRole[]
-  createdAt   DateTime?  @default(now())
-  updatedAt   DateTime   @updatedAt
-  emailVerified DateTime?
-  accounts Account[]
-  image    String?
-  externalId  String?
-  sessions Session[]
+  id                String             @id @default(cuid())
+  name              String             @default("")
+  email             String             @unique @default("")
+  password          String?
+  hashedToken       String?
+  roles             UserRole[]
+  createdAt         DateTime?          @default(now())
+  updatedAt         DateTime           @updatedAt
+  emailVerified     DateTime?
+  accounts          Account[]
+  image             String?
+  externalId        String?
+  sessions          Session[]
+  SelfIntroductions SelfIntroduction[]
+  UserResume        UserResume[]
 }
 
 model VerificationToken {
@@ -84,4 +86,31 @@ model UserRole {
   role   Role   @relation(fields: [roleId], references: [id])
 
   @@unique([userId, roleId])
+}
+
+model SelfIntroduction {
+  id        String    @id @default(cuid())
+  userId    String
+  createdAt DateTime? @default(now())
+  updatedAt DateTime  @updatedAt
+  video     String
+  audio     String
+  text      String?
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model UserResume {
+  id              String    @id @default(cuid())
+  userId          String
+  filePath        String
+  resumeContent   String?
+  userContent     String?
+  suggestionOne   String?
+  suggestionTwo   String?
+  suggestionThree String?
+  createdAt       DateTime? @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
 }

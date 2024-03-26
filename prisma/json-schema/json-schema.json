@@ -177,6 +177,18 @@
           "items": {
             "$ref": "#/definitions/Session"
           }
+        },
+        "SelfIntroductions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SelfIntroduction"
+          }
+        },
+        "UserResume": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserResume"
+          }
         }
       },
       "required": [
@@ -240,6 +252,106 @@
         "userId",
         "roleId"
       ]
+    },
+    "SelfIntroduction": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "video": {
+          "type": "string"
+        },
+        "audio": {
+          "type": "string"
+        },
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "user": {
+          "$ref": "#/definitions/User"
+        }
+      },
+      "required": [
+        "userId",
+        "updatedAt",
+        "video",
+        "audio"
+      ]
+    },
+    "UserResume": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "filePath": {
+          "type": "string"
+        },
+        "resumeContent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "userContent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "suggestionOne": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "suggestionTwo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "suggestionThree": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "createdAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "user": {
+          "$ref": "#/definitions/User"
+        }
+      },
+      "required": [
+        "userId",
+        "filePath",
+        "updatedAt"
+      ]
     }
   },
   "type": "object",
@@ -261,6 +373,12 @@
     },
     "userRole": {
       "$ref": "#/definitions/UserRole"
+    },
+    "selfIntroduction": {
+      "$ref": "#/definitions/SelfIntroduction"
+    },
+    "userResume": {
+      "$ref": "#/definitions/UserResume"
     }
   }
 }

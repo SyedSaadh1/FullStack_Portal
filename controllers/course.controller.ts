@@ -19,7 +19,6 @@ class CourseController extends Controller {
 
 	constructor() {
 		super();
-		this.getAllCourses();
 	}
 
 	async getAllCourses(): Promise<Course[]> {

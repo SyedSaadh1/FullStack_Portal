@@ -29,5 +29,8 @@
       "error",
       "always"
     ]
+  },
+  "env": {
+    "browser": true
   }
 }

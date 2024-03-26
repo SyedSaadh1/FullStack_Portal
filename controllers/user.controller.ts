@@ -1,10 +1,10 @@
-import { Controller } from "./controller";
+import { Controller } from './controller';
 
 class UserController extends Controller {
-  async isAdmin(request: Request): Promise<boolean> {
-    return false;
-  }
-
+	async isAdmin(): Promise<boolean> {
+		return false;
+	}
 }
 
-export default new UserController();
+const controller = new UserController();
+export default controller;

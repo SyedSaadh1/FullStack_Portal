@@ -27,6 +27,20 @@ const handler = NextAuth({
 	session: {
 		strategy: 'jwt'
 	},
+	callbacks: {
+		session: async ({ session, token }) => {
+			if (session?.user) {
+				session.user.id = token.sub;
+			}
+			return Promise.resolve(session);
+		},
+		jwt: async ({ user, token }) => {
+			if (user) {
+				token.uid = user.id;
+			}
+			return token;
+		}
+	},
 	events: {
 		signIn: async ({ user }) => {
 			const loginUser = user as User;

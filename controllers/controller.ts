@@ -2,18 +2,11 @@
 // import SessionService from "services/session.services";
 // import type { IUser } from "types/user.types";
 
-export class Controller {
+import { DefaultUser, getServerSession } from 'next-auth';
 
-  // async getUser(request: Request) {
-  //   let user: IUser | null = null;
-  //   try {
-  //     user = await SessionService.getUser(request);
-  //     if (user) {
-  //       user.isAdmin = (await User.isAdminUser(user)) || user.email === "zakeer@zakeer.me";
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  //   return user;
-  // }
+export class Controller {
+	async getUser() {
+		const session = await getServerSession();
+		return session?.user as DefaultUser;
+	}
 }
