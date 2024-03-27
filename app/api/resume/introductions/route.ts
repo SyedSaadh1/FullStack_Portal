@@ -1,6 +1,4 @@
 import { anyscaleService } from '@/adapters/ai/anyscale.adapater';
-// import { uploadFile } from '@/adapters/aws/s3.adapater';
-// import db from '@/db';
 import StringUtils from '@/utils/string.utls';
 import { NextRequest, NextResponse } from 'next/server';
 
@@ -20,10 +18,6 @@ export async function POST(request: NextRequest) {
 		);
 	}
 
-	// const time = new Date().getTime();
-	// const filename = `resume-${time}.pdf`;
-	// await uploadFile(resume, `fullstack-institute/${userId}`, filename);
-
 	const arrayBuffer = await resume.arrayBuffer();
 	const buffer = Buffer.from(arrayBuffer);
 	const pdf = await getDocumentProxy(new Uint8Array(buffer));
@@ -35,14 +29,6 @@ export async function POST(request: NextRequest) {
     text as string
 	);
 	const data = StringUtils.getJSONArrayFromString(content + '')[0];
-
-	// await db.userResume.create({
-	// 	data: {
-	// 		userId,
-	// 		filePath: filename,
-	// 		resumeContent: String(text)
-	// 	}
-	// });
 
 	return Response.json({
 		status: true,

@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 const plugin = require('tailwindcss/plugin');
+const { nextui } = require('@nextui-org/react');
 
 const config = {
 	darkMode: ['class'],
@@ -9,7 +10,8 @@ const config = {
 		'./app/**/*.{ts,tsx}',
 		'./src/**/*.{ts,tsx}',
 		'./ui/**/*.{ts,tsx}',
-		'./lib/**/*.{ts,tsx}'
+		'./lib/**/*.{ts,tsx}',
+		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
 	],
 	prefix: '',
 	theme: {
@@ -93,7 +95,8 @@ const config = {
 				},
 				{ values: theme('textShadow') }
 			);
-		})
+		}),
+		nextui()
 	]
 } satisfies Config;
 
