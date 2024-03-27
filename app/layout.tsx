@@ -1,11 +1,11 @@
 import React from 'react';
 import PageHeader from '@/ui/layout/PageHeader';
-import FluentUIProvider from './FluentUIProvider';
 import NextAuthProvider from './NextAuthProvider';
 import './tailwind.css';
 
 import { Metadata } from 'next';
 import PageFooter from '@/ui/layout/PageFooter';
+import UIProvider from './NextUIProvider';
 
 export const metadata: Metadata = {
 	title: 'Fullstack Institute | Elevate Your Development Journey',
@@ -23,7 +23,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className="theme-day bg">
-				<FluentUIProvider>
+				<UIProvider>
 					<NextAuthProvider>
 						<main className="bg">
 							<PageHeader />
@@ -31,7 +31,7 @@ export default function RootLayout({
 							<PageFooter />
 						</main>
 					</NextAuthProvider>
-				</FluentUIProvider>
+				</UIProvider>
 			</body>
 		</html>
 	);
