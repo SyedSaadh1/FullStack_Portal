@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '@nextui-org/react';
 import { VideoCameraSlashIcon } from '@heroicons/react/24/outline';
 
 const PermissionErrorGuide = () => {

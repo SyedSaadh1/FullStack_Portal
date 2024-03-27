@@ -1,14 +1,13 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import {
-	Card,
-	CardContent,
-	CardFooter,
-	CardHeader,
-	CardTitle
-} from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import FullstackHeader from '~/FullstackHeader';
+import {
+	Button,
+	Card,
+	CardBody,
+	CardFooter,
+	CardHeader
+} from '@nextui-org/react';
 
 export default function Page() {
 	return (
@@ -17,9 +16,9 @@ export default function Page() {
 			<div className="flex justify-center items-center">
 				<Card className="w-[420px]">
 					<CardHeader>
-						<CardTitle>Enter your email to start learning</CardTitle>
+						<h2>Enter your email to start learning</h2>
 					</CardHeader>
-					<CardContent>
+					<CardBody>
 						<form>
 							<div className="grid w-full items-center gap-4">
 								<div className="flex flex-col space-y-1.5">
@@ -42,7 +41,7 @@ export default function Page() {
                     </div> */}
 							</div>
 						</form>
-					</CardContent>
+					</CardBody>
 					<CardFooter>
 						<Button className="w-full">CONTINUE</Button>
 					</CardFooter>

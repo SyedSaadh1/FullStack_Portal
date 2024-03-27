@@ -1,7 +1,7 @@
 'use client';
 /* eslint-disable no-undef */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@nextui-org/react';
 import { Card, CardFooter, CardHeader } from '@/components/ui/card';
 import Container from '@/ui/layout/container';
 import Webcam from 'react-webcam';

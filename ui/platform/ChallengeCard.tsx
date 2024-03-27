@@ -1,12 +1,4 @@
-import { makeStyles, Body1, shorthands } from '@fluentui/react-components';
-import { Card, CardFooter, CardPreview } from '@fluentui/react-components';
-
-const useStyles = makeStyles({
-	card: {
-		...shorthands.margin('auto'),
-		maxWidth: '100%'
-	}
-});
+import { Card, CardBody, CardFooter } from '@nextui-org/react';
 
 interface ChallengeCardProps {
   title: string;
@@ -15,21 +7,19 @@ interface ChallengeCardProps {
 }
 
 const ChallengeCard = ({ title, img }: ChallengeCardProps) => {
-	const styles = useStyles();
-
 	return (
-		<Card className={styles.card}>
-			<CardPreview>
+		<Card>
+			<CardBody>
 				<img
 					src={`https://mir-s3-cdn-cf.behance.net/projects${img}`}
 					alt={title}
 				/>
-			</CardPreview>
+			</CardBody>
 
 			<CardFooter>
-				<Body1>
+				<p>
 					<b>{title}</b>
-				</Body1>
+				</p>
 			</CardFooter>
 		</Card>
 	);
