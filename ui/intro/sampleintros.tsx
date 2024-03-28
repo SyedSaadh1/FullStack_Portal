@@ -1,14 +1,9 @@
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader
-} from '@/components/ui/card';
 import { prisma } from '@/prisma';
 import {
 	Sample_intros,
 	compareSelfIntro
 } from '@/services/adapter/intro.adapter';
+import { Card, CardBody, CardHeader } from '@nextui-org/react';
 import { getServerSession } from 'next-auth';
 
 export async function Intros() {
@@ -39,17 +34,17 @@ export async function Intros() {
 	console.log(user_intros);
 
 	/*
-      prsima.selfIntro.createMany({
-        data: user_intros
-      })
-  */
+			prsima.selfIntro.createMany({
+				data: user_intros
+			})
+	*/
 
 	const selfIntroSimilarities = await compareSelfIntro(selfIntro, intros);
 
 	return (
 		<div className="flex flex-col gap-4">
 			<Card>
-				<CardDescription>{selfIntro}</CardDescription>
+				<p>{selfIntro}</p>
 			</Card>
 
 			<div className="grid grid-cols-3 gap-2">
@@ -58,13 +53,11 @@ export async function Intros() {
 						<CardHeader>
 							{intro?.name} - {selfIntroSimilarities?.[idx]?.score}
 						</CardHeader>
-						<CardContent>
-							<CardDescription>{intro?.content}</CardDescription>
+						<CardBody>
+							<p>{intro?.content}</p>
 							<div className="border-b border-gray-300 my-4" />
-							<CardDescription>
-								{selfIntroSimilarities?.[idx]?.details}
-							</CardDescription>
-						</CardContent>
+							<p>{selfIntroSimilarities?.[idx]?.details}</p>
+						</CardBody>
 					</Card>
 				))}
 			</div>

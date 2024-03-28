@@ -1,9 +1,7 @@
 'use client';
 import Container from '@/ui/layout/container';
-import { Label } from '@/components/ui/label';
 import { LabelInput } from '@/components/form/LabelInput';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@nextui-org/react';
+import { Button, Textarea } from '@nextui-org/react';
 import Link from 'next/link';
 
 type Props = {};
@@ -33,7 +31,7 @@ const ResumeBuilder = (_: Props) => {
 				))}
 
 				<div className="md:col-span-3 col-span-1 flex flex-col gap-2">
-					<Label htmlFor="summary">Information</Label>
+					<label htmlFor="summary">Information</label>
 					<Textarea id="summary" placeholder="Write Your Summary." />
 				</div>
 			</div>

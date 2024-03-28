@@ -1,12 +1,12 @@
 import React from 'react';
-import { Input } from '@/components/ui/input';
 import FullstackHeader from '~/FullstackHeader';
 import {
 	Button,
 	Card,
 	CardBody,
 	CardFooter,
-	CardHeader
+	CardHeader,
+	Input
 } from '@nextui-org/react';
 
 export default function Page() {

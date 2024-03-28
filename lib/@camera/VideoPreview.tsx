@@ -1,4 +1,4 @@
-import { Card } from '@/components/ui/card';
+import { Card } from '@nextui-org/react';
 import React from 'react';
 
 interface Props {

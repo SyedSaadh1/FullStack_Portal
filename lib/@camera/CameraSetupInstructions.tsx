@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import TextSmall from '@/components/ui/text/TextSmall';
+import { Card, CardBody, CardHeader } from '@nextui-org/react';
 import React from 'react';
 
 const CameraSetupInstructions = () => {
@@ -11,7 +11,7 @@ const CameraSetupInstructions = () => {
           Follow these tips for the best recording experience:
 				</TextSmall>
 			</CardHeader>
-			<CardContent>
+			<CardBody>
 				<ul className="space-y-6 mt-4">
 					<li className="flex items-center">
 						<span className="flex-shrink-0">
@@ -63,7 +63,7 @@ const CameraSetupInstructions = () => {
 						</p>
 					</li>
 				</ul>
-			</CardContent>
+			</CardBody>
 		</Card>
 	);
 };

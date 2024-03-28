@@ -5,13 +5,13 @@ import { format } from 'date-fns';
 import { Calendar as CalendarIcon } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
-import { Button } from '@nextui-org/react';
-import { Calendar } from '@/components/ui/calendar';
 import {
+	Button,
 	Popover,
 	PopoverContent,
 	PopoverTrigger
-} from '@/components/ui/popover';
+} from '@nextui-org/react';
+import { Calendar } from '@/components/ui/calendar';
 
 export function DatePicker(props: any) {
 	const [date, setDate] = React.useState<Date>();
@@ -20,7 +20,7 @@ export function DatePicker(props: any) {
 		<Popover>
 			<PopoverTrigger asChild>
 				<Button
-					variant={'outline'}
+					color={'default'}
 					className={cn(
 						'w-full justify-start text-left font-normal',
 						!date && 'text-muted-foreground'

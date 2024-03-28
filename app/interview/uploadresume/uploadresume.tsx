@@ -4,7 +4,6 @@ import Balancer from 'react-wrap-balancer';
 import { CloudArrowUpIcon } from '@heroicons/react/24/outline';
 import axios from 'axios';
 import { useSession } from 'next-auth/react';
-import { Alert, AlertTitle } from '@/components/ui/alert';
 import { useRouter } from 'next/navigation';
 import ENDPOINTS from '@/contants/api.constants';
 import { SelfIntroduction } from '@/types/user.types';
@@ -185,9 +184,9 @@ export default function InputFile() {
 				)}
 
 				{errorMessage && (
-					<Alert variant="destructive">
-						<AlertTitle>{errorMessage}</AlertTitle>
-					</Alert>
+					<p>
+						<h1>{errorMessage}</h1>
+					</p>
 				)}
 			</label>
 		</>

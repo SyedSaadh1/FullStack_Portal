@@ -1,8 +1,7 @@
 'use client';
 /* eslint-disable no-undef */
 import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { Button } from '@nextui-org/react';
-import { Card, CardFooter, CardHeader } from '@/components/ui/card';
+import { Button, Card, CardFooter, CardHeader } from '@nextui-org/react';
 import Container from '@/ui/layout/container';
 import Webcam from 'react-webcam';
 import useWebcamRecorder from './useWebcamRecorder';
@@ -94,7 +93,7 @@ function VideoCapture({ title, isSubmitting, onSubmit }: VideoCaptureProps) {
 				<VideoPreview videoPreviewUrl={videoPreviewUrl} />;
 				{/* {audioPreviewUrl && <audio controls src={audioPreviewUrl} />} */}
 				<div className="flex gap-4 justify-center">
-					<Button size="lg" onClick={handleRetake} variant="destructive">
+					<Button size="lg" onClick={handleRetake} color="default">
             Retake
 					</Button>
 					<Button size="lg" onClick={handleSubmit} disabled={isSubmitting}>
@@ -158,7 +157,7 @@ function VideoCapture({ title, isSubmitting, onSubmit }: VideoCaptureProps) {
 										<Button
 											onClick={handleStopCaptureClick}
 											size="lg"
-											variant="destructive"
+											color="default"
 										>
                       Stop Recording
 										</Button>

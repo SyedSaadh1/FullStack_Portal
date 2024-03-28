@@ -1,10 +1,8 @@
 'use client';
 import Container from '@/ui/layout/container';
 import React from 'react';
-import { Label } from '@/components/ui/label';
 import Link from 'next/link';
-import { Button } from '@nextui-org/react';
-import { Textarea } from '@/components/ui/textarea';
+import { Button, Textarea } from '@nextui-org/react';
 
 type Props = {};
 
@@ -13,11 +11,11 @@ const Skills = (_: Props) => {
 		<Container>
 			<div className="grid grid-cols-2 gap-16 pb-8">
 				<div className="flex flex-col gap-2">
-					<Label>Advance Skills </Label>
+					<label>Advance Skills </label>
 					<Textarea />
 				</div>
 				<div className="flex flex-col gap-2">
-					<Label>Professional Skills</Label>
+					<label>Professional Skills</label>
 					<Textarea />
 				</div>
 			</div>

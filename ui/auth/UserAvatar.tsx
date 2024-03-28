@@ -1,21 +1,20 @@
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "@/components/ui/avatar"
+import { Avatar } from '@nextui-org/react';
 
 interface UserAvatarProps {
-  avatar: string
-  name: string
+  avatar: string;
+  name: string;
 }
 
-export default function UserAvatar({ name = "", avatar }: UserAvatarProps) {
-  const avatarNames = (name || "").split(" ");
-  const initials = avatarNames.map((name) => name[0]).join("") || "!?";
-  return (
-    <Avatar>
-      <AvatarImage src={avatar} alt={name} />
-      <AvatarFallback>{initials}</AvatarFallback>
-    </Avatar>
-  )
+export default function UserAvatar({ name = '', avatar }: UserAvatarProps) {
+	const avatarNames = (name || '').split(' ');
+	const initials = avatarNames.map(name => name[0]).join('') || '!?';
+	return (
+		<Avatar
+			src={avatar}
+			isBordered
+			radius="full"
+			alt={name}
+			fallback={initials}
+		></Avatar>
+	);
 }

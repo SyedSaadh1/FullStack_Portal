@@ -1,12 +1,10 @@
 'use client';
 import Container from '@/ui/layout/container';
 import React from 'react';
-import { Label } from '@/components/ui/label';
 import { DatePicker } from '../dateui/DatePicker';
 import Link from 'next/link';
-import { Button } from '@nextui-org/react';
+import { Button, Textarea } from '@nextui-org/react';
 import { LabelInput } from '@/components/form/LabelInput';
-import { Textarea } from '@/components/ui/textarea';
 
 type Props = {};
 
@@ -35,17 +33,17 @@ const Education = (_: Props) => {
 						/>
 					))}
 					<div className="flex flex-col gap-2">
-						<Label>Start Date</Label>
+						<label>Start Date</label>
 						<DatePicker />
 					</div>
 					<div className="flex flex-col gap-2">
-						<Label>End Date</Label>
+						<label>End Date</label>
 						<DatePicker />
 					</div>
 				</div>
 
 				<div className="col-span-1">
-					<Label>Description</Label>
+					<label>Description</label>
 					<Textarea />
 				</div>
 			</div>

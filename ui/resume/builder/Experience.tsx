@@ -1,12 +1,10 @@
 'use client';
 import Container from '@/ui/layout/container';
 import React from 'react';
-import { Label } from '@/components/ui/label';
 import { DatePicker } from '../dateui/DatePicker';
 import { LabelInput } from '@/components/form/LabelInput';
 import Link from 'next/link';
-import { Button } from '@nextui-org/react';
-import { Textarea } from '@/components/ui/textarea';
+import { Button, Textarea } from '@nextui-org/react';
 
 type Props = {};
 
@@ -40,17 +38,17 @@ const Experience = (_: Props) => {
 
 				<div className="flex flex-col gap-8">
 					<div className="flex flex-col gap-2">
-						<Label>Start Date</Label>
+						<label>Start Date</label>
 						<DatePicker />
 					</div>
 					<div className="flex flex-col gap-2">
-						<Label>End Date</Label>
+						<label>End Date</label>
 						<DatePicker />
 					</div>
 				</div>
 
 				<div className="md:col-span-2 col-span-1 flex flex-col gap-2">
-					<Label>Role And Responsibilities </Label>
+					<label>Role And Responsibilities </label>
 					<Textarea />
 				</div>
 			</div>
