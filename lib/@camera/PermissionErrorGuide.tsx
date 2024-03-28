@@ -43,10 +43,7 @@ const PermissionErrorGuide = () => {
 				</p>
 
 				<div className="mt-6">
-					<Button
-						variant="destructive"
-						onClick={() => window.location.reload()}
-					>
+					<Button variant="solid" onClick={() => window.location.reload()}>
             Refresh Page
 					</Button>
 				</div>

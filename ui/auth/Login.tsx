@@ -12,7 +12,7 @@ const Login = (props: Props) => {
 	};
 
 	return (
-		<Button variant="outline" onClick={handleLogin}>
+		<Button variant="solid" onClick={handleLogin}>
 			<svg className="mr-2 h-4 w-4" role="img" viewBox="0 0 24 24" {...props}>
 				<path
 					fill="currentColor"

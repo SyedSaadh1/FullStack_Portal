@@ -18,7 +18,7 @@ function CourseInfo({ course }: Props) {
 							{course?.description}
 						</p>
 
-						<Button variant="secondary" className="mt-8" size="xl">
+						<Button variant="solid" className="mt-8" size="lg">
               Enroll Now
 						</Button>
 					</section>

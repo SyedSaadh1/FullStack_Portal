@@ -1,7 +1,7 @@
 import React from 'react';
-import { Input, InputProps } from '../ui/input';
 
 import { LabelProps } from '@radix-ui/react-label';
+import { Input, InputProps } from '@nextui-org/react';
 
 export interface LabelInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
