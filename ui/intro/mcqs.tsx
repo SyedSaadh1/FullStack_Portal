@@ -1,7 +1,6 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { CardFooter } from '@fluentui/react-components';
+import { Button } from '@nextui-org/react';
+import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
 import React, { useState } from 'react';
 
 export default function MCQs({ questions = [] }: any) {
@@ -52,7 +51,7 @@ export default function MCQs({ questions = [] }: any) {
 			{!showResult ? (
 				<Card className="w-[550px]">
 					<CardHeader>{question}</CardHeader>
-					<CardContent className="flex flex-col gap-4">
+					<CardBody className="flex flex-col gap-4">
 						<form className="flex flex-col gap-4">
 							{options.map((option: any, idx: any) => (
 								<label className="ml-4" key={idx}>
@@ -67,7 +66,7 @@ export default function MCQs({ questions = [] }: any) {
 								</label>
 							))}
 						</form>
-					</CardContent>
+					</CardBody>
 					<CardFooter className="p-4 flex justify-end">
 						<Button
 							onClick={onClickNext}
@@ -80,7 +79,7 @@ export default function MCQs({ questions = [] }: any) {
 			) : (
 				<Card className="w-[550px] bg-gray-200 ml-auto mr-auto">
 					<CardHeader className="text-2xl font-bold">Result</CardHeader>
-					<CardContent>
+					<CardBody>
 						<div className="flex flex-col gap-4">
 							<p className="text-lg">
                 Total Questions :
@@ -101,7 +100,7 @@ export default function MCQs({ questions = [] }: any) {
 								<span className="text-emerald-500">{Result.wrongAnswers}</span>
 							</p>
 						</div>
-					</CardContent>
+					</CardBody>
 				</Card>
 			// <div className="result">
 			//   <h3>Result</h3>

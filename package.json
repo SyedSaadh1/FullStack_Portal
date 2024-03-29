@@ -19,7 +19,6 @@
     "@aws-sdk/client-s3": "^3.540.0",
     "@aws-sdk/s3-request-presigner": "^3.540.0",
     "@codesandbox/sandpack-react": "^2.12.1",
-    "@fluentui/react-components": "^9.46.0",
     "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "^2.1.4",
     "@monaco-editor/react": "^4.6.0",

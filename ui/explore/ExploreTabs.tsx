@@ -1,65 +1,62 @@
-'use client'
+'use client';
 import React, { useCallback, useEffect } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { makeStyles, tokens, shorthands, Subtitle1, TabList, Tab, Title1, SelectTabData } from '@fluentui/react-components';
 import Container from '../layout/container';
-
-const useStyles = makeStyles({
-  root: {
-    paddingTop: tokens.spacingHorizontalMNudge,
-    backgroundColor: `var(--theme-background-card-normal)`,
-    boxShadow: `var(--root-depth-2)`
-  },
-  tabList: {
-    marginLeft: `calc(${tokens.spacingHorizontalMNudge} * -1.25)`,
-    textTransform: 'capitalize',
-    ...shorthands.gap(tokens.spacingHorizontalL)
-  },
-  tab: {
-    textTransform: 'capitalize',
-  },
-});
+import { Tabs, Tab } from '@nextui-org/react';
 
 const EXPLORE_PARAM = 'explore';
 const TABS = ['programs', 'courses', 'topics'];
 
 const ExploreTabs = ({ tabs }: any) => {
-  const styles = useStyles();
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const pathname = usePathname();
-  const exploreParam = searchParams.get(EXPLORE_PARAM) || TABS[0];
+	const searchParams = useSearchParams();
+	const router = useRouter();
+	const pathname = usePathname();
+	const exploreParam = searchParams.get(EXPLORE_PARAM) || TABS[0];
 
-  const updateURL = useCallback((newParam: string) => {
-    const newSearchParams = new URLSearchParams(searchParams);
-    newSearchParams.set(EXPLORE_PARAM, newParam);
-    router.push(`${pathname}?${newSearchParams.toString()}`);
-  }, [router, pathname, searchParams]);
+	const updateURL = useCallback(
+		(newParam: string) => {
+			const newSearchParams = new URLSearchParams(searchParams);
+			newSearchParams.set(EXPLORE_PARAM, newParam);
+			router.push(`${pathname}?${newSearchParams.toString()}`);
+		},
+		[router, pathname, searchParams]
+	);
 
-  const onTabSelect = useCallback((_: any, data: SelectTabData) => {
-    updateURL(data.value as string);
-  }, [updateURL]);
+	// const onTabSelect = useCallback((_: any, data: SelectTabData) => {
+	// 	updateURL(data.value as string);
+	// }, [updateURL]);
 
-  useEffect(() => {
-    if (!searchParams.has(EXPLORE_PARAM)) {
-      updateURL(TABS[0]);
-    }
-  }, [searchParams, updateURL]);
+	useEffect(() => {
+		if (!searchParams.has(EXPLORE_PARAM)) {
+			updateURL(TABS[0]);
+		}
+	}, [searchParams, updateURL]);
 
-  return (<>
-    <div className={styles.root}>
-      <Container>
-        <Subtitle1>Explore</Subtitle1>
-        <TabList className={styles.tabList} selectedValue={exploreParam} onTabSelect={onTabSelect}>
-          {TABS.map(tab => (
-            <Tab key={tab} value={tab} content={<Title1 className={styles.tab}>{tab}</Title1>} />
-          ))}
-        </TabList>
-      </Container>
-    </div>
-    {tabs[exploreParam]}
-  </>
-  );
+	return (
+		<>
+			<div>
+				<Container>
+					<h1>Explore</h1>
+					<Tabs
+						color="primary"
+						variant="underlined"
+						classNames={{
+							tabList:
+                'gap-6 w-full relative rounded-none p-0 border-b border-divider',
+							cursor: 'w-full bg-[#22d3ee]',
+							tab: 'max-w-fit px-0 h-12',
+							tabContent: 'group-data-[selected=true]:text-[#06b6d4]'
+						}}
+					>
+						{TABS.map(tab => (
+							<Tab key={tab} title={<h2>{tab}</h2>} />
+						))}
+					</Tabs>
+				</Container>
+			</div>
+			{tabs[exploreParam]}
+		</>
+	);
 };
 
 export default ExploreTabs;

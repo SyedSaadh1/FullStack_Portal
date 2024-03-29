@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { UserIcon as CameraIcon } from '@heroicons/react/24/outline';
-import { Button } from '@/components/ui/button';
+import { Button } from '@nextui-org/react';
 import PermissionErrorGuide from './PermissionErrorGuide';
 import VideoCapture from './VideoCapture';
 import { DefaultUser } from 'next-auth';
