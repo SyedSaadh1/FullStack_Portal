@@ -1,10 +1,7 @@
-import { anyscaleService } from '@/adapters/ai/anyscale.adapater';
+import ResumeService from '@/modules/external/ai/ResumeService';
 // import { uploadFile } from '@/adapters/aws/s3.adapater';
 // import db from '@/db';
-import StringUtils from '@/utils/string.utls';
 import { NextRequest, NextResponse } from 'next/server';
-
-import { extractText, getDocumentProxy } from 'unpdf';
 
 export async function POST(request: NextRequest) {
 	const form = await request.formData();
@@ -20,22 +17,8 @@ export async function POST(request: NextRequest) {
 		);
 	}
 
-	// const time = new Date().getTime();
-	// const filename = `resume-${time}.pdf`;
-	// await uploadFile(resume, `fullstack-institute/${userId}`, filename);
-
-	const arrayBuffer = await resume.arrayBuffer();
-	const buffer = Buffer.from(arrayBuffer);
-	const pdf = await getDocumentProxy(new Uint8Array(buffer));
-
-	// Extract text from PDF
-	const { text } = await extractText(pdf, { mergePages: true });
-
-	const content = await anyscaleService.generateResumeIntroductions(
-    text as string
-	);
-	const data = StringUtils.getJSONArrayFromString(content + '')[0];
-
+	const { introductions, resumeContent } =
+    await ResumeService.generateSelfIntroductionFromResume(resume);
 	// await db.userResume.create({
 	// 	data: {
 	// 		userId,
@@ -46,7 +29,7 @@ export async function POST(request: NextRequest) {
 
 	return Response.json({
 		status: true,
-		content,
-		data
+		content: resumeContent,
+		data: introductions
 	});
 }

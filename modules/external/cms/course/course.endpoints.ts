@@ -1,0 +1,11 @@
+import ENDPOINTS from '../cms.endpoints';
+
+const { CMS_REST_ENDPOINT } = ENDPOINTS;
+const BASE_ENDPOINT = `${CMS_REST_ENDPOINT}/courses`;
+
+const COURSE_ENDPOINTS = {
+	GET_ALL_PUBLIC_COURSES: `${BASE_ENDPOINT}`,
+	GET_COURSE_BY_ID: `${BASE_ENDPOINT}`
+};
+
+export default COURSE_ENDPOINTS;

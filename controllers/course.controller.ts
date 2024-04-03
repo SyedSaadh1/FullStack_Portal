@@ -23,7 +23,7 @@ class CourseController extends Controller {
 
 	async getAllCourses(): Promise<Course[]> {
 		try {
-			if (this.publicCourses?.length) return this.publicCourses;
+			// if (this.publicCourses?.length) return this.publicCourses;
 			this.publicCourses = await coursesServices.getAllPublicCourses();
 			return this.publicCourses;
 		} catch (error) {

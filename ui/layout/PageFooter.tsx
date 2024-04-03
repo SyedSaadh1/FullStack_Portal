@@ -43,7 +43,7 @@ const PageFooter = (_: Props) => {
 							</Lead>
 						</div>
 						<div className="flex-1 text-right">
-							<Button size="lg" className="h-16 px-16 text-2xl">
+							<Button color="primary" size="lg" className="h-16 px-16 text-2xl">
                 Explore courses
 							</Button>
 						</div>

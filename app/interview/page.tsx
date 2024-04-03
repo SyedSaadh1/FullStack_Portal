@@ -1,3 +1,4 @@
+import PageV1 from './components/@sample/PageV1';
 import Welcome from './components/Welcome';
 // import Title from '@/components/ui/text/Title';
 // import { Mcqs } from '@/services/adapter/intro.adapter';
@@ -14,6 +15,7 @@ export default async function Page() {
 
 	return (
 		<div className="min-h-[50vh]">
+			<PageV1 />
 			<Welcome />
 			<Container className="py-6">
 				{/* <Title>Interview Page</Title> */}

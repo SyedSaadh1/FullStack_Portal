@@ -1,14 +1,10 @@
 import React from 'react';
 import Container from '../layout/container';
-import courseController from '@/controllers/course.controller';
-import { Course } from '@/types/course.types';
 import CourseCardCarousel from './CourseCardCarousel';
+import CourseController from '@/modules/internal/courses/CourseController';
 
 const HomePageCourses = async () => {
-	const courses: Course[] = JSON.parse(
-		JSON.stringify(await courseController.getAllCourses())
-	);
-
+	const courses = await CourseController.getAllPublicCourses();
 	return (
 		<section className="py-8">
 			<Container>

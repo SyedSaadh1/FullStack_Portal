@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className="theme-day bg">
+			<body className="theme-day bg" suppressHydrationWarning={true}>
 				<UIProvider>
 					<NextAuthProvider>
 						<main className="bg">

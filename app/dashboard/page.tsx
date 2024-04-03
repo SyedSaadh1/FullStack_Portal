@@ -1,22 +1,23 @@
-import React from 'react';
-import Container from '../layout/container';
-import { Course } from '@/types/course.types';
+import Container from '@/ui/layout/container';
 import { Button } from '@nextui-org/react';
-type Props = {
-  course: Course;
-};
+import React from 'react';
 
-function CourseInfo({ course }: Props) {
+type Props = {};
+
+const Dashboard = (_: Props) => {
 	return (
-		<section className="bg-slate-100 shadow-inner">
+		<section className="bg-slate-100 rounded-xl shadow-inner">
 			<Container className="py-6 text-center max-w-screen-xl">
 				<h3 className="text-5xl font-bold text-center py-8 p-4 border-b-2 border-dashed border-gray-300">
-					{course?.name}
+          Ready to Begin Your Adventure?
 				</h3>
 
 				<div className="py-10 border-b-2 border-dashed border-gray-300">
 					<p className="max-w-4xl mx-auto text-xl">
-						{course?.shortDescription}
+            Unlock the door to endless possibilities and growth. Browse through
+            our diverse programs and select the course that sparks your
+            interest. Your journey to mastery and success starts on this
+            dashboard.
 					</p>
 				</div>
 
@@ -28,7 +29,7 @@ function CourseInfo({ course }: Props) {
 							className="flex-1 max-w-4xl font-bold"
 							variant="ghost"
 						>
-              Table of Contents
+              Explore Courses
 						</Button>
 						<Button
 							size="lg"
@@ -36,7 +37,7 @@ function CourseInfo({ course }: Props) {
 							variant="shadow"
 							color="primary"
 						>
-              Enroll now
+              Explore Programs
 						</Button>
 					</div>
 					<div />
@@ -44,5 +45,6 @@ function CourseInfo({ course }: Props) {
 			</Container>
 		</section>
 	);
-}
-export default CourseInfo;
+};
+
+export default Dashboard;
