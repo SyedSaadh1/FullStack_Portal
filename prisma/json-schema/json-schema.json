@@ -178,16 +178,22 @@
             "$ref": "#/definitions/Session"
           }
         },
-        "SelfIntroductions": {
+        "selfIntroductions": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/SelfIntroduction"
           }
         },
-        "UserResume": {
+        "userResume": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/UserResume"
+          }
+        },
+        "interviews": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Interview"
           }
         }
       },
@@ -352,6 +358,204 @@
         "filePath",
         "updatedAt"
       ]
+    },
+    "Interview": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "user": {
+          "$ref": "#/definitions/User"
+        },
+        "stack": {
+          "$ref": "#/definitions/Stack"
+        },
+        "interviewDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "roleType": {
+          "type": "string",
+          "default": "FRONTEND",
+          "enum": [
+            "FRONTEND",
+            "BACKEND",
+            "FULLSTACK"
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Question"
+          }
+        },
+        "Answer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Answer"
+          }
+        }
+      },
+      "required": [
+        "userId",
+        "stackId"
+      ]
+    },
+    "Stack": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "stackName": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "isEnabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "type": {
+          "type": "string",
+          "default": "FRONTEND",
+          "enum": [
+            "FRONTEND",
+            "BACKEND",
+            "FULLSTACK"
+          ]
+        },
+        "technologies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TechnologyOnStack"
+          }
+        },
+        "Interview": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Interview"
+          }
+        }
+      },
+      "required": [
+        "stackName",
+        "description"
+      ]
+    },
+    "Technology": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "techName": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "stacks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TechnologyOnStack"
+          }
+        }
+      },
+      "required": [
+        "techName",
+        "category"
+      ]
+    },
+    "TechnologyOnStack": {
+      "type": "object",
+      "properties": {
+        "stack": {
+          "$ref": "#/definitions/Stack"
+        },
+        "technology": {
+          "$ref": "#/definitions/Technology"
+        }
+      },
+      "required": [
+        "stackId",
+        "techId"
+      ]
+    },
+    "Question": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "questionType": {
+          "type": "string",
+          "default": "MCQ",
+          "enum": [
+            "MCQ",
+            "CODE_CHALLENGE"
+          ]
+        },
+        "difficulty": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "EASY",
+            "MEDIUM",
+            "HARD"
+          ]
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Answer"
+          }
+        },
+        "interviews": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Interview"
+          }
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "Answer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "question": {
+          "$ref": "#/definitions/Question"
+        },
+        "interview": {
+          "$ref": "#/definitions/Interview"
+        },
+        "answerValue": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "questionId",
+        "interviewId",
+        "answerValue"
+      ]
     }
   },
   "type": "object",
@@ -379,6 +583,24 @@
     },
     "userResume": {
       "$ref": "#/definitions/UserResume"
+    },
+    "interview": {
+      "$ref": "#/definitions/Interview"
+    },
+    "stack": {
+      "$ref": "#/definitions/Stack"
+    },
+    "technology": {
+      "$ref": "#/definitions/Technology"
+    },
+    "technologyOnStack": {
+      "$ref": "#/definitions/TechnologyOnStack"
+    },
+    "question": {
+      "$ref": "#/definitions/Question"
+    },
+    "answer": {
+      "$ref": "#/definitions/Answer"
     }
   }
 }

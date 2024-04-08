@@ -7,6 +7,7 @@
 import Container from '@/ui/layout/container';
 import InterviewProBanner from './components/@interview/InterviewProBanner';
 import SelectTechStack from './components/@interview/SelectTechStack';
+import TechnologyController from '@/modules/internal/interview/technologies/TechnologyController';
 
 export default async function Page() {
 	// const jobDescription =
@@ -14,10 +15,12 @@ export default async function Page() {
 	// const questions = await Mcqs(jobDescription);
 	// const question: any = JSON.parse(questions || '[]');
 
+	const stacks = await TechnologyController.getAllStackTypes();
+
 	return (
 		<div className="min-h-[50vh]">
 			<InterviewProBanner />
-			<SelectTechStack />
+			<SelectTechStack stacks={stacks} />
 			{/* <Welcome /> */}
 			<Container className="py-6">
 				{/* <Title>Interview Page</Title> */}

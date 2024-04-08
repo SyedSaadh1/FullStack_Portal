@@ -1,9 +1,10 @@
 import Title from '@/components/ui/text/Title';
 import { Card, CardBody, CardHeader } from '@nextui-org/react';
+import { Stack } from '@prisma/client';
 import React from 'react';
 
 type Props = {
-  tech: any;
+  tech: Stack;
   onClick: any;
   hasSelected?: boolean;
 };
@@ -20,7 +21,7 @@ function TechDetail({ tech, onClick, hasSelected }: Props) {
 			disableRipple
 		>
 			<CardHeader>
-				<Title>{tech?.stack_name}</Title>
+				<Title className="w-full text-left text-3xl">{tech?.stackName}</Title>
 			</CardHeader>
 			<CardBody>
 				<p className="text-xl text-muted-foreground">{tech?.description}</p>

@@ -1,8 +1,9 @@
+import { Stack } from '@prisma/client';
 import { useReducer } from 'react';
 
 interface IState {
   selectedStackType: null | string;
-  selectedStack: null | string;
+  selectedStack: null | Stack;
 }
 
 const INITIAL_STATE: IState = {
@@ -41,7 +42,7 @@ export const selectStackType = (payload: string) => ({
 	payload
 });
 
-export const selectStack = (payload: string) => ({
+export const selectStack = (payload: Stack) => ({
 	type: ACTION.SELECT_STACK,
 	payload
 });
@@ -52,6 +53,6 @@ export const useStack = () => {
 	return {
 		stackState,
 		selectStackType: (payload: string) => dispatch(selectStackType(payload)),
-		selectStack: (payload: string) => dispatch(selectStack(payload))
+		selectStack: (payload: Stack) => dispatch(selectStack(payload))
 	};
 };

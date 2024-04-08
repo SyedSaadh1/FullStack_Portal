@@ -1,26 +1,3 @@
-import { PrismaClient } from '@prisma/client'
-const db = new PrismaClient();
+import prisma from '@/prisma';
 
-db.$extends({
-  result: {
-    user: {
-      fullName: {
-        needs: {},
-        compute() {
-          return `Test`
-        }
-      }
-    }
-  },
-  model: {
-    user: {
-      test: {
-        compute() {
-          return `Test`
-        }
-      }
-    }
-  }
-})
-
-export default db;
+export default prisma;

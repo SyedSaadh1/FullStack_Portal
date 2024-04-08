@@ -60,8 +60,9 @@ model User {
   image             String?
   externalId        String?
   sessions          Session[]
-  SelfIntroductions SelfIntroduction[]
-  UserResume        UserResume[]
+  selfIntroductions SelfIntroduction[]
+  userResume        UserResume[]
+  interviews        Interview[]
 }
 
 model VerificationToken {
@@ -113,4 +114,92 @@ model UserResume {
   updatedAt       DateTime  @updatedAt
 
   user User @relation(fields: [userId], references: [id])
+}
+
+// Users Table
+// Interviews Table
+model Interview {
+  id            String   @id @default(cuid())
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId        String
+  stack         Stack    @relation(fields: [stackId], references: [id])
+  stackId       String // Allow optional stack (for custom interviews) 
+  interviewDate DateTime @default(now())
+  roleType      RoleType @default(FRONTEND) // Enum
+  notes         String?
+
+  questions Question[]
+  Answer    Answer[]
+}
+
+// Stack Table (Assuming you have this defined elsewhere)
+
+model Stack {
+  id           String              @id @default(cuid())
+  stackName    String
+  description  String
+  isEnabled    Boolean             @default(false)
+  type         RoleType            @default(FRONTEND) // Enum
+  technologies TechnologyOnStack[]
+  Interview    Interview[]
+
+  @@map("Stacks")
+}
+
+model Technology {
+  id       String              @id @default(cuid())
+  techName String
+  category String
+  stacks   TechnologyOnStack[]
+
+  @@map("Technologies")
+}
+
+model TechnologyOnStack {
+  stack      Stack      @relation(fields: [stackId], references: [id])
+  stackId    String // Foreign key to Stack
+  technology Technology @relation(fields: [techId], references: [id])
+  techId     String // Foreign key to Technology
+
+  @@id([stackId, techId])
+  @@map("Stack_Technologies")
+}
+
+// Questions Table
+model Question {
+  id           String       @id @default(cuid())
+  text         String
+  questionType QuestionType @default(MCQ)
+  difficulty   Difficulty? // Enum, if using
+
+  answers    Answer[]
+  interviews Interview[]
+}
+
+// Answer Table
+model Answer {
+  id          String    @id @default(cuid())
+  question    Question  @relation(fields: [questionId], references: [id])
+  questionId  String
+  interview   Interview @relation(fields: [interviewId], references: [id])
+  interviewId String
+  answerValue String
+}
+
+// Enums
+enum RoleType {
+  FRONTEND
+  BACKEND
+  FULLSTACK
+}
+
+enum QuestionType {
+  MCQ
+  CODE_CHALLENGE
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
 }

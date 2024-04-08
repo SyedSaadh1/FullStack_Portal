@@ -1,27 +1,47 @@
 'use client';
 import Title from '@/components/ui/text/Title';
-import TechnologyController from '@/modules/internal/interview/technologies/TechnologyController';
 import Container from '@/ui/layout/container';
-import { Button } from '@nextui-org/react';
-import React, { useMemo } from 'react';
+import { Button, RadioGroup, Radio } from '@nextui-org/react';
+import React, { useMemo, useState } from 'react';
 import { useStack } from './state/stackReducer';
 import TechDetail from './TechDetail';
+import { Stack } from '@prisma/client';
+import { getQuestions } from '~/interview/server/actions';
+import StringUtils from '@/utils/string.utls';
+import JSONViewer from '@/ui/common/JSONViewer';
 
-type Props = {};
+type Props = {
+  stacks: Stack[];
+};
 
-function SelectTechStack(_: Props) {
-	const allStacks = TechnologyController.getAllStackTypes();
+function SelectTechStack({ stacks }: Props) {
 	const {
 		stackState: { selectedStack, selectedStackType },
 		selectStack,
 		selectStackType
 	} = useStack();
 
+	const [level, setLevel] = useState('');
+	const [isLoading, setIsLoading] = useState(false);
+	const [questions, setQuestions] = useState([]);
+
+	const allStacks = useMemo(() => {
+		return [...new Set(stacks.map(stack => stack.type))];
+	}, [stacks]);
+
 	const stackDetails = useMemo(() => {
 		if (selectedStackType) {
-			return TechnologyController.getStackByType(selectedStackType);
+			return stacks.filter(stack => stack.type === selectedStackType);
 		}
-	}, [selectedStackType]);
+	}, [selectedStackType, stacks]);
+
+	const startInterview = async () => {
+		setIsLoading(true);
+		const response = await getQuestions(selectedStack, level);
+		const json = StringUtils.getJSONArrayFromString(response);
+		setQuestions(json as any);
+		setIsLoading(false);
+	};
 
 	return (
 		<Container className="py-8">
@@ -50,23 +70,42 @@ function SelectTechStack(_: Props) {
 
 				<div className="grid grid-cols-1 md:grid-cols-2 md:grid-cols-3 gap-4">
 					{stackDetails &&
-            stackDetails.map((tech: any) => (
+            stackDetails.map((tech: Stack) => (
             	<TechDetail
             		onClick={() => selectStack(tech)}
-            		hasSelected={selectedStack?.stack_name === tech.stack_name}
-            		key={tech.stack_name}
+            		hasSelected={selectedStack?.stackName === tech.stackName}
+            		key={tech.stackName}
             		tech={tech}
             	/>
             ))}
 				</div>
 
-				<div className="text-right">
-					{selectedStack && (
-						<Button variant="shadow" color="primary" size="lg">
+				{selectedStack && (
+					<div className="flex justify-between items-center bg-slate-100 rounded-xl p-4 md:p-8">
+						<RadioGroup
+							label="Select your level"
+							orientation="horizontal"
+							value={level}
+							onValueChange={setLevel}
+						>
+							<Radio value="EASY">EASY</Radio>
+							<Radio value="MEDIUM">MEDIUM</Radio>
+							<Radio value="HARD">HARD</Radio>
+						</RadioGroup>
+						<Button
+							variant="shadow"
+							color="primary"
+							size="lg"
+							isDisabled={!level}
+							isLoading={isLoading}
+							onClick={startInterview}
+						>
               Start Interview
 						</Button>
-					)}
-				</div>
+					</div>
+				)}
+
+				<JSONViewer value={questions} />
 			</div>
 		</Container>
 	);
