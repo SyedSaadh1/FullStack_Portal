@@ -384,6 +384,17 @@
             "FULLSTACK"
           ]
         },
+        "difficulty": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "EASY",
+            "MEDIUM",
+            "HARD"
+          ]
+        },
         "notes": {
           "type": [
             "string",
@@ -501,9 +512,9 @@
         },
         "questionType": {
           "type": "string",
-          "default": "MCQ",
+          "default": "TEXT",
           "enum": [
-            "MCQ",
+            "TEXT",
             "CODE_CHALLENGE"
           ]
         },

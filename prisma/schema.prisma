@@ -119,13 +119,14 @@ model UserResume {
 // Users Table
 // Interviews Table
 model Interview {
-  id            String   @id @default(cuid())
-  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id            String      @id @default(cuid())
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId        String
-  stack         Stack    @relation(fields: [stackId], references: [id])
+  stack         Stack       @relation(fields: [stackId], references: [id])
   stackId       String // Allow optional stack (for custom interviews) 
-  interviewDate DateTime @default(now())
-  roleType      RoleType @default(FRONTEND) // Enum
+  interviewDate DateTime    @default(now())
+  roleType      RoleType    @default(FRONTEND) // Enum
+  difficulty    Difficulty? // Enum, if using
   notes         String?
 
   questions Question[]
@@ -169,7 +170,7 @@ model TechnologyOnStack {
 model Question {
   id           String       @id @default(cuid())
   text         String
-  questionType QuestionType @default(MCQ)
+  questionType QuestionType @default(TEXT)
   difficulty   Difficulty? // Enum, if using
 
   answers    Answer[]
@@ -194,7 +195,7 @@ enum RoleType {
 }
 
 enum QuestionType {
-  MCQ
+  TEXT
   CODE_CHALLENGE
 }
 

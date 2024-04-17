@@ -7,7 +7,6 @@ import { useStack } from './state/stackReducer';
 import TechDetail from './TechDetail';
 import { Stack } from '@prisma/client';
 import { getQuestions } from '~/interview/server/actions';
-import StringUtils from '@/utils/string.utls';
 import JSONViewer from '@/ui/common/JSONViewer';
 
 type Props = {
@@ -35,12 +34,19 @@ function SelectTechStack({ stacks }: Props) {
 		}
 	}, [selectedStackType, stacks]);
 
-	const startInterview = async () => {
-		setIsLoading(true);
-		const response = await getQuestions(selectedStack, level);
-		const json = StringUtils.getJSONArrayFromString(response);
-		setQuestions(json as any);
-		setIsLoading(false);
+	const startInterview = async (retry = false) => {
+		try {
+			setIsLoading(true);
+			const response = await getQuestions(selectedStack, level);
+			setQuestions(response as any);
+		} catch (error) {
+			if (retry) {
+				return;
+			}
+			await startInterview(true);
+		} finally {
+			setIsLoading(false);
+		}
 	};
 
 	return (
@@ -98,7 +104,7 @@ function SelectTechStack({ stacks }: Props) {
 							size="lg"
 							isDisabled={!level}
 							isLoading={isLoading}
-							onClick={startInterview}
+							onClick={() => startInterview()}
 						>
               Start Interview
 						</Button>
