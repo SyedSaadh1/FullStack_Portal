@@ -12,6 +12,9 @@ export default class InterviewServices {
 		let questions: any = [];
 		try {
 			questions = await this.getQuestions(stack, difficulty);
+			if (!questions) {
+				questions = await this.getQuestions(stack, difficulty);
+			}
 		} catch (error) {
 			questions = await this.getQuestions(stack, difficulty);
 		}
@@ -24,7 +27,8 @@ export default class InterviewServices {
 					create: questions.map((question: any) => ({
 						text: question?.question,
 						questionType: question?.type,
-						difficulty: difficulty as Difficulty
+						difficulty: difficulty as Difficulty,
+						duration: String(question?.timeLimit)
 					}))
 				}
 			}
@@ -57,7 +61,8 @@ export default class InterviewServices {
 						id: true,
 						text: true,
 						questionType: true,
-						difficulty: true
+						difficulty: true,
+						duration: true
 					}
 				}
 			}

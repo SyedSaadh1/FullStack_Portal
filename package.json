@@ -75,6 +75,7 @@
     "react-simple-code-editor": "^0.13.1",
     "react-webcam": "^7.2.0",
     "react-wrap-balancer": "^1.1.0",
+    "sandpack-file-explorer": "^0.0.7",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
     "tech-stack-icons": "^2.0.3",

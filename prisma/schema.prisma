@@ -170,6 +170,7 @@ model TechnologyOnStack {
 model Question {
   id           String       @id @default(cuid())
   text         String
+  duration     String?
   questionType QuestionType @default(TEXT)
   difficulty   Difficulty? // Enum, if using
 
@@ -185,6 +186,7 @@ model Answer {
   interview   Interview @relation(fields: [interviewId], references: [id])
   interviewId String
   answerValue String
+  duration    String?
 }
 
 // Enums
