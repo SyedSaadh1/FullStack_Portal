@@ -1,7 +1,7 @@
 // app/admin/[[...nextadmin]]/page.tsx
 import { NextAdmin } from '@premieroctet/next-admin';
 import { getPropsFromParams } from '@premieroctet/next-admin/dist/appRouter';
-import { prisma } from '@/prisma';
+import prisma from '@/prisma';
 import { submitFormAction } from '../actions/nextadmin';
 import { options } from '../admin.options';
 

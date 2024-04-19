@@ -1,6 +1,6 @@
 // actions/nextadmin.ts
 'use server';
-import { prisma } from '@/prisma';
+import prisma from '@/prisma';
 import { ActionParams } from '@premieroctet/next-admin';
 import { submitForm } from '@premieroctet/next-admin/dist/actions';
 import { options } from '../admin.options';
