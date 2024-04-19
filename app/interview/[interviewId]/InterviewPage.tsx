@@ -20,6 +20,7 @@ import {
 	SandpackProvider
 } from '@codesandbox/sandpack-react';
 
+// @ts-ignore
 import { SandpackFileExplorer } from 'sandpack-file-explorer';
 
 type Props = {
