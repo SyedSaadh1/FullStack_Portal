@@ -8,6 +8,7 @@ import Container from '@/ui/layout/container';
 import InterviewProBanner from './components/@interview/InterviewProBanner';
 import SelectTechStack from './components/@interview/SelectTechStack';
 import TechnologyController from '@/modules/internal/interview/technologies/TechnologyController';
+import Welcome from './components/Welcome';
 
 export default async function Page() {
 	// const jobDescription =
@@ -21,7 +22,7 @@ export default async function Page() {
 		<div className="min-h-[50vh]">
 			<InterviewProBanner />
 			<SelectTechStack stacks={stacks} />
-			{/* <Welcome /> */}
+			<Welcome />
 			<Container className="py-6">
 				{/* <Title>Interview Page</Title> */}
 				{/* <p>Page content</p> */}
